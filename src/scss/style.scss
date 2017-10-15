@@ -22,6 +22,14 @@ body {
     @include font-regular;
 }
 
+a {
+    color: $primary-2;
+    &:hover, &:active, &:visited {
+        color: $primary-1;
+        //text-decoration: none;
+    }
+}
+
 #main {
     margin-top: 80px;
     position: absolute;
@@ -63,7 +71,7 @@ body {
             line-height: 40px;
             font-size: 14px;
             list-style:none;
-            margin:10px 0;
+            margin: 0;
             overflow:hidden;
             padding-left: 0px;
 

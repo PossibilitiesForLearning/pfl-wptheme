@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-md-3">
-                <img src="<?= img_path() ?>logo.png">
+                <img src="/wp-content/themes/pfl/images/logo.png">
             </div>
             <div class="col-xs-12 col-md-6">
                 <ul>
