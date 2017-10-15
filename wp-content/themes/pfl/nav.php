@@ -9,7 +9,7 @@
                 <li>Strengths</li>
             </ul>
         </div>
-        <div class="container-logo"><img src="<?=getThemePath()?>images/logo.png"></div>
+        <div class="container-logo"><img src="<?=getThemePath()?>/images/logo.png"></div>
         <div class="navbar-items navbar-rightside hidden-xs hidden-sm">
             <ul>
                 <li>Resources</li>
@@ -18,7 +18,7 @@
             </ul>
         </div>
         <div class="navbar-mobile navbar-mobile-rightside hidden-md hidden-lg pull-right">
-            <img src="<?=getThemePath()?>images/hamburger.png" height="32" width="32" class="mobile-menu"></img>
+            <img src="<?=getThemePath()?>/images/hamburger.png" height="32" width="32" class="mobile-menu"></img>
 </div>
     </div>
     <!-- container -->
