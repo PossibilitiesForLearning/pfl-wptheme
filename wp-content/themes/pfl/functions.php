@@ -1,7 +1,7 @@
 <?php
 
 function getThemePath() {
-	return "./wp-content/themes/pfl/";
+	return "/wp-content/themes/pfl";
 }
 
 function bgRandom() {

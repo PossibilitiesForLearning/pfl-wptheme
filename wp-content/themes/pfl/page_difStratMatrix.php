@@ -13,10 +13,10 @@ get_header(); ?>
 
 <!-- BEGINING OF HTML PAGE -->
 
-	<link rel="stylesheet" href="./matrixApp/libs/angularPrint.css">
-    <link rel="stylesheet" href="./matrixApp/libs/bootstrap.min.css">
-	<link rel="stylesheet" href="./matrixApp/libs/font-awesome.min.css">
-	<link rel="stylesheet" href="./matrixApp/libs/jquery-ui.css">
+	<link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/angularPrint.css">
+    <link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/bootstrap.min.css">
+	<link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/font-awesome.min.css">
+	<link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/jquery-ui.css">
 
 	
     <style>
@@ -411,18 +411,18 @@ input:checked + .slider:before {
 
 	</body>
 
-<script src="./matrixApp/libs/jquery.min.js"></script>
-<script src="./matrixApp/libs/bootstrap.min.js"></script>
-<script src="./matrixApp/libs/angular_1.3.9.js"></script>
-<script src="./matrixApp/libs/jquery-ui.min.js"></script>
-<script src="./matrixApp/libs/alasql.min.js"></script>
-<script src="./matrixApp/libs/moment.min.js"></script>
-<script src="./matrixApp/libs/angularPrint.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/jquery.min.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/bootstrap.min.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/angular_1.3.9.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/jquery-ui.min.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/alasql.min.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/moment.min.js"></script>
+<script src="<?=getThemePath()?>/matrixApp/libs/angularPrint.js"></script>
 
-<script type="text/javascript" src="./matrixApp/static.content/indicator.matrix.js"></script>
-<script type="text/javascript" src="./matrixApp/app/pflMatrixApp.js"></script>
-<script type="text/javascript" src="./matrixApp/app/pflMatrixApp.controller.js"></script>
-<script type="text/javascript" src="./matrixApp/app/pflMatrixApp.service.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/static.content/indicator.matrix.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.controller.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.service.js"></script>
 	
 
 
