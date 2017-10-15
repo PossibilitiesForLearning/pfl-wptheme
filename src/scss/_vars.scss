@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Lato:300,300i,400,400i,700');
+
+$img-path:              "/wp-content/themes/pfl/images/";
+$js-path:               "/wp-content/themes/pfl/js/";
+
+//== Colours
+$dark-1:                #2f343b;
+$dark-2:                #171717;
+
+$light-1:               #f9f9f9;
+$light-2:               #edeaef;
+
+$primary-1:             #73626e;
+$primary-2:             #655661;
+$primary-3:             #413e4a;
+
+$secondary-1:           #c1ce96;
+$secondary-2:           #a5b080;
+
+//== Width
+
+$screen-sm-min: 		768px;
+$screen-xs-max: 		($screen-sm-min - 1);
+$screen-md-min: 		992px;
+$screen-sm-max: 		($screen-md-min - 1);
+$screen-lg-min: 		1200px;
+$screen-md-max: 		($screen-lg-min - 1);
+
+//== Typography
+
+@mixin font-regular() {
+    font-family: "Lato", Helvetica, Arial, sans-serif;   
+}
+
+@mixin font-title() {
+    font-family: "Domine", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+

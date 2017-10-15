@@ -1,0 +1,104 @@
+.body-content {
+    
+        #image-background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: url($img-path + "bg-person3.png") no-repeat right top fixed; 
+            opacity: 0.8;
+        }
+    
+        @media (max-width: $screen-sm-max) {
+            #image-background {
+                opacity: 0.4!important;
+            }
+        }
+    
+        #content-background {    
+            top: 0px;
+            overflow: hidden;
+            width:100%;
+    
+    
+            .color-block {
+                height: 600px;
+                width: 200%;
+                margin-left: -50%;
+    
+                &.block1 {
+                    transform: rotate(-20deg);     
+                    margin-top: -500px;   
+                    background: url($img-path + "background-1.jpg"); 
+                    background-size: cover;
+                    opacity: 0.95;
+                }
+                
+                &.block2 {
+                    transform: rotate(-20deg);     
+                    margin-top: 700px;   
+                    background: url($img-path + "background-1.jpg"); 
+                    background-size: cover;
+                    opacity: 0.5;
+                }
+                &.block3 {
+                    transform: rotate(20deg);     
+                    background-color: rgba($light-2, 1);
+                    margin-top: -60px;
+                    background-size: cover;
+                    opacity: 0.95;
+                }
+            }
+        }
+    
+        #primary {
+            position: absolute;
+            top: 220px;
+            width: 100%;
+    
+            .hero {
+                @include font-title;
+                font-size: 48px;
+    
+                em {
+                    font-size: 60px;
+                    font-style: normal;
+                }
+                .secondary {
+                    color: $secondary-2;
+                }
+            }
+
+            .subtitle {
+                font-size: 32px;
+                font-style: italic;
+            }
+
+            .content-row {
+                background-color: rgba($light-1, 0.6);
+                margin-top: 40px;
+                padding-top: 40px;
+
+                .content-body {
+                    font-size: 24px;
+                    line-height: 48px;
+                    padding: 60px 0px;
+                    p {
+                        padding: 10px 0px;
+
+                        &:first-child:first-letter {
+                            color: $secondary-2;
+                            float: left;
+                            font-size: 92px;
+                            line-height: 60px;
+                            padding-top: 18px;
+                            padding-right: 14px;
+                            //padding-left: 3px;
+                          }
+                    }
+                }
+
+            }
+    
+        }
+    
+    }

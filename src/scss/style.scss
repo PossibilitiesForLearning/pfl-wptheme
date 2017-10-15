@@ -1,0 +1,68 @@
+/*!
+Theme Name: Possibilities for Learning
+Theme URI: //www.possibilitiesforlearning.com
+Description: Wordpress theme for Possibilities for Learning
+Version: 1.0
+Author: Kevin Ho
+Author URI: me@kevinho.net
+*/
+
+@import "_vars.scss";
+@import "_navigation.scss";
+@import "_index.scss";
+@import "_content.scss";
+
+html {
+    overflow-x: hidden;
+    background-color: rgba($primary-1, 0.1);
+}
+
+body {
+    color: $dark-1;
+    @include font-regular;
+}
+
+#main {
+    margin-top: 80px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+.footer {
+    margin-top: 60px;
+    background-color: $dark-1;
+    color: $light-1;
+    //width: 100%;
+    border-top: 20px solid $primary-3;
+    padding-top: 80px;
+    padding-bottom: 160px;
+
+    ul {
+        list-style: none;
+        margin-top: -15px;
+        li {
+            margin: 20px 0px 20px 20px;
+
+            &.main {
+                font-weight: bold;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+.breadcrumb-container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    .breadcrumb-row {
+        background-color: rgba($secondary-2, .8);
+        .breadcrumbs {
+            color: $light-1;
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+
+}

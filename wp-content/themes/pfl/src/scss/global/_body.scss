@@ -1,0 +1,165 @@
+body {
+    font-family: $font;
+}
+
+h1 {
+    font-family: $font-light;
+    font-size: 106px;
+    @media (max-width: $screen-xs-max) {
+        font-size: 48px;
+    }
+}
+
+h2 {
+    font-family: $font-light;
+    font-size: 60px;
+    line-height: 65px;
+    @media (max-width: $screen-xs-max) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+h3 {
+    font-family: $font-light;
+    font-size: 40px;
+    line-height: 50px;
+    @media (max-width: $screen-xs-max) {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+h4 {
+    font-family: $font;
+    font-size: 26px;
+    line-height: 34px;
+}
+
+h5 {
+    font-family: $font;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h6 {
+    font-family: $font;
+    font-size: 12px;
+}
+
+.h7 {
+    font-family: $font;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.h7-bold {
+    @extend .h7;
+    font-family: $font-bold;
+}
+
+
+.body-text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.linkout {
+    margin-top: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: $font-bold;
+    text-transform: uppercase;
+    display: block;
+    img {
+        padding-left: 10px;
+        margin-top: -3px;
+    }
+}
+
+a {
+    color: $gray-2;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: $brand-3;
+    transition: 0.2s;
+}
+
+ul.body {
+    padding-left: 10px;
+    list-style-type: none;
+    li {
+        padding: 5px;
+        &:before {
+            /* For a round bullet */
+            content: '\2022';
+            display: block;
+            position: relative;
+            max-width: 0;
+            max-height: 0;
+            left: -15px;
+            top: 0;
+        }
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.page-logo {
+    width: 125px;
+}
+
+.section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+// Button Outline
+.button {
+    font-family: $font-bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: white;
+    -webkit-transition: .5s;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 0);
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $brand-4;
+        background-color: white;
+    }
+    &[disabled='disabled'] {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+body.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+span.icon-checkmark {
+    &:before {
+        content: url($img-path + "icon/checkmark-gray.png");
+    }
+    color: transparent;
+}

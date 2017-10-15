@@ -1,0 +1,18 @@
+{
+  "name": "Possibilities for Learning",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Ho",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-sass": "*"
+  }
+}

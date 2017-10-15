@@ -1,0 +1,430 @@
+body.template-industry-vehicle {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($vehicle-2, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $vehicle-2;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $vehicle-2;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $vehicle-2;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $vehicle-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-autoturn-platform.jpg');
+        h4,
+        h5 {
+            color: $autoturn-2;
+        }
+    }
+}
+
+body.template-industry-air {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($air-2, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $air-2;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $air-2;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $air-2;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $air-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-aviplan-turn-platform.jpg');
+        h4,
+        h5 {
+            color: $air-2;
+        }
+    }
+}
+
+body.template-industry-road {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($torus-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $torus-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $torus-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $torus-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $torus-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-torus-platform.jpg');
+        h4,
+        h5 {
+            color: $torus-2;
+        }
+    }
+}
+
+body.template-industry-sitedesign {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($parkcad-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $parkcad-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $parkcad-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $parkcad-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $parkcad-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-parkcad-platform.jpg');
+        h4,
+        h5 {
+            color: $parkcad-1;
+        }
+    }
+}
+
+
+body.template-industry-signage {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($sigma-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $sigma-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $sigma-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $sigma-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $sigma-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-sigma-platform.jpg');
+        h4,
+        h5 {
+            color: $sigma-2;
+        }
+    }
+}
+
+body.template-industry-traffic {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($otiss-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $otiss-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $otiss-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $otiss-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $otiss-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-otiss-platform.jpg');
+        h4,
+        h5 {
+            color: $otiss-2;
+        }
+    }
+}
+
+body.template-industry-obstacle {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($aircraftdataviewer-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $aircraftdataviewer-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $aircraftdataviewer-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $aircraftdataviewer-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $aircraftdataviewer-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-obstacle-platform.jpg');
+        h4,
+        h5 {
+            color: $aircraftdataviewer-2;
+        }
+    }
+}
+
+body.template-industry-rail {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($nexus-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $nexus-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $nexus-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $nexus-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $nexus-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-rail-platform.jpg');
+        h4,
+        h5 {
+            color: $nexus-2;
+        }
+    }
+}
+
+body.template-industry-fasttime {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($arcport-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $arcport-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $arcport-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $arcport-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $arcport-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-arcport-platform.jpg');
+        h4,
+        h5 {
+            color: $arcport-2;
+        }
+    }
+}
+
+body.template-industry-osp {
+    #page-industry-body {
+        #navigation-bar {
+            background-color: rgba($skysafe-1, 1);
+        }
+        .page-body {
+            .page-title {
+                h2 {
+                    color: $skysafe-1;
+                }
+            }
+            .page-subtitle {
+                h5 {
+                    color: $skysafe-1;
+                }
+            }
+            .page-content {
+                > .row {
+                    .solution-product {
+                        .product-name {
+                            h5 {
+                                color: $skysafe-1;
+                            }
+                        }
+                        .product-description {
+                            .linkout {
+                                color: $skysafe-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-osp-platform.jpg');
+        h4,
+        h5 {
+            color: $skysafe-2;
+        }
+    }
+}

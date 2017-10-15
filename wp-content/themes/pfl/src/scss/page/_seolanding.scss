@@ -1,0 +1,169 @@
+body.template-seo {
+
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+    }
+
+    p, li {
+        font-size: 18px;
+    }
+
+    #seo-form-overlay {
+        position: fixed;
+        top: 280px;
+        z-index: 100;
+        pointer-events: none;
+
+        .form-box {
+            pointer-events: auto;
+            
+            .form-header {
+                background-color: white;
+                color: $brand-4;
+                font-size: 26px;
+                text-transform: uppercase;
+                padding: 30px 30px;
+                border: 1px solid $gray-7;
+                border-radius: 10px 10px 0px 0px;
+            }
+
+            .form-body {
+                background-color: $gray-2;
+                padding: 20px 30px;
+                border: 1px solid $gray-7;
+                border-radius: 0px 0px 10px 10px;
+                border-top: 0px;
+
+                input {
+                    font-size: 14px;
+                    margin: 10px 0px;
+                }
+
+                select {
+                    margin: 10px 0px;
+                    padding: 15px;
+                }
+
+                input[type="text"], select {
+                    border-radius: 5px;
+                    border: 1px solid $gray-7;
+                    height: auto;
+                }
+
+                button {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    color: $brand-4;
+                    border-color: $brand-4;
+                }
+            }
+        }
+    }
+    
+    #seo-header {
+
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-size: cover;
+
+        .logo-row {
+
+            margin-bottom: 80px;
+            
+            div.phone {
+                color: white;
+                font-size: 20px;
+                float: right;
+                margin-top: 40px;
+            }            
+        }
+
+        .title-row {
+            h2 {
+                text-transform: uppercase;
+                color: white;
+            }                        
+        }    
+    }
+
+    #page-header-stripe {
+        color: $brand-1;
+    }
+
+    #seo-content1 {
+        background-color: $gray-2;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #seo-form-mobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $brand-4;
+        }
+        
+        button {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            color: $brand-4;
+            border-color: $brand-4;
+        }
+    }
+
+    #seo-content2 {
+        color: white;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-size: cover;
+        text-transform: uppercase;
+    }
+    
+    #seo-content3 {
+        background-color: $gray-2;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .feature-rows {
+        margin-top: 60px;
+
+        .feature-block {
+
+            margin-bottom: 40px;
+
+            &:nth-of-type(odd) {
+                clear: left;
+            }
+
+
+            .thumb {
+                margin-bottom: 30px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+        }
+    }
+
+
+    footer#nav {
+        div.phone {
+            color: $gray-4;
+            font-size: 20px;
+            float:right;
+            margin-top: 40px;
+
+        }
+
+        table.partners {
+            td {
+                padding-top: 8px;
+            }
+        }
+    }
+}

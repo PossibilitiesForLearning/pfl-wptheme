@@ -1,0 +1,58 @@
+#lb-overlay
+{
+    opacity: 0;
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+ 
+    -ms-touch-action: none;
+    touch-action: none;
+    background-color: rgba($brand-2, 0.95);
+    
+    cursor: pointer;
+    cursor: -webkit-zoom-out; 
+    cursor: -moz-zoom-out;
+    
+    .container { 
+        position:relative;
+        top: 40%;
+        transform: translateY(-50%);
+    
+        .lb-feature {
+            margin-bottom: 40px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .lb-text {
+            color: $gray-1;
+            
+            .lb-heading {
+                
+                @media (min-width: $screen-md-min) {
+                    border-right: 1px solid $gray-4;
+                }
+                h6, h4 {
+                    text-transform: uppercase;
+                }
+
+                h4 {
+                    color: $brand-3;
+                }
+            }
+            .lb-caption {
+                @extend .body-text;
+            }
+        }
+
+    }
+}
+
+
+.lightbox {
+    cursor: pointer;
+    cursor: -webkit-zoom-in; 
+    cursor: -moz-zoom-in;    
+}

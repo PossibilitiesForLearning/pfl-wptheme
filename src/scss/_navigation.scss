@@ -1,0 +1,102 @@
+.navbar {
+    border-top: 20px solid $dark-1;
+    background-color: $primary-1;
+
+    .container {
+        height: 60px;
+        text-align: center;
+
+        > div {
+            display: inline-block;
+
+            &.container-logo {
+                //width: 50%;
+                width: 211px;
+                margin: 0 auto;
+            }
+
+            &.navbar-items {
+                color: $light-1;
+                vertical-align: top;
+
+                ul {                    
+                    list-style-type: none;
+                    margin-bottom: 0px;
+                    font-size: 0px;
+                    padding-left: 0px;
+
+                    li {
+                        width: 120px;
+                        display: inline-block;
+                        list-style-type: none;
+                        line-height: 61px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: 0.5s;
+
+                        &:hover, &.active {
+                            background-color: $primary-3;
+                        }
+                    }
+                }
+
+                &.navbar-leftside {
+                    margin-right: -3px;
+                }
+
+                &.navbar-rightside {
+                    margin-left: -3px;
+                }
+            }
+
+            &.links {
+                height: 60px;
+                width: 25%;
+
+                ul {
+                    list-style:none;
+                    li {
+                        display:inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#nav-menu-mast {
+    top: 81px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: $primary-3;
+    color: $light-1;
+    padding: 60px 0px 20px;
+    font-size: 16px;
+    display: none;
+
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+
+    .menu-mast {
+        padding: 0px 60px;
+
+        &.menu-mast-right {
+            border-right: 2px solid $primary-1;
+        }
+
+        ul {
+            padding-left: 0px;
+            li {
+                list-style-type: none;
+                line-height: 60px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

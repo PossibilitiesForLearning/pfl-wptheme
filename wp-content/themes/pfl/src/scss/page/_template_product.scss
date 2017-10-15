@@ -1,0 +1,7303 @@
+
+//      Product Slug Names
+
+$aircraft:                      "aircraft-data-viewer";
+$autoturn:                      "autoturn";
+$autoturn-invision:             "autoturn_invision";
+$autoturn-lite:                 "autoturnlite";
+$autoturn-online:               "autoturn_online";
+$autoturn-pro:                  "autoturnpro";
+$autoturn-rail:                 "autoturn-rail";
+$autoturn-revit:                "autoturn_revit";
+$aviplan-airside:               "aviplanairside";
+$aviplan-airside-pro:           "aviplanairsidepro";
+$aviplan-turn:                  "aviplan-turn";
+$aviplan-turn-pro:              "aviplanturnpro";
+$guidesign:                     "guidesign";
+$guidesignplus:                 "guidesignplus";
+$signdesignpro:                 "signdesignpro";
+$linedesignpro:                 "linedesignpro";
+$signdesignprouk:               "signdesignprouk";
+$linedesignprouk:               "linedesignprouk";
+$signdesignproqa:               "signdesignproqa";
+$linedesignproqa:               "linedesignproqa";
+$nexus:                         "nexus";
+//$obstacle-surface-planner-pro:  "obstaclesurfaceplannerpro";
+$otiss:                         "otiss";
+$park-cad:                      "parkcad";
+$roadcem:                       "roadcem";
+$sigma:                         "sigma";
+$sitecem:                       "sitecem";
+$torus:                         "torus";
+$vehicle-turning-templates:     "vehicle_turning_templates";
+$arcport:                       "arcport";
+$skysafe:                       "skysafe";
+$standard-vehicle-library:      "standard-vehicle-library";
+$extended-vehicle-library:      "extended-vehicle-library";
+
+
+body.template-product-#{$aircraft} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $air-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $air-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($air-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $air-2;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $air-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $air-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $air-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $air-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $air-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $air-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $air-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-platform.jpg');
+        h4 {
+            color: $air-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $air-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$aircraft}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $air-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $air-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $air-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $air-2;
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+    
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $air-2;
+                }
+                .form-body {
+                    button {
+                        color: $air-2;
+                        border-color: $air-2;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $air-2;
+                border-color: $air-2;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $air-2;
+            }
+        }
+    }
+}
+
+body.template-product-#{$autoturn} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturn-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturn-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturn-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturn-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturn-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturn-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturn-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturn-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturn-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturn-2;
+            border-color: $autoturn-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturn-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturn-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+        h4 {
+            color: $autoturn-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturn-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturn-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturn-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturn-2;
+        }
+        .button {
+            color: $autoturn-2;
+            border-color: $autoturn-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturn-2;
+                }
+                .form-body {
+                    button {
+                        color: $autoturn-2;
+                        border-color: $autoturn-2;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $autoturn-2;
+                border-color: $autoturn-2;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturn-2;
+            }
+        }
+    }    
+}
+
+body.template-product-#{$autoturn_invision} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturninvision-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturninvision-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturninvision-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturninvision-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturninvision-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturninvision-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturninvision-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturninvision-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturninvision-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturninvision-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturninvision-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturninvision-2;
+            border-color: $autoturninvision-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturninvision-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturninvision-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-platform.jpg');
+        h4 {
+            color: $autoturninvision-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturninvision-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturninvision-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturninvision-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturninvision-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturninvision-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturninvision-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturninvision-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturninvision-2;
+        }
+        .button {
+            color: $autoturninvision-2;
+            border-color: $autoturninvision-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturninvision-2;
+                }
+                .form-body {
+                    button {
+                        color: $autoturninvision-2;
+                        border-color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $autoturninvision-2;
+                border-color: $autoturninvision-2;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturninvision-2;
+            }
+        }
+    }    
+}
+
+body.template-product-#{$autoturn-lite} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturninvision-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturninvision-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturninvision-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturninvision-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturninvision-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturninvision-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturninvision-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturninvision-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturninvision-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturninvision-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturninvision-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturninvision-2;
+            border-color: $autoturninvision-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturninvision-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturninvision-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-lite}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-lite}-platform.jpg');
+        h4 {
+            color: $autoturninvision-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn-lite}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturninvision-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturninvision-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturninvision-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn_invision}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturninvision-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturninvision-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturninvision-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturninvision-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturninvision-2;
+        }
+        .button {
+            color: $autoturninvision-2;
+            border-color: $autoturninvision-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturninvision-2;
+                }
+                .form-body {
+                    button {
+                        color: $autoturninvision-2;
+                        border-color: $autoturninvision-2;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $autoturninvision-2;
+                border-color: $autoturninvision-2;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile  {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturninvision-2;
+            }
+        }
+    }    
+}
+
+body.template-product-#{$autoturn-pro} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturn-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturn-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturn-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturn-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturn-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturn-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturn-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturn-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturn-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturn-2;
+            border-color: $autoturn-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturn-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturn-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-pro}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-pro}-platform.jpg');
+        h4 {
+            color: $autoturn-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn-pro}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturn-2;
+            }
+        }
+    }
+
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturn-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturn-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturn-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturn-2;
+        }
+        .button {
+            color: $autoturn-2;
+            border-color: $autoturn-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturn-1;
+                }
+                .form-body {
+                    button {
+                        color: $autoturn-1;
+                        border-color: $autoturn-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $autoturn-1;
+                border-color: $autoturn-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturn-1;
+            }
+        }
+    }    
+}
+
+body.template-product-#{$autoturn-rail} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturnrail-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturnrail-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturnrail-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturnrail-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturnrail-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturnrail-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturnrail-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturnrail-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturnrail-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturnrail-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturnrail-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturnrail-2;
+            border-color: $autoturnrail-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturnrail-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturnrail-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-platform.jpg');
+        h4 {
+            color: $autoturnrail-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturnrail-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturnrail-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturnrail-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn-rail}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturnrail-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturnrail-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturnrail-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturnrail-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturnrail-2;
+        }
+        .button {
+            color: $autoturnrail-2;
+            border-color: $autoturnrail-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturnrail-1;
+                }
+                .form-body {
+                    button {
+                        color: $autoturnrail-1;
+                        border-color: $autoturnrail-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $autoturnrail-1;
+                border-color: $autoturnrail-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturnrail-1;
+            }
+        }
+    }
+    
+}
+
+body.template-product-#{$autoturn-revit} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturnrail-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturnrail-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturnrail-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturnrail-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturnrail-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturnrail-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturnrail-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturnrail-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturnrail-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturnrail-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturnrail-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturnrail-2;
+            border-color: $autoturnrail-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturnrail-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturnrail-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-platform.jpg');
+        h4 {
+            color: $autoturnrail-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturnrail-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturnrail-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturnrail-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturnrail-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn-revit}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturnrail-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturnrail-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturnrail-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturnrail-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturnrail-2;
+        }
+        .button {
+            color: $autoturnrail-2;
+            border-color: $autoturnrail-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturnrail-1;
+                }
+                .form-body {
+                    button {
+                        color: $autoturnrail-1;
+                        border-color: $autoturnrail-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $autoturnrail-1;
+                border-color: $autoturnrail-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturnrail-1;
+            }
+        }
+    }
+}
+
+
+body.template-product-#{$autoturn-online} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturnonline-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturnonline-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturnonline-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturnonline-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturnonline-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturnonline-1;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturnonline-1;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturnonline-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturnonline-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturnonline-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturnonline-1;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturnonline-1;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturnonline-1;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturnonline-1;
+            border-color: $autoturnonline-1;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturnonline-1;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturnonline-1;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturnonline-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn-online}-platform.jpg');
+        h4 {
+            color: $autoturnonline-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturnonline-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturnonline-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturnonline-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturnonline-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturnonline-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturnonline-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturnonline-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturnonline-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturnonline-2;
+        }
+        .button {
+            color: $autoturnonline-2;
+            border-color: $autoturnonline-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturnonline-1;
+                }
+                .form-body {
+                    button {
+                        color: $autoturnonline-1;
+                        border-color: $autoturnonline-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $autoturnonline-1;
+                border-color: $autoturnonline-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturnonline-1;
+            }
+        }
+    }
+}
+
+body.template-product-#{$aviplan-airside} {
+    #body-clients {
+        h5 {
+            color: $air-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($air-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $air-2;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $air-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $air-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $air-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $air-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $air-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $air-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $air-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-airside}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-airside}-platform.jpg');
+        h4 {
+            color: $air-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$aviplan-airside}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $air-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $air-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $air-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $air-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $air-2;
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+
+    
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $air-2;
+                }
+                .form-body {
+                    button {
+                        color: $air-2;
+                        border-color: $air-2;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $air-2;
+                border-color: $air-2;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $air-2;
+            }
+        }
+    }
+}
+
+body.template-product-#{$aviplan-airside-pro} {
+    #body-clients {
+        h5 {
+            color: $air-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($air-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $air-2;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $air-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $air-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $air-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $air-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $air-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $air-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $air-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-airside}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-airside-pro}-platform.jpg');
+        h4 {
+            color: $air-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$aviplan-airside-pro}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $air-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $air-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $air-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $air-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $air-2;
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $air-2;
+                }
+                .form-body {
+                    button {
+                        color: $air-2;
+                        border-color: $air-2;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $air-2;
+                border-color: $air-2;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $air-2;
+            }
+        }
+    }
+}
+
+body.template-product-#{$aviplan-turn} {
+    #body-clients {
+        h5 {
+            color: $air-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($air-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $air-2;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $air-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $air-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $air-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $air-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $air-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $air-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $air-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-platform.jpg');
+        h4 {
+            color: $air-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $air-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $air-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $air-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $air-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $air-2;
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $air-2;
+                }
+                .form-body {
+                    button {
+                        color: $air-2;
+                        border-color: $air-2;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $air-2;
+                border-color: $air-2;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile  {
+            h1, h2, h3, h4, h5, h6 {
+                color: $air-2;
+            }
+        }
+    }
+}
+
+body.template-product-#{$aviplan-turn-pro} {
+    #body-clients {
+        h5 {
+            color: $air-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($air-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $air-2;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $air-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $air-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $air-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $air-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $air-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $air-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $air-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn-pro}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn-pro}-platform.jpg');
+        h4 {
+            color: $air-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn-pro}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $air-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $air-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $air-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$aviplan-turn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $air-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $air-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $air-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $air-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $air-2;
+        }
+        .button {
+            color: $air-2;
+            border-color: $air-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $air-2;
+                }
+                .form-body {
+                    button {
+                        color: $air-2;
+                        border-color: $air-2;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $air-2;
+                border-color: $air-2;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $air-2;
+            }
+        }
+    }
+}
+
+body.template-product-#{$guidesign} {
+    #body-clients {
+        h5 {
+            color: $guidesign-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($guidesign-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $guidesign-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $guidesign-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $guidesign-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $guidesign-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $guidesign-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $guidesign-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $guidesign-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $guidesign-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+        h4 {
+            color: $guidesign-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $guidesign-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $guidesign-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $guidesign-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $guidesign-2;
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $guidesign-1;
+                }
+                .form-body {
+                    button {
+                        color: $guidesign-1;
+                        border-color: $guidesign-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $guidesign-1;
+                border-color: $guidesign-1;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $guidesign-1;
+            }
+        }
+    }
+}
+
+body.template-product-#{$guidesignplus} {
+    #body-clients {
+        h5 {
+            color: $guidesign-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($guidesign-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $guidesign-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $guidesign-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $guidesign-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $guidesign-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $guidesign-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $guidesign-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $guidesign-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $guidesign-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$guidesignplus}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$guidesignplus}-platform.jpg');
+        h4 {
+            color: $guidesign-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$guidesignplus}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $guidesign-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $guidesign-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $guidesign-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $guidesign-2;
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $guidesign-1;
+                }
+                .form-body {
+                    button {
+                        color: $guidesign-1;
+                        border-color: $guidesign-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $guidesign-1;
+                border-color: $guidesign-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $guidesign-1;
+            }
+        }
+    }    
+}
+
+body.template-product-#{$signdesignproqa} {
+    #body-clients {
+        h5 {
+            color: $guidesign-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$signdesignproqa}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($guidesign-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $guidesign-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $guidesign-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $guidesign-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $guidesign-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $guidesign-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $guidesign-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $guidesign-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $guidesign-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$signdesignproqa}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+        h4 {
+            color: $guidesign-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $guidesign-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $guidesign-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $guidesign-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $guidesign-2;
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $guidesign-1;
+                }
+                .form-body {
+                    button {
+                        color: $guidesign-1;
+                        border-color: $guidesign-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $guidesign-1;
+                border-color: $guidesign-1;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $guidesign-1;
+            }
+        }
+    }
+}
+body.template-product-#{$signdesignprouk} {
+    #body-clients {
+        h5 {
+            color: $guidesign-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$signdesignprouk}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($guidesign-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $guidesign-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $guidesign-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $guidesign-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $guidesign-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $guidesign-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $guidesign-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $guidesign-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $guidesign-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$signdesignprouk}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+        h4 {
+            color: $guidesign-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $guidesign-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $guidesign-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $guidesign-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $guidesign-2;
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $guidesign-1;
+                }
+                .form-body {
+                    button {
+                        color: $guidesign-1;
+                        border-color: $guidesign-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $guidesign-1;
+                border-color: $guidesign-1;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $guidesign-1;
+            }
+        }
+    }
+}
+body.template-product-#{$linedesignproqa} {
+    #body-clients {
+        h5 {
+            color: $guidesign-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$linedesignproqa}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($guidesign-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $guidesign-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $guidesign-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $guidesign-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $guidesign-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $guidesign-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $guidesign-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $guidesign-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $guidesign-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$linedesignproqa}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+        h4 {
+            color: $guidesign-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $guidesign-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $guidesign-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $guidesign-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $guidesign-2;
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $guidesign-1;
+                }
+                .form-body {
+                    button {
+                        color: $guidesign-1;
+                        border-color: $guidesign-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $guidesign-1;
+                border-color: $guidesign-1;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $guidesign-1;
+            }
+        }
+    }
+}
+body.template-product-#{$linedesignprouk} {
+    #body-clients {
+        h5 {
+            color: $guidesign-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$linedesignprouk}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($guidesign-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $guidesign-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $guidesign-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $guidesign-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $guidesign-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $guidesign-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $guidesign-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $guidesign-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $guidesign-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$linedesignprouk}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+        h4 {
+            color: $guidesign-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $guidesign-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $guidesign-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$guidesign}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $guidesign-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $guidesign-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $guidesign-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $guidesign-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $guidesign-2;
+        }
+        .button {
+            color: $guidesign-2;
+            border-color: $guidesign-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $guidesign-1;
+                }
+                .form-body {
+                    button {
+                        color: $guidesign-1;
+                        border-color: $guidesign-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $guidesign-1;
+                border-color: $guidesign-1;
+            }
+        }
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $guidesign-1;
+            }
+        }
+    }
+}
+
+body.template-product-#{$nexus} {
+    #body-clients {
+        h5 {
+            color: $nexus-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$nexus}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($nexus-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $nexus-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $nexus-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $nexus-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $nexus-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $nexus-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $nexus-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $nexus-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$nexus}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$nexus}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $nexus-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $nexus-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $nexus-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $nexus-2;
+            border-color: $nexus-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $nexus-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $nexus-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $nexus-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$nexus}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$nexus}-platform.jpg');
+        h4 {
+            color: $nexus-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$nexus}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $nexus-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $nexus-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $nexus-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $nexus-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$nexus}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $nexus-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $nexus-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $nexus-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $nexus-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $nexus-2;
+        }
+        .button {
+            color: $nexus-2;
+            border-color: $nexus-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $nexus-1;
+                }
+                .form-body {
+                    button {
+                        color: $nexus-1;
+                        border-color: $nexus-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $nexus-1;
+                border-color: $nexus-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $nexus-1;
+            }
+        }
+    }    
+}
+
+body.template-product-#{$otiss} {
+    #body-clients {
+        h5 {
+            color: $otiss-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$otiss}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($otiss-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $otiss-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $otiss-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $otiss-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $otiss-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $otiss-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $otiss-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $otiss-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$otiss}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$otiss}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $otiss-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $otiss-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $otiss-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $otiss-2;
+            border-color: $otiss-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $otiss-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $otiss-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $otiss-1;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$otiss}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$otiss}-platform.jpg');
+        h4 {
+            color: $otiss-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$otiss}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $otiss-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $otiss-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $otiss-1;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $otiss-1;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$otiss}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $otiss-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $otiss-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $otiss-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $otiss-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $otiss-2;
+        }
+        .button {
+            color: $otiss-2;
+            border-color: $otiss-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $otiss-1;
+                }
+                .form-body {
+                    button {
+                        color: $otiss-1;
+                        border-color: $otiss-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $otiss-1;
+                border-color: $otiss-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $otiss-1;
+            }
+        }
+    }        
+}
+
+body.template-product-#{$park-cad} {
+    #body-clients {
+        h5 {
+            color: $parkcad-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($parkcad-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $parkcad-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $parkcad-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $parkcad-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $parkcad-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $parkcad-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $parkcad-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $parkcad-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $parkcad-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $parkcad-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $parkcad-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $parkcad-2;
+            border-color: $parkcad-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $parkcad-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $parkcad-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $parkcad-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-platform.jpg');
+        h4 {
+            color: $parkcad-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $parkcad-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $parkcad-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $parkcad-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $parkcad-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$park-cad}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $parkcad-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $parkcad-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $parkcad-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $parkcad-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $parkcad-2;
+        }
+        .button {
+            color: $parkcad-2;
+            border-color: $parkcad-2;
+        }
+    }
+    
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $parkcad-1;
+                }
+                .form-body {
+                    button {
+                        color: $parkcad-1;
+                        border-color: $parkcad-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $parkcad-1;
+                border-color: $parkcad-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $parkcad-1;
+            }
+        }
+    }        
+}
+
+body.template-product-#{$roadcem} {
+    #body-clients {
+        h5 {
+            color: $roadcem-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($roadcem-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $roadcem-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $roadcem-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $roadcem-1;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $roadcem-1;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $roadcem-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $roadcem-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $roadcem-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $roadcem-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $roadcem-1;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $roadcem-1;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $roadcem-1;
+            border-color: $roadcem-1;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $roadcem-1;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $roadcem-1;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $roadcem-1;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-platform.jpg');
+        h4 {
+            color: $roadcem-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $roadcem-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $roadcem-1;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $roadcem-1;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $roadcem-1;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$roadcem}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $roadcem-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $roadcem-1;
+            }
+        }
+        .infobox {
+            a {
+                color: $roadcem-1;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $roadcem-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $roadcem-1;
+        }
+        .button {
+            color: $roadcem-1;
+            border-color: $roadcem-1;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $roadcem-1;
+                }
+                .form-body {
+                    button {
+                        color: $roadcem-1;
+                        border-color: $roadcem-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $roadcem-1;
+                border-color: $roadcem-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $roadcem-1;
+            }
+        }
+    }         
+}
+
+body.template-product-#{$sigma} {
+    #body-clients {
+        h5 {
+            color: $sigma-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$sigma}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($sigma-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $sigma-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $sigma-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $sigma-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $sigma-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $sigma-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #page-library-select {
+        background-image: url($img-path + 'bg/product-#{$sigma}-platform.jpg');
+
+        .product-choose {
+            h5 {
+                color: $sigma-2;
+            }
+        }
+        
+        .product-select {
+            h4 {
+                color: $sigma-1;
+            }
+        }
+
+        .button {
+            border-color: $sigma-2;
+            color: $sigma-2;
+        }
+    }
+
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $sigma-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $sigma-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$sigma}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$sigma}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $sigma-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $sigma-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $sigma-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $sigma-2;
+            border-color: $sigma-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $sigma-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $sigma-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $sigma-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$sigma}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$sigma}-platform.jpg');
+        h4 {
+            color: $sigma-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$sigma}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $sigma-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $sigma-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $sigma-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $sigma-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$sigma}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $sigma-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $sigma-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $sigma-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $sigma-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $sigma-2;
+        }
+        .button {
+            color: $sigma-2;
+            border-color: $sigma-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $sigma-1;
+                }
+                .form-body {
+                    button {
+                        color: $sigma-1;
+                        border-color: $sigma-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $sigma-1;
+                border-color: $sigma-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $sigma-1;
+            }
+        }
+    }         
+}
+
+body.template-product-#{$sitecem} {
+    #body-clients {
+        h5 {
+            color: $sitecem-1;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($sitecem-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $sitecem-1;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $sitecem-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $sitecem-1;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $sitecem-1;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $sitecem-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $sitecem-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $sitecem-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $sitecem-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $sitecem-1;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $sitecem-1;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $sitecem-1;
+            border-color: $sitecem-1;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $sitecem-1;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $sitecem-1;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $sitecem-1;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-platform.jpg');
+        h4 {
+            color: $sitecem-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $sitecem-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $sitecem-1;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $sitecem-1;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $sitecem-1;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$sitecem}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $sitecem-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $sitecem-1;
+            }
+        }
+        .infobox {
+            a {
+                color: $sitecem-1;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $sitecem-2;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $sitecem-1;
+        }
+        .button {
+            color: $sitecem-1;
+            border-color: $sitecem-1;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $sitecem-1;
+                }
+                .form-body {
+                    button {
+                        color: $sitecem-1;
+                        border-color: $sitecem-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $sitecem-1;
+                border-color: $sitecem-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $sitecem-1;
+            }
+        }
+    }         
+}
+
+body.template-product-#{$torus} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $torus-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $torus-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$torus}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($torus-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $torus-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $torus-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $torus-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $torus-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $torus-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $torus-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $torus-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$torus}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$torus}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $torus-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $torus-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $torus-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $torus-2;
+            border-color: $torus-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $torus-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $torus-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $torus-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$torus}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$torus}-platform.jpg');
+        h4 {
+            color: $torus-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$torus}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $torus-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $torus-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $torus-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $torus-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$torus}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $torus-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $torus-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $torus-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $torus-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $torus-2;
+        }
+        .button {
+            color: $torus-2;
+            border-color: $torus-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $torus-1;
+                }
+                .form-body {
+                    button {
+                        color: $torus-1;
+                        border-color: $torus-1;
+                    }
+                }
+            }
+        }
+        #seo-form-mobile {        
+            button {
+                color: $torus-1;
+                border-color: $torus-1;
+            }
+        }
+
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $torus-1;
+            }
+        }
+    }         
+}
+
+body.template-product-#{$vehicle-turning-templates} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $vehicle-turning-templates-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $vehicle-turning-templates-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($vehicle-turning-templates-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $vehicle-turning-templates-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $vehicle-turning-templates-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $vehicle-turning-templates-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $vehicle-turning-templates-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $vehicle-turning-templates-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $vehicle-turning-templates-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $vehicle-turning-templates-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $vehicle-turning-templates-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $vehicle-turning-templates-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $vehicle-turning-templates-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $vehicle-turning-templates-2;
+            border-color: $vehicle-turning-templates-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $vehicle-turning-templates-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $vehicle-turning-templates-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $vehicle-turning-templates-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$vehicle-turning-templates}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+        h4 {
+            color: $vehicle-turning-templates-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+        ul {
+            li {
+                &:before {
+                    color: $vehicle-turning-templates-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $vehicle-turning-templates-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $vehicle-turning-templates-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $vehicle-turning-templates-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $vehicle-turning-templates-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $vehicle-turning-templates-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $vehicle-turning-templates-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $vehicle-turning-templates-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $vehicle-turning-templates-2;
+        }
+        .button {
+            color: $vehicle-turning-templates-2;
+            border-color: $vehicle-turning-templates-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $vehicle-turning-templates-1;
+                }
+                .form-body {
+                    button {
+                        color: $vehicle-turning-templates-1;
+                        border-color: $vehicle-turning-templates-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $vehicle-turning-templates-1;
+                border-color: $vehicle-turning-templates-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $vehicle-turning-templates-1;
+            }
+        }
+    }           
+}
+
+
+body.template-product-#{$arcport} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $arcport-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $arcport-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$arcport}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($arcport-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $arcport-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $arcport-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $arcport-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $arcport-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $arcport-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $arcport-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $arcport-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$arcport}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$arcport}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $arcport-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $arcport-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $arcport-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $arcport-2;
+            border-color: $arcport-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $arcport-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $arcport-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $arcport-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$arcport}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$arcport}-platform.jpg');
+        h4 {
+            color: $arcport-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$arcport}-platform.jpg');
+        ul {
+            li {
+                &:before {
+                    color: $arcport-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $arcport-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $arcport-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $arcport-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$arcport}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $arcport-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $arcport-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $arcport-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $arcport-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $arcport-2;
+        }
+        .button {
+            color: $arcport-2;
+            border-color: $arcport-2;
+        }
+    }
+
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $arcport-1;
+                }
+                .form-body {
+                    button {
+                        color: $arcport-1;
+                        border-color: $arcport-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $arcport-1;
+                border-color: $arcport-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $arcport-1;
+            }
+        }
+    }               
+}
+
+
+
+body.template-product-#{$skysafe} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $skysafe-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $skysafe-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($skysafe-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $skysafe-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $skysafe-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $skysafe-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $skysafe-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $skysafe-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $skysafe-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $skysafe-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $skysafe-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $skysafe-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $skysafe-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $skysafe-2;
+            border-color: $skysafe-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $skysafe-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $skysafe-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $skysafe-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-platform.jpg');
+        h4 {
+            color: $skysafe-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-platform.jpg');
+        ul {
+            li {
+                &:before {
+                    color: $skysafe-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $skysafe-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $skysafe-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $skysafe-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$skysafe}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $skysafe-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $skysafe-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $skysafe-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $skysafe-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $skysafe-2;
+        }
+        .button {
+            color: $skysafe-2;
+            border-color: $skysafe-2;
+        }
+    }
+
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $skysafe-1;
+                }
+                .form-body {
+                    button {
+                        color: $skysafe-1;
+                        border-color: $skysafe-1;
+                    }
+                }
+            }
+        }
+
+        #seo-content1, #seo-content3 {
+            h1, h2, h3, h4, h5, h6 {
+                color: $skysafe-1;
+            }
+        }
+    }                   
+}
+
+
+body.template-product-#{$standard-vehicle-library}, body.template-product-#{$extended-vehicle-library} {
+    #page-industry-marketing {
+        h4,
+        h5 {
+            color: $autoturn-2;
+        }
+    }
+    #body-clients {
+        h5 {
+            color: $autoturn-2;
+            text-transform: uppercase;
+        }
+    }
+    #page-header {
+        background-image: url($img-path + 'bg/product-#{$standard-vehicle-library}-header.jpg');
+        #navigation-bar {
+            background-color: rgba($autoturn-1, 0.5);
+        }
+
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-header-stripe {
+        h5 {
+            color: $autoturn-1;
+        }
+    }
+    #page-opening {
+        > .container {
+            .table-of-contents {
+                table {
+                    td {
+                        a {
+                            &:hover,
+                            &:active,
+                            &:focus,
+                            &.active {
+                                color: $autoturn-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .intro-copy {
+                h4 {
+                    color: $autoturn-2;
+                }
+                ul {
+                    li {
+                        &:before {
+                            color: $autoturn-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #page-library-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+
+        .product-choose {
+            h5 {
+                color: $autoturn-2;
+            }
+        }
+        
+        .product-select {
+            h4 {
+                color: $autoturn-1;
+            }
+        }
+
+        .button {
+            border-color: $autoturn-2;
+            color: $autoturn-2;
+        }
+    }
+
+    #page-overview-video {
+        .container {
+            .thumbnail-description {
+                h5 {
+                    &.title {
+                        color: $autoturn-2;
+                    }
+                }
+                .linkout {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #body-testimonials {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-cta.jpg');
+        .container {
+            h5 {
+                color: $gray-1;
+            }
+            h6 {
+                color: $gray-1;
+            }
+        }
+    }
+    #page-feature-select {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-featureselect.jpg');
+    }
+    #page-features-rows {
+        .feature-row {
+            .feature-text {
+                h5 {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    #page-overview-features {
+        h4 {
+            color: $autoturn-2;
+        }
+        .feature-row {
+            > .row {
+                .feature-cell {
+                    h5 {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+        .button {
+            color: $autoturn-2;
+            border-color: $autoturn-2;
+        }
+    }
+    #page-support {
+        h5 {
+            color: $autoturn-2;
+        }
+        .support-block {
+            > a {
+                &:hover,
+                &:focus,
+                &:active {
+                    h6 {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-instructions {
+        > .container {
+            color: $autoturn-2;
+        }
+    }
+    #page-freetrialform {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-body.jpg');
+    }
+    #page-platform {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+        h4 {
+            color: $autoturn-2;
+        }
+    }
+    #page-industry-marketing {
+        background-image: url($img-path + 'bg/product-#{$autoturn}-platform.jpg');
+
+        ul {
+            li {
+                &:before {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    .page-case-studies {
+        .casestudy-row {
+            .casestudy-cell {
+                h5 {
+                    color: $autoturn-2;
+                }
+            }
+        }
+    }
+    #page-comparison-tabs {
+        .comparison-tab {
+            &.active,
+            &:hover {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-comparison-grid {
+        table {
+            thead {
+                td {
+                    &:not(:first-child) {
+                        color: $autoturn-2;
+                    }
+                }
+            }
+        }
+    }
+    #page-cta {
+        background-image: url($img-path + 'bg/product-#{$standard-vehicle-library}-cta.jpg');
+        .button {
+            &:hover, &:focus, &:active {
+                color: $autoturn-2;
+            }
+        }
+    }
+    #page-help {
+        .infobox-title {
+            h5 {
+                color: $autoturn-2;
+            }
+        }
+        .infobox {
+            a {
+                color: $autoturn-2;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $autoturn-1;
+                }
+            }
+        }
+    }
+    #page-form-buynow {
+        h5 {
+            color: $autoturn-2;
+        }
+        .button {
+            color: $autoturn-2;
+            border-color: $autoturn-2;
+        }
+    }
+
+    &.template-seo {
+        #seo-form-overlay {
+            .form-box {
+                .form-header {
+                    color: $autoturn-1;
+                }
+                .form-body {
+                    button {
+                        color: $autoturn-1;
+                        border-color: $autoturn-1;
+                    }
+                }
+            }
+        }
+
+        #seo-form-mobile {        
+            button {
+                color: $arcport-1;
+                border-color: $arcport-1;
+            }
+        }
+
+        #seo-content1, #seo-content3, #seo-form-mobile {
+            h1, h2, h3, h4, h5, h6 {
+                color: $autoturn-1;
+            }
+        }
+    }       
+}

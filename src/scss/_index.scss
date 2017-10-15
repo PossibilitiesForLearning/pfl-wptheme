@@ -1,0 +1,158 @@
+.body-index {
+
+    #image-background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url($img-path + "bg-person2.png") no-repeat right top fixed; 
+        opacity: 0.8;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        #image-background {
+            opacity: 0.4!important;
+        }
+    }
+
+    #index-background {    
+        top: 0px;
+        overflow: hidden;
+        width:100%;
+
+
+        .color-block {
+            height: 600px;
+            width: 200%;
+            margin-left: -50%;
+
+            &.block1 {
+                transform: rotate(-20deg);     
+                margin-top: -500px;   
+                background: url($img-path + "background-1.jpg"); 
+                background-size: cover;
+                opacity: 0.95;
+            }
+            
+            &.block2 {
+                transform: rotate(-20deg);     
+                margin-top: 700px;   
+                background: url($img-path + "background-1.jpg"); 
+                background-size: cover;
+                opacity: 0.5;
+            }
+            &.block3 {
+                transform: rotate(20deg);     
+                background-color: rgba($light-2, 1);
+                margin-top: -60px;
+                background-size: cover;
+                opacity: 0.95;
+            }
+        }
+    }
+
+    #primary {
+        position: absolute;
+        top: 180px;
+
+        .hero {
+            @include font-title;
+            font-size: 48px;
+
+            em {
+                font-size: 60px;
+                font-style: normal;
+            }
+            .secondary {
+                color: $secondary-2;
+            }
+        }
+
+        .tagline {
+            margin-top: 140px;
+            font-size: 30px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 60px;
+            margin-bottom: 80px;
+
+            p {
+                margin-bottom: 80px;            
+            }
+
+            em {
+                //text-decoration: underline;
+                font-weight: 400;
+            }
+        }
+
+        .image-block {
+            //height: 240px;
+            background-size: cover;
+            margin-bottom: 40px;
+
+            
+            @media (max-width: $screen-sm-max) {
+
+                .white-block {
+                    .description {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .white-block {
+                background-color: rgba($light-1, 0.95);
+                //height: 60%;
+                margin: 5% 20% 0 -20%;
+                padding-bottom: 30px;
+                cursor: pointer;
+                transition: 0.5s;
+
+                .feature {
+                    font-style: italic;
+                    font-size: 40px;
+                    margin-left: -15%;
+                    padding-top: 20px;
+                }
+
+                .description {
+                    padding: 30px 200px 10px 40px;
+                    font-size: 24px;
+                    line-height: 48px;
+                    font-weight: 300;
+
+                    strong {
+                        font-weight: 400;
+                    }
+                }
+
+                
+
+                &:hover {                
+                    background-color: rgba($primary-1, 0.95);                            
+                    -webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+                    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.5);
+
+                    .feature {
+                        color: black;
+                    }
+                    .description {
+                        color: $light-1;
+                    }
+                }
+            }
+
+            &.block1 {
+                background-image: url($img-path + "feature-1.jpg");
+            }
+            &.block2 {
+                background-image: url($img-path + "feature-2.jpg");
+            }
+            &.block3 {
+                background-image: url($img-path + "feature-3.jpg");
+            }
+        }
+    }
+
+}
