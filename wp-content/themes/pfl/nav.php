@@ -7,7 +7,7 @@
                 <li>Strengths</li>
             </ul>
         </div>
-        <div class="container-logo"><img src="<?= img_path() ?>logo.png"></div>
+        <div class="container-logo"><img src="/wp-content/themes/pfl/images/logo.png"></div>
         <div class="navbar-items navbar-rightside hidden-xs">
             <ul>
                 <li>Resources</li>
