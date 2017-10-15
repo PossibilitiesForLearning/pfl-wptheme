@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<div id="main">
 
-		<div id="image-background">
+		<div id="image-background" style="background-image: url('<?=bgRandom()?>');">
 
 		</div>
 
@@ -28,10 +28,10 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div class="container-fluid breadcrumb-container hidden-sm">
+		<div class="container-fluid breadcrumb-container hidden-xs hidden-sm">
 			<div class="row breadcrumb-row">				
 				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
-						<?php custom_breadcrumbs(); ?>
+					<?php custom_breadcrumbs(); ?>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,8 @@
 <div class="navbar navbar-fixed-top">
     <div class="container">
-        <div class="navbar-items navbar-leftside hidden-xs">
+        <div class="navbar-mobile navbar-mobile-leftside hidden-md hidden-lg">
+</div>
+        <div class="navbar-items navbar-leftside hidden-xs hidden-sm">
             <ul>
                 <li>Home</li>
                 <li class="active">Differentiation</li>
@@ -8,13 +10,16 @@
             </ul>
         </div>
         <div class="container-logo"><img src="/wp-content/themes/pfl/images/logo.png"></div>
-        <div class="navbar-items navbar-rightside hidden-xs">
+        <div class="navbar-items navbar-rightside hidden-xs hidden-sm">
             <ul>
                 <li>Resources</li>
                 <li>About</li>
                 <li>Search</li>
             </ul>
         </div>
+        <div class="navbar-mobile navbar-mobile-rightside hidden-md hidden-lg pull-right">
+            <img src="/wp-content/themes/pfl/images/hamburger.png" height="32" width="32"></img>
+</div>
     </div>
     <!-- container -->
 </div>

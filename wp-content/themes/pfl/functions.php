@@ -1,4 +1,8 @@
 <?php
+
+function bgRandom() {
+	return "/wp-content/themes/pfl/images/bg-person" . rand(1,4) . ".png";
+}
 // Breadcrumbs
 function custom_breadcrumbs() {
 	

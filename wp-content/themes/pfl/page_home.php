@@ -1,3 +1,4 @@
+<?php /* Template name: Homepage */ ?>
 <?php
 /**
  * Template for displaying all pages
@@ -75,7 +76,6 @@ get_header(); ?>
 					<div class="feature">How do they want to learn?</div>
 					<div class="description">Students can complete the <strong>interactive survey to identify their favourite types of differentiation</strong>.  Students and their teachers can design activities, large and small, that involve them so their learning is personalized.</div>
 				</div>
-
 			</div>
 		</div>
 
