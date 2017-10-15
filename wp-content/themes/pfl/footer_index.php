@@ -1,10 +1,10 @@
 <div class="footer row">
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-6 col-sm-4 col-md-3">
                 <img src="/wp-content/themes/pfl/images/logo.png">
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-sm-4 col-md-6">
                 <ul>
                     <li class="main">INTRODUCTION</li>
                     <li class="main">LEARNING</li>
@@ -22,7 +22,7 @@
                     <li class="main">ABOUT</li>
                 </ul>
             </div>
-            <div class="col-xs-6 col-md-3"><img src="https://licensebuttons.net/l/by/3.0/88x31.png" alt="" width="88" height="31"><br/><br/>
+            <div class="col-xs-6 col-sm-4 col-md-3"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc/3.0/88x31.png" alt="" width="88" height="31"></a><br/><br/>
             <em>Creative Commons</em><br/><br/><em>Possibilities for Learning</em>
             </div>
         </div>

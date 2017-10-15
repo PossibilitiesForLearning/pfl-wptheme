@@ -52,6 +52,10 @@
             &.navbar-mobile {
                 width: 32px;
                 margin-top: 14px;
+
+                .mobile-menu {
+                    cursor: pointer;
+                }
             }
 
             &.links {

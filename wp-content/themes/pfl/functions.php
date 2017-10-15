@@ -1,5 +1,9 @@
 <?php
 
+function getThemePath() {
+	return "./wp-content/themes/pfl/";
+}
+
 function bgRandom() {
 	return "/wp-content/themes/pfl/images/bg-person" . rand(1,4) . ".png";
 }
