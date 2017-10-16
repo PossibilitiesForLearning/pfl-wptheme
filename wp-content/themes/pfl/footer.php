@@ -17,12 +17,20 @@
 
 
 	<?php wp_footer(); ?>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	    crossorigin="anonymous"></script>
+	<script
+	src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	    crossorigin="anonymous"></script>
-	<script src="/wp-content/themes/pfl/js/parallax.min.js"></script>
+		crossorigin="anonymous"></script>
+	<script src="<?=getThemePath()?>/matrixApp/libs/angular_1.3.9.js"></script>
+	<script src="<?=getThemePath()?>/matrixApp/libs/moment.min.js"></script>
+	<script src="<?=getThemePath()?>/matrixApp/libs/jquery-ui.min.js"></script>
+	<script src="<?=getThemePath()?>/matrixApp/libs/alasql.min.js"></script>
+
+	<script src="<?=getThemePath()?>/matrixApp/libs/angularPrint.js"></script>
+
 	<script src="/wp-content/themes/pfl/js/scripts.min.js"></script>
 	</body>
 

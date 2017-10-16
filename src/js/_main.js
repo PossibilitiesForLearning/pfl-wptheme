@@ -4,7 +4,7 @@ $( document ).ready(function() {
     $(document).scroll(function() {
         var newOpacity = 0.8 - (0.8 * ($(document).scrollTop() / $(window).height()));
         $("#image-background").css("opacity", newOpacity);
-        $(".color-block.block2").css("opacicty", 1- newOpacity);
+        $(".color-block.block2").css("opacity", 1- newOpacity);
     });
 
     $(".navbar-items li").click(function() {

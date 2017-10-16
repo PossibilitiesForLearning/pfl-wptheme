@@ -13,26 +13,8 @@ get_header(); ?>
 
 <!-- BEGINING OF HTML PAGE -->
 
-	<link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/angularPrint.css">
-    <link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/bootstrap.min.css">
-	<link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/font-awesome.min.css">
-	<link rel="stylesheet" href="<?=getThemePath()?>/matrixApp/libs/jquery-ui.css">
-
 	
     <style>
-        html {
-        height: 100%;
-        width: 100%;
-        padding: 40px;		
-        }
-
-
-        .row {
-             width: 100%;
-             //text-align: center; 
-             vertical-align:top;
-        } 
-
  
         .saveBar {
             padding: 5px;
@@ -162,13 +144,48 @@ input:checked + .slider:before {
 
     <style>
         body {
-            font-size:11px !important;
-            padding: 10px;
+            
 			font-family: "Comic Sans MS", "Comic Sans", cursive;
         }
     </style>
 
-<body ng-cloak ng-controller="pflMatrixController" ng-app='pflMatrixApp' style="max-width:1100">
+<body ng-cloak ng-controller="pflMatrixController" ng-app='pflMatrixApp' class="body-content body-matrix">
+	
+<?php include 'nav.php';?>
+
+<div id="main">
+	<div id="image-background" style="background-image: url('<?=bgRandom()?>');">
+
+	</div>
+
+	<div id="content-background">
+		<div class="color-block block1">
+
+		</div>
+		<div class="color-block block2">
+
+		</div>
+		<div class="color-block block3">
+
+		</div>
+	</div>
+
+	<div class="container-fluid breadcrumb-container hidden-xs hidden-sm">
+		<div class="row breadcrumb-row">				
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+				<?php custom_breadcrumbs(); ?>
+			</div>
+		</div>
+	</div>
+
+	<div id="primary" class="container-fluid">
+
+	<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero">
+					<em><?php the_title(); ?></em>
+				</div>
+			</div>
+			
 	<div id="helpDialog" title="Pfl Matrix - Instructions" style="display:none;background-color:beige;font-size:13px;font-family: 'Comic Sans MS', 'Comic Sans', cursive;" print-remove>
 			<ol ng-show="language=='default_en'">
 			<li>Print a copy of the Brilliant Behaviours to record the behaviours that appear. Use either an individual checklist, group checklist, or a copy of the Guide.</li>
@@ -373,7 +390,7 @@ input:checked + .slider:before {
 
 <div class="pageBreak"></div>
 
-<div style="color:white;margin-top:100px;" print-section>
+<div style="color:white;margin-top:100px;" print-section class="printOnly">
 	</br></br></br></br>
 	<span>Behaviours</span><br>
 	<ul>
@@ -407,23 +424,19 @@ input:checked + .slider:before {
 	</ul>			
 </div>
 
+			</div>
 
+			</div>
 
 	</body>
 
-<script src="<?=getThemePath()?>/matrixApp/libs/jquery.min.js"></script>
-<script src="<?=getThemePath()?>/matrixApp/libs/bootstrap.min.js"></script>
-<script src="<?=getThemePath()?>/matrixApp/libs/angular_1.3.9.js"></script>
-<script src="<?=getThemePath()?>/matrixApp/libs/jquery-ui.min.js"></script>
-<script src="<?=getThemePath()?>/matrixApp/libs/alasql.min.js"></script>
-<script src="<?=getThemePath()?>/matrixApp/libs/moment.min.js"></script>
-<script src="<?=getThemePath()?>/matrixApp/libs/angularPrint.js"></script>
+	<?php get_footer(); ?>
 
-<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/static.content/indicator.matrix.js"></script>
-<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.js"></script>
-<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.controller.js"></script>
-<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.service.js"></script>
-	
+	<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/static.content/indicator.matrix.js"></script>
+	<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.js"></script>
+	<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.controller.js"></script>
+	<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.service.js"></script>
+
 
 
 <!-- END OF HTML PAGE -->
