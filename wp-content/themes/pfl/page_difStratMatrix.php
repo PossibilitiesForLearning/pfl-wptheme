@@ -142,13 +142,6 @@ input:checked + .slider:before {
 }​
     </style>
 
-    <style>
-        body {
-            
-			font-family: "Comic Sans MS", "Comic Sans", cursive;
-        }
-    </style>
-
 <body ng-cloak ng-controller="pflMatrixController" ng-app='pflMatrixApp' class="body-content body-matrix">
 	
 <?php include 'nav.php';?>
@@ -180,38 +173,40 @@ input:checked + .slider:before {
 
 	<div id="primary" class="container-fluid">
 
-	<div class="row">
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero">
-					<em><?php the_title(); ?></em>
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero">
+				<em><?php the_title(); ?>
+			<i class="fa fa-info-circle" aria-hidden="true" ng-click="showHelp();"></i>	</em>
+			</div>
+		</div>
+
+		<div class="row content-row">
+
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 subtitle">
+				Teacher/Parent
+				<label class="switch" style="top:7px;">
+					<input type="checkbox" ng-model="isStudentText" ng-click="setLanguage(isStudentText);">
+					<div class="slider round"></div>
+				</label>
+				Student	
+			</div>
+
+			<div class="container">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 content-body">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+				<?php echo the_content();?>
+
+				<?php endwhile; endif; ?>
 				</div>
 			</div>
-			
-	<div id="helpDialog" title="Pfl Matrix - Instructions" style="display:none;background-color:beige;font-size:13px;font-family: 'Comic Sans MS', 'Comic Sans', cursive;" print-remove>
-			<ol ng-show="language=='default_en'">
-			<li>Print a copy of the Brilliant Behaviours to record the behaviours that appear. Use either an individual checklist, group checklist, or a copy of the Guide.</li>
-			<li>Record the information required information about the student and activity or activities at the top of the form.</li>
-			<li>Observe a student while she or he is engaged in a challenging activity in an area of strength or interest. Click here to see a description of suitable activities.</li>
-			<li>Put a check to the left of each Brilliant Behaviour the student demonstrates frequently, intensely and consistently.</li>
-			<li>Transfer the student information and behaviours observed from the Brilliant Behaviours form to the Guide online. The Guide will change the Xs to the right of each behaviour you check into <i class="fa fa-check-circle-o" aria-hidden="true"></i>.</li>
-			<li>The Guide will also highlight the differentiation strategies to emphasize for this student when she or he is working in this area of strength or interest.</li>
-			<li>The definition of each behaviour and strategy will appear when the cursor rests on it. Read the definitions for each of the strategies recommended by the Guide. Do they seem appropriate?</li>
-		</ol>
-
-			<ol ng-show="language=='kids_en'">
-			<li>Fill in the information at the top of the form.</li>
-			<li>Read the list of Behaviours in the form. Let the cursor rest on the name of a behaviour and a description of it will appear. Click here if you want more information about any of them.</li>
-			<li>Do you experience any of those behaviours when you are learning something challenging about a topic you love? Put a check mark (v) in the column to the left of each Behaviour that is consistently, intensely true of you while you’re learning something fascinating.</li>
-			<li>Now look at the names of the strategies the Guide is recommending for you. They will be highlighted in green. A brief definition for each strategy will appear if you put your cursor over the name. Click on the name if you want more information and examples. The Guide thinks activities like that involve the strategies highlighted in green will challenge you in ways you’ll like when you are learning about your favourite topic. Do you agree with some or all of what the Guide has recommended?</li>
-			<li>Share your Guide and the results with your teacher.</li>			
-			</ol>
-	</div>
-
+		</div>
+		
 <div class="panel panel-default" print-remove>
   <div class="panel-heading">
 	<div class="row">
 		<div class="col-sm-3">
-			Differentiation Strategy Guide
-			<i class="fa fa-info-circle" aria-hidden="true" ng-click="showHelp();"></i>			
+			Differentiation Strategy Guide		
 		</div>
 		<div class="col-sm-4">			
 			<div style="float:right;">
@@ -424,11 +419,31 @@ input:checked + .slider:before {
 	</ul>			
 </div>
 
-			</div>
+
 
 			</div>
 
-	</body>
+			</div>
+
+			<div id="helpDialog" title="Pfl Matrix - Instructions" style="display:none;background-color:beige;font-size:13px;font-family: 'Comic Sans MS', 'Comic Sans', cursive;" print-remove>
+			<ol ng-show="language=='default_en'">
+			<li>Print a copy of the Brilliant Behaviours to record the behaviours that appear. Use either an individual checklist, group checklist, or a copy of the Guide.</li>
+			<li>Record the information required information about the student and activity or activities at the top of the form.</li>
+			<li>Observe a student while she or he is engaged in a challenging activity in an area of strength or interest. Click here to see a description of suitable activities.</li>
+			<li>Put a check to the left of each Brilliant Behaviour the student demonstrates frequently, intensely and consistently.</li>
+			<li>Transfer the student information and behaviours observed from the Brilliant Behaviours form to the Guide online. The Guide will change the Xs to the right of each behaviour you check into <i class="fa fa-check-circle-o" aria-hidden="true"></i>.</li>
+			<li>The Guide will also highlight the differentiation strategies to emphasize for this student when she or he is working in this area of strength or interest.</li>
+			<li>The definition of each behaviour and strategy will appear when the cursor rests on it. Read the definitions for each of the strategies recommended by the Guide. Do they seem appropriate?</li>
+		</ol>
+
+			<ol ng-show="language=='kids_en'">
+			<li>Fill in the information at the top of the form.</li>
+			<li>Read the list of Behaviours in the form. Let the cursor rest on the name of a behaviour and a description of it will appear. Click here if you want more information about any of them.</li>
+			<li>Do you experience any of those behaviours when you are learning something challenging about a topic you love? Put a check mark (v) in the column to the left of each Behaviour that is consistently, intensely true of you while you’re learning something fascinating.</li>
+			<li>Now look at the names of the strategies the Guide is recommending for you. They will be highlighted in green. A brief definition for each strategy will appear if you put your cursor over the name. Click on the name if you want more information and examples. The Guide thinks activities like that involve the strategies highlighted in green will challenge you in ways you’ll like when you are learning about your favourite topic. Do you agree with some or all of what the Guide has recommended?</li>
+			<li>Share your Guide and the results with your teacher.</li>			
+			</ol>
+	</div>
 
 	<?php get_footer(); ?>
 
@@ -437,6 +452,7 @@ input:checked + .slider:before {
 	<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.controller.js"></script>
 	<script type="text/javascript" src="<?=getThemePath()?>/matrixApp/app/pflMatrixApp.service.js"></script>
 
+	</body>
 
 
 <!-- END OF HTML PAGE -->
