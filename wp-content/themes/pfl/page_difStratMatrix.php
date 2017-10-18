@@ -15,15 +15,7 @@ get_header(); ?>
 
 	
     <style>
- 
-        .saveBar {
-            padding: 5px;
-            background-color:white;
-        }
-        .saveBar button{
-            padding: 5px;
-        }
-		
+ 		
 		.matrixTable td{
 			border: 1px solid #ccc;
 			background-color:white;	
@@ -82,64 +74,6 @@ get_header(); ?>
 			
 		}		
 
-		/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 17px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {display:none;}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 17px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}​
     </style>
 
 <body ng-cloak ng-controller="pflMatrixController" ng-app='pflMatrixApp' class="body-content body-matrix">
@@ -147,7 +81,7 @@ input:checked + .slider:before {
 <?php include 'nav.php';?>
 
 <div id="main">
-	<div id="image-background" style="background-image: url('<?=bgRandom()?>');">
+	<div id="image-background" style="background-image: url('<?= bgRandom() ?>');">
 
 	</div>
 
@@ -175,115 +109,72 @@ input:checked + .slider:before {
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero">
-				<em><?php the_title(); ?>
-			<i class="fa fa-info-circle" aria-hidden="true" ng-click="showHelp();"></i>	</em>
+				<em><?php the_title(); ?></em>
 			</div>
 		</div>
 
-		<div class="row content-row">
+		<div class="row content-row settings-row ">
 
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 subtitle">
-				Teacher/Parent
-				<label class="switch" style="top:7px;">
+			<div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 toggle-row">
+				<span class="sku" ng-class="{'active' : language=='default_en'}">Teacher/Parent</span>
+				<label class="switch">
 					<input type="checkbox" ng-model="isStudentText" ng-click="setLanguage(isStudentText);">
 					<div class="slider round"></div>
 				</label>
-				Student	
+				<span class="sku" ng-class="{'active' : language=='kids_en'}">Student</span>
 			</div>
 
-			<div class="container">
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1 content-body">
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-				<?php echo the_content();?>
-
-				<?php endwhile; endif; ?>
-				</div>
-			</div>
-		</div>
-		
-<div class="panel panel-default" print-remove>
-  <div class="panel-heading">
-	<div class="row">
-		<div class="col-sm-3">
-			Differentiation Strategy Guide		
-		</div>
-		<div class="col-sm-4">			
-			<div style="float:right;">
-				Teacher/Parent Version
-				<label class="switch" style="top:7px;">
-					<input type="checkbox" ng-model="isStudentText" ng-click="setLanguage(isStudentText);">
-					<div class="slider round"></div>
-				</label>
-				Student Version				
-			</div>
-		</div>		
-		<div class="col-sm-5">			
-			<div style="float:right;">
-				<button class="btn btn-info btn-sm fa fa-save" ng-click="savePflMatrix();">&nbsp;Save</button>
-				<label for="file-input" class="btn btn-info btn-sm fa fa-folder-open" >&nbsp;Open</label>				
+			<div class="col-xs-12 col-sm-5 col-md-5 text-right button-row">
+				<div class="instructions" ng-click="showHelp();">Instructions</div>	
+				<button class="btn" ng-click="savePflMatrix();">Save</button>
+				<label for="file-input" class="btn" >Load</label>				
 				<input type="file" id="file-input" style="display:none;">
-				<button class="btn btn-info btn-sm fa fa-print" print-btn >&nbsp;Print</button>
+				<button class="btn" print-btn >Print</button>
 			</div>
-		</div>				
-	</div>
-  </div>  
-</div>
+		</div>
 
-<div class="panel panel-default" print-remove>
-  <div class="panel-heading">
-	<div class="row">
-		<div class="col-sm-6">Information</div>
-		<div class="col-sm-6">			
-			<div style="float:right;" ng-init="showInfoForm=true;">
-				<i class="fa fa-caret-up" aria-hidden="true" ng-show="showInfoForm" ng-click="showInfoForm=false;"></i>
-				<i class="fa fa-caret-down" aria-hidden="true" ng-show="!showInfoForm" ng-click="showInfoForm=true;"></i>
-			</div>
-		</div>		
-	</div>
-  </div>
-  <div class="panel-body" ng-show="showInfoForm">
-	<div class='row'>
-		<div class='col-sm-4'>
-			<div class="form-group row">
-				<label for="pflName" class="col-form-label">Name</label>
-				<input class="form-control" type="text" id="pflName" ng-model="userInfo.pflName">
-			</div>
-		</div>
-		<div class='col-sm-4'>
-			<div class="form-group row">
-				<label for="pflGrade" class="col-form-label">Grade</label>
-				<input class="form-control" type="number" id="pflGrade" ng-model="userInfo.pflGrade">
-			</div>
-		</div>		
-		<div class='col-sm-4'>
-			<div class="form-group row">
-				<label for="pflDate" class="col-form-label">Date</label>
-				<input class="form-control" type="date" id="pflDate" ng-model="userInfo.pflDate">
-			</div>
-		</div>				
-	</div>
-	<div class='row'>
-		<div class='col-sm-12'>
-			<div class="form-group row">
-				<label for="pflStrengths" class="col-form-label" ng-show="language=='default_en'">Strengths:</label>
-				<label for="pflStrengths" class="col-form-label" ng-show="language=='kids_en'">Things you LOVE to learn about: </label>
-				<textarea class="form-control span6" rows="3" id="pflStrengths" ng-model="userInfo.pflStrengths"></textarea>
-			</div>
-		</div>
-	</div>
-	<div class='row' ng-show="language=='default_en'">  
-		<div class='col-sm-12'>
-			<div class="form-group row">
-				<label for="pflEvidence" class="col-form-label" >Dates and descriptions of activities observed:</label>
-				<textarea class="form-control span6" rows="3" id="pflEvidence" ng-model="userInfo.pflEvidence"></textarea>
+		<div class="row content-row form-row container-fluid">		
+			
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+				<div class='row'>
+					<div class='col-sm-4'>
+						<div class="form-group row">
+							<label for="pflName" class="col-form-label">Name</label>
+							<input class="form-control" type="text" id="pflName" ng-model="userInfo.pflName">
+						</div>
+					</div>
+					<div class='col-sm-4'>
+						<div class="form-group row">
+							<label for="pflGrade" class="col-form-label">Grade</label>
+							<input class="form-control" type="number" id="pflGrade" ng-model="userInfo.pflGrade">
+						</div>
+					</div>		
+					<div class='col-sm-4'>
+						<div class="form-group row">
+							<label for="pflDate" class="col-form-label">Date</label>
+							<input class="form-control" type="date" id="pflDate" ng-model="userInfo.pflDate">
+						</div>
+					</div>				
+				</div>
+				<div class='row'>
+						<div class='col-sm-12'>
+							<div class="form-group row">
+								<label for="pflStrengths" class="col-form-label" ng-show="language=='default_en'">Strengths</label>
+								<label for="pflStrengths" class="col-form-label" ng-show="language=='kids_en'">Things You LOVE to Learn About</label>
+								<textarea class="form-control span6" rows="3" id="pflStrengths" ng-model="userInfo.pflStrengths"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class='row' ng-show="language=='default_en'">  
+						<div class='col-sm-12'>
+							<div class="form-group row">
+								<label for="pflEvidence" class="col-form-label" >Dates and Descriptions of Activities Observed</label>
+								<textarea class="form-control span6" rows="3" id="pflEvidence" ng-model="userInfo.pflEvidence"></textarea>
+							</div>
+						</div>
+					</div>	
 			</div>
 		</div>
-	</div>	
-    
-  </div>
-</div>
-	
 <div class="row printOnly" >
 	<div class="row">
 		<div class="col-sm-2">Name: {{userInfo.pflName}}</div>

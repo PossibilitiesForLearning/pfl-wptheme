@@ -58,6 +58,7 @@
             .hero {
                 @include font-title;
                 font-size: 48px;
+                margin-bottom: 40px;
     
                 em {
                     font-size: 60px;
@@ -75,7 +76,6 @@
 
             .content-row {
                 background-color: rgba($light-1, 0.6);
-                margin-top: 40px;
                 padding-top: 40px;
 
                 .content-body {
