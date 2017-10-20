@@ -1,4 +1,36 @@
 .body-matrix {
+
+    .container-infotip {
+        z-index: 1000;
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        //background-color: rgba($primary-2, 0.9);        
+        color: $light-1;
+
+        .infotip-cell {
+            padding: 16px;
+            background-color: rgba($primary-3,0.9);
+            color: white;
+            -webkit-box-shadow: 0px 0px 10px 0px  rgba($dark-1,0.5);
+            -moz-box-shadow: 0px 0px 10px 0px  rgba($dark-1,0.5);
+            box-shadow: 0px 0px 10px 0px rgba($dark-1,0.5);
+            border-radius: 5px;            
+
+            #matrixDefs {
+                #defTitle {
+                    padding-bottom: 8px;
+                    margin-bottom: 8px;
+                    font-size: 18px;
+                    border-bottom: 1px solid $secondary-1;
+                }
+                #defInfo {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     #primary {
         .settings-row {
             padding-top: 60px;
@@ -107,6 +139,12 @@
                     &:hover {
                         background-color: $secondary-1;
                     }
+
+                    &.btn-default {
+                        background-color: $light-2;
+                        color: $dark-1;
+                        border-color: transparent;
+                    }
                 }
             }
         }
@@ -122,6 +160,58 @@
             .form-group {
                 padding: 0px 15px;
                 margin-bottom: 25px;
+            }
+        }
+
+        .matrix-row {
+            .pflDiffGroups{
+                text-align:center;
+                height:25px;
+                vertical-align:top;
+            }
+            .pflDiffTitles{
+                font-size:11px;
+            }
+            .pflCont {color:blue;}
+            .pflProc {color:cadetblue;}
+            .pflProd {color:dodgerblue;}
+
+            table.matrixTable {
+                width: 100%;
+            }
+        }
+        .recommendations-row {
+            padding-bottom: 30px;
+            color: $light-1;
+
+            .recommendations-cell {
+                background-color: $primary-2;
+                padding: 30px 20px;
+            }
+
+            .recommend-heading {
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+                font-size: 18px;
+                border-bottom: 1px solid $secondary-1;          
+            }
+
+            .recommendations {
+                font-size: 14px;
+                margin-top: 10px;
+
+                li {
+                    padding:4px 0px;
+                    
+                    .rec-title {
+                        font-weight: bold;
+
+                    }
+                    .rec-description {
+                        font-style: italic;
+                    }
+
+                }
             }
         }
     }
