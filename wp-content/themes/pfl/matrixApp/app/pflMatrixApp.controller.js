@@ -178,8 +178,7 @@ app.controller("pflMatrixController", function ($scope, pflMatrixService) {
 		{id:"feedAssProd",color:colors.dodgerblue, colorRgb:colorsRgb.dodgerblue, htmlTitleClass:'pflProd'},
 		{id:"selSelProd",color:colors.dodgerblue, colorRgb:colorsRgb.dodgerblue, htmlTitleClass:'pflProd'},
 		{id:"transProd",color:colors.dodgerblue, colorRgb:colorsRgb.dodgerblue, htmlTitleClass:'pflProd'},
-		{id:"prodVariety",color:colors.dodgerblue, colorRgb:colorsRgb.dodgerblue, htmlTitleClass:'pflProd'},
-		{id:"break",color:colors.dodgerblue, colorRgb:colorsRgb.dodgerblue, htmlTitleClass:'pflProd'}
+		{id:"prodVariety",color:colors.dodgerblue, colorRgb:colorsRgb.dodgerblue, htmlTitleClass:'pflProd'}
 	];
 	
 	

@@ -15,8 +15,10 @@ $( document ).ready(function() {
     $(".pflCell, .matrix-indicator").hover(function() {
         $(this).parent().addClass("active");
         $('.matrixTable td:nth-child(' + ($(this).index() + 1) + ')').addClass('active');
+        $('.matrixTable th:nth-child(' + ($(this).index() + 1) + ')').addClass('active');
     }, function() {
         $('.matrixTable td:nth-child(' + ($(this).index() + 1) + ')').removeClass('active');
+        $('.matrixTable th:nth-child(' + ($(this).index() + 1) + ')').removeClass('active');
         $(this).parent().removeClass("active");
     });
 

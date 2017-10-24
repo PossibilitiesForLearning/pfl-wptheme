@@ -178,6 +178,14 @@
             }
         }
 
+        .matrix-heading {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
         .matrix-row {
             .pflDiffGroups{
                 text-align:center;
@@ -189,10 +197,19 @@
                 width: 100%;   
                 border-collapse: separate;
                 border-spacing: 4px;
+                padding-right: 30px;
                 
                 th {
                     height: 40px;
                     white-space: nowrap;
+
+                    &.active {
+                        span {                            
+                            background-color: $primary-3;
+                            color: white;
+                            padding: 4px 8px;
+                        }
+                    }
                     
                     > div {
                         -webkit-transform: rotate(315deg) translate(12px, 12px);
@@ -204,7 +221,7 @@
                             transition: 0.25s;
 
                             &.selected {
-                                background-color: $secondary-2;
+                                background-color: $secondary-2!important;
                                 color: white;
                                 padding: 4px 8px;
                             }
@@ -231,7 +248,7 @@
                             //color: white;
                             
                             &:nth-of-type(1) {
-                                background-color: $secondary-2!important;
+                                background-color: $primary-3;
                                 color: white;
                             }
                         }
@@ -258,7 +275,7 @@
                     font-weight: bold;
 
                     &.ranked {
-                        background-color: $secondary-2;
+                        background-color: $secondary-2!important;
                         color: white;
                     }
                 }
@@ -306,6 +323,14 @@
                         .checkbox-indicator {
                             display: none;
                         }
+                    }
+                }
+            }
+
+            @media print {
+                table.matrixTable {
+                    td.pflCell:not(.breakColumn) {
+                        border: 1px solid gray;
                     }
                 }
             }

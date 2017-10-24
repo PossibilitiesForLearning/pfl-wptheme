@@ -17,11 +17,11 @@ get_header(); ?>
 <?php include 'nav.php';?>
 
 <div id="main">
-	<div id="image-background" style="background-image: url('<?= bgRandom() ?>');">
+	<div id="image-background" style="background-image: url('<?= bgRandom() ?>');" print-remove>
 
 	</div>
 
-	<div id="content-background">
+	<div id="content-background" print-remove>
 		<div class="color-block block1">
 
 		</div>
@@ -33,7 +33,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="container-fluid breadcrumb-container hidden-xs hidden-sm">
+	<div class="container-fluid breadcrumb-container hidden-xs hidden-sm" print-remove>
 		<div class="row breadcrumb-row">				
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
 				<?php custom_breadcrumbs(); ?>
@@ -60,12 +60,12 @@ get_header(); ?>
 	<div id="primary" class="container-fluid">
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero" print-remove>
 				<em><?php the_title(); ?></em>
 			</div>
 		</div>
 
-		<div class="row content-row settings-row ">
+		<div class="row content-row settings-row " print-remove>
 
 			<div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 toggle-row">
 				<span class="sku" ng-class="{'active' : language=='default_en'}">Teacher/Parent</span>
@@ -85,7 +85,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div class="row content-row form-row container-fluid">					
+		<div class="row content-row form-row container-fluid" print-remove>					
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
 				<div class='row'>
 					<div class='col-sm-4'>
@@ -139,14 +139,16 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div class="row content-row matrix-row">
+
+		<div class="row content-row matrix-heading">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+				Differentiation Strategies
+			</div>
+		</div>
+
+		<div class="row content-row matrix-row" print-section >
 			<div class="col-xs-12">
-				<style>				
-				</style>
 				<table class="matrixTable" >
-					<tr>
-						<th colspan=23 class="pflDiffGroups">Differentiation Strategies<span class="printOnly"></br></br></br></span></th>
-					</tr>
 					<tr>
 						<th >
 						</th>
