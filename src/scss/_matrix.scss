@@ -1,5 +1,19 @@
 .body-matrix {
 
+    #matrixDefsForPrint {
+		height: 165px!important;
+		width: 195px!important;
+		-webkit-transform: translate(1px, 1px) !important;
+		-webkit-transform: rotate(0deg) !important;
+		transform: translate(1px, 1px)!important;
+		transform: rotate(0deg)!important;
+		white-space: normal !important;
+		color: #ccc;
+		padding: 5px;
+		position: relative;
+		top: -45px;
+	}
+
     .container-infotip {
         z-index: 1000;
         position: fixed;
@@ -7,10 +21,11 @@
         width: 100%;
         //background-color: rgba($primary-2, 0.9);        
         color: $light-1;
+        display: none;
 
         .infotip-cell {
             padding: 16px;
-            background-color: rgba($primary-3,0.9);
+            background-color: rgba($primary-3,1);
             color: white;
             -webkit-box-shadow: 0px 0px 10px 0px  rgba($dark-1,0.5);
             -moz-box-shadow: 0px 0px 10px 0px  rgba($dark-1,0.5);
@@ -169,15 +184,96 @@
                 height:25px;
                 vertical-align:top;
             }
-            .pflDiffTitles{
-                font-size:11px;
-            }
-            .pflCont {color:blue;}
-            .pflProc {color:cadetblue;}
-            .pflProd {color:dodgerblue;}
 
             table.matrixTable {
-                width: 100%;
+                width: 100%;   
+                border-collapse: separate;
+                border-spacing: 4px;
+                
+                th {
+                    height: 40px;
+                    white-space: nowrap;
+                    
+                    > div {
+                        -webkit-transform: rotate(315deg) translate(12px, 12px);
+                        transform: rotate(315deg) translate(12px, 12px);
+                        width: 35px;
+
+                        > span {
+                            border-bottom: 1px solid #ccc;
+                        }
+                    }
+                }
+
+                .pflRow {
+                    transition: 0.15s;
+                    &.active {
+                        td {
+                            background-color: $light-2;
+                            //color: white;
+                        }
+                    }
+                }
+
+                .pflCell {
+                    text-align: center;
+                    background-color: white;
+
+                    i.fa-circle {
+                        opacity: 0.35;
+                    }
+                }
+
+                .pflRankingCell {
+                    text-align: center;
+                    background-color: white;
+                    font-weight: bold;
+
+                    &.ranked {
+                        background-color: $secondary-2;
+                        color: white;
+                    }
+                }
+
+                .pflCont {color:$primary-2;}
+                .pflProc {color:$tertiary-2;}
+                .pflProd {color:$primary-2;}                     
+	
+                .breakColumn {
+                    width: 10px !important;
+                    background-color: transparent !important;
+                }
+    
+                .infotip-mouseover {
+                    cursor: pointer;
+                }
+
+                tr {               
+                    &.selected {
+                        td {
+                            background-color: $light-2;
+
+                            &:nth-of-type(1) {
+                                background-color: $secondary-2!important;
+                                color: white;
+                            }
+                        }
+                    }               
+
+                    .pflIndicatorCol {
+                        padding: 4px 8px;
+                        font-weight: bold;
+                    }                    
+                    
+                    .matrix-strategy {
+                    }
+                    .matrix-indicator {
+
+                        .checkbox-indicator {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
         .recommendations-row {
@@ -199,9 +295,14 @@
             .recommendations {
                 font-size: 14px;
                 margin-top: 10px;
+                padding-left: 0px;
+                list-style:none;
 
                 li {
                     padding:4px 0px;
+                    &:before {
+                        content: "\300B";
+                    }
                     
                     .rec-title {
                         font-weight: bold;
