@@ -200,9 +200,27 @@
                         width: 35px;
 
                         > span {
-                            border-bottom: 1px solid #ccc;
+                            //border-bottom: 1px solid #ccc;
+                            transition: 0.25s;
+
+                            &.selected {
+                                background-color: $secondary-2;
+                                color: white;
+                                padding: 4px 8px;
+                            }
                         }
                     }
+                }
+
+                .stratRow, .rankingRow {
+                    td:nth-of-type(1), th:nth-of-type(1){
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                }
+
+                .rankingRow {
+                    line-height: 32px;
                 }
 
                 .pflRow {
@@ -211,6 +229,11 @@
                         td {
                             background-color: $light-2;
                             //color: white;
+                            
+                            &:nth-of-type(1) {
+                                background-color: $secondary-2!important;
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -275,6 +298,10 @@
                     .matrix-indicator {
                         padding: 4px 8px;
                         font-weight: bold;
+                        border-radius: 5px;
+                        background-color: $primary-2;
+                        color: white;
+                        transition: 0.25s;
 
                         .checkbox-indicator {
                             display: none;

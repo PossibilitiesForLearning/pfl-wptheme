@@ -154,14 +154,14 @@ get_header(); ?>
 						<th colspan=9 style="height:80px;" class="pflDiffGroups pflProc">Process</th>
 						<th colspan=6 class="pflDiffGroups pflProd">Product</th>
 					</tr>
-					<tr>
+					<tr class="stratRow">
 						<th>Behaviours</th>
 						
 						<th ng-repeat="diffStrat in orderedDiffOptsArray"
 							ng-click="showDef(diffOptions[diffStrat.id])" 
 							>
 							<div ng-show="diffStrat.id!='break'" >
-								<span ng-style="{'background-color': topDiffOpts.indexOf(diffStrat.id)>=0 ? '#eff579':'white'}" 
+								<span ng-class="{'selected' :  topDiffOpts.indexOf(diffStrat.id)>=0 }" 
 								class="pflDiffTitles matrix-strategy  {{diffStrat.htmlTitleClass}}">
 									{{diffOptions[diffStrat.id].title}}
 								</span>
@@ -180,7 +180,7 @@ get_header(); ?>
 						</td>
 																											
 					</tr>
-					<tr>
+					<tr class="rankingRow" ng-show="topDiffOpts.length > 0">
 						<td>Ranking</td>	
 						<td class="pflRankingCell"
 						ng-class="{'ranked' : topDiffOpts.indexOf(diffStrat.id)>=0}" 						
@@ -193,7 +193,7 @@ get_header(); ?>
 			</div>	
 		</div>	
 
-		<div class="row content-row recommendations-row" print-section>
+		<div class="row content-row recommendations-row" print-section  ng-show="topDiffOpts.length > 0">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-10 col-sm-offset-1 recommendations-cell">
