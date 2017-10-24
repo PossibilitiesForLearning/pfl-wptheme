@@ -12,10 +12,12 @@ $( document ).ready(function() {
         }, 3000);
     });
 
-    $(".pflRow").hover(function() {
-        $(this).addClass("active");
+    $(".pflCell, .matrix-indicator").hover(function() {
+        $(this).parent().addClass("active");
+        $('.matrixTable td:nth-child(' + ($(this).index() + 1) + ')').addClass('active');
     }, function() {
-        $(this).removeClass("active");
+        $('.matrixTable td:nth-child(' + ($(this).index() + 1) + ')').removeClass('active');
+        $(this).parent().removeClass("active");
     });
 
     $(".matrix-indicator").click(function () {

@@ -10,54 +10,7 @@
 
 get_header(); ?>
 
-<!-- BEGINING OF HTML PAGE -->
-
-	
-    <style>
- 		
-		.matrixTable td{
-			border: 1px solid #ccc;
-			background-color:white;	
-			text-align:center;
-			
-		}			
-
-		.matrixTable th{
-			height: 40px; 
-			white-space: nowrap;
-		}		
-		
-		.matrixTable th > div{
-			-webkit-transform: translate(25px, 51px);
-			-webkit-transform: rotate(315deg);
-			transform: translate(25px, 51px);
-			transform: rotate(315deg);			
-			width:35px;	
-			}
-
-		.breakColumn {width:5px !important; background-color: #4CAF50 !important;	}
-		
-		.matrixTable th > div > span{ 
-			border-bottom: 1px solid #ccc
-			
-		}	
-		
-		#matrixDefsForPrint{
-			height:165px!important;
-			width:195px!important;
-			-webkit-transform: translate(1px, 1px) !important;
-			-webkit-transform: rotate(0deg) !important;
-			transform: translate(1px, 1px)!important;
-			transform: rotate(0deg)!important;			
-			white-space: normal !important;		
-			color:	#ccc;	
-			padding:5px;
-			position:relative;
-			top:-45px;
-			
-		}		
-
-    </style>
+<!-- BEGINING OF HTML PAGE -->	
 
 <body ng-cloak ng-controller="pflMatrixController" ng-app='pflMatrixApp' class="body-content body-matrix">
 	
@@ -209,8 +162,7 @@ get_header(); ?>
 							>
 							<div ng-show="diffStrat.id!='break'" >
 								<span ng-style="{'background-color': topDiffOpts.indexOf(diffStrat.id)>=0 ? '#eff579':'white'}" 
-								style="text-shadow: 1px 0 #888888;letter-spacing:1px;font-weight:bold;"
-								class="pflDiffTitles {{diffStrat.htmlTitleClass}}">
+								class="pflDiffTitles matrix-strategy  {{diffStrat.htmlTitleClass}}">
 									{{diffOptions[diffStrat.id].title}}
 								</span>
 							</div>
@@ -218,20 +170,20 @@ get_header(); ?>
 						</th>								
 						
 					</tr>
-					<tr ng-repeat="orderedIndic in orderdIndicators">
-						<td style="text-align:left;border: 0px; font-size:11px;text-shadow: 1px 0 #888888;letter-spacing:1px;font-weight:bold;" ng-click="showDef(indicators[orderedIndic])">
-							<input type="checkbox" ng-model="indicators[orderedIndic].isSelected" ng-change="updateRank(indicators[orderedIndic]);" style="margin-right:3px;">{{indicators[orderedIndic].title}}
+					<tr class="pflRow" ng-repeat="orderedIndic in orderdIndicators">
+						<td class="matrix-indicator infotip-mouseover" ng-click="showDef(indicators[orderedIndic])">
+							<input type="checkbox" ng-model="indicators[orderedIndic].isSelected" ng-change="updateRank(indicators[orderedIndic]);" class="checkbox-indicator">{{indicators[orderedIndic].title}}
 						</td>
-						<td  ng-repeat="diffStrat in orderedDiffOptsArray" ng-class="(diffStrat.id=='break') ? 'breakColumn':diffStrat.htmlTitleClass">
-							<i ng-show="diffStrat.id!='break' && indicators[orderedIndic].isSelected && setIndicatorLocation(indicators[orderedIndic] , diffOptions[diffStrat.id])" class="fa fa-check-circle-o"></i>
+						<td class="pflCell" ng-repeat="diffStrat in orderedDiffOptsArray" ng-class="(diffStrat.id=='break') ? 'breakColumn':diffStrat.htmlTitleClass">
+							<i ng-show="diffStrat.id!='break' && indicators[orderedIndic].isSelected && setIndicatorLocation(indicators[orderedIndic] , diffOptions[diffStrat.id])" class="fa fa-check"></i>
 							<i ng-show="diffStrat.id!='break' && !indicators[orderedIndic].isSelected && setIndicatorLocation(indicators[orderedIndic], diffOptions[diffStrat.id])" class="fa fa-circle"></i>						
 						</td>
 																											
 					</tr>
 					<tr>
-						<td style=" font-size:11px;text-align:right;padding-right:10px;">Ranking</td>	
-						<td style="background-color:#eee; font-size:11px;" 
-						ng-style="{'background-color': topDiffOpts.indexOf(diffStrat.id)>=0 ? '#eff579':'#eee'}"
+						<td>Ranking</td>	
+						<td class="pflRankingCell"
+						ng-class="{'ranked' : topDiffOpts.indexOf(diffStrat.id)>=0}" 						
 						ng-repeat="diffStrat in orderedDiffOptsArray">
 							{{diffOptRankings[diffStrat.id].displayRank}}
 						</td>
