@@ -58,15 +58,23 @@
             @include font-title;
             font-size: 48px;
 
+            @media (max-width: $screen-sm-max) {
+                font-size: 32px!important;   
+            }
+
             em {
                 font-size: 60px;
                 font-style: normal;
+
+                @media (max-width: $screen-sm-max) {
+                    font-size: 48px!important;
+                }
             }
             .secondary {
                 color: $secondary-2;
             }
         }
-
+        
         .tagline {
             margin-top: 140px;
             font-size: 30px;

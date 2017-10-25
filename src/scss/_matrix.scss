@@ -198,6 +198,9 @@
         }
 
         .matrix-row {
+
+            overflow-x: scroll;
+
             .pflDiffGroups{
                 text-align:center;
                 height:25px;
