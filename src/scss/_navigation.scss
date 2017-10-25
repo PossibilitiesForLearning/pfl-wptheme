@@ -1,6 +1,11 @@
 .navbar {
     border-top: 20px solid $dark-1;
     background-color: $primary-1;
+    transition: top 0.2s ease-in-out;
+    
+    &.nav-up {
+        top: -130px;
+    }
 
     .container {
         height: 60px;

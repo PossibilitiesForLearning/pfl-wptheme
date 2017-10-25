@@ -83,8 +83,8 @@ app.controller("pflMatrixController", function ($scope, pflMatrixService) {
 
 			//$('#DivToShow').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
 			
-			$('#defTitle').html(diffObj.title + '<i class="fa fa-times pull-right"></i>');
-			$('#defInfo').text(diffObj.descriptions[$scope.language]);
+			$('.defTitle').html(diffObj.title + '<i class="fa fa-times pull-right hidden"></i>');
+			$('.defInfo').text(diffObj.descriptions[$scope.language]);
 	}
 	
 	document.getElementById('file-input').addEventListener('change', readSingleFile, false);

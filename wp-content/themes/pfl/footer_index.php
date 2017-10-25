@@ -1,4 +1,4 @@
-<div class="footer row">
+<div class="footer row"  print-remove>
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-sm-4 col-md-3">

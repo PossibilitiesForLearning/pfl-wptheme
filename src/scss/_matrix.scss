@@ -1,3 +1,14 @@
+
+@media print {
+    div {
+        float: none !important;
+    }
+    .pageBreak {
+        display: block; 
+        page-break-before: always;
+    }
+}
+
 .body-matrix {
 
     #matrixDefsForPrint {
@@ -12,7 +23,8 @@
 		padding: 5px;
 		position: relative;
 		top: -45px;
-	}
+    }
+    
 
     .container-infotip {
         z-index: 1000;
@@ -33,13 +45,13 @@
             border-radius: 5px;            
 
             #matrixDefs {
-                #defTitle {
+                .defTitle {
                     padding-bottom: 8px;
                     margin-bottom: 8px;
                     font-size: 18px;
                     border-bottom: 1px solid $secondary-1;
                 }
-                #defInfo {
+                .defInfo {
                     font-size: 14px;
                 }
             }
@@ -183,7 +195,6 @@
             font-weight: bold;
             text-align: center;
             padding-top: 20px;
-            padding-bottom: 20px;
         }
 
         .matrix-row {
@@ -198,6 +209,12 @@
                 border-collapse: separate;
                 border-spacing: 4px;
                 padding-right: 30px;
+
+                .pflGroupRow {
+                    height: 120px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
                 
                 th {
                     height: 40px;
@@ -278,10 +295,14 @@
                         background-color: $secondary-2!important;
                         color: white;
                     }
+
+                    &:empty {
+                        background-color: transparent;
+                    }
                 }
 
                 .pflCont {color:$primary-2;}
-                .pflProc {color:$tertiary-2;}
+                .pflProc {color:$secondary-3;}
                 .pflProd {color:$primary-2;}                     
 	
                 .breakColumn {
@@ -290,7 +311,6 @@
                 }
     
                 .infotip-mouseover {
-                    cursor: pointer;
                 }
 
                 tr {               
@@ -311,6 +331,7 @@
                     }                    
                     
                     .matrix-strategy {
+                        cursor: default;
                     }
                     .matrix-indicator {
                         padding: 4px 8px;
@@ -319,6 +340,7 @@
                         background-color: $primary-2;
                         color: white;
                         transition: 0.25s;
+                        cursor: pointer;
 
                         .checkbox-indicator {
                             display: none;

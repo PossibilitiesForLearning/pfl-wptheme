@@ -47,8 +47,8 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 infotip-cell">
 					<div id="matrixDefs" print-remove>
-						<div id="defTitle" print-remove>Definition<i class="fa fa-times pull-right"></i></div>
-						<div id="defInfo" print-remove>
+						<div class="defTitle" print-remove>Definition<i class="fa fa-times pull-right"></i></div>
+						<div class="defInfo" print-remove>
 							Click on a behaviour or strategy for the definition
 						</div>
 					</div>
@@ -73,7 +73,7 @@ get_header(); ?>
 					<input type="checkbox" ng-model="isStudentText" ng-click="setLanguage(isStudentText);">
 					<div class="slider round"></div>
 				</label>
-				<span class="sku" ng-class="{'active' : language=='kids_en'}">Student</span>
+				<span class="sku" ng-class="{'active' : language=='kids_en'}" ng-click="language!='kids_en' ? isStudentText.checked=true">Student</span>
 			</div>
 
 			<div class="col-xs-12 col-sm-5 col-md-5 text-right button-row">
@@ -108,19 +108,17 @@ get_header(); ?>
 					</div>				
 				</div>
 				<div class='row'>
-					<div class='col-sm-12'>
+					<div class='col-xs-12 col-md-6' ng-class="{'col-md-12' : language=='kids_en'}">
 						<div class="form-group row">
 							<label for="pflStrengths" class="col-form-label" ng-show="language=='default_en'">Strengths</label>
 							<label for="pflStrengths" class="col-form-label" ng-show="language=='kids_en'">Things You LOVE to Learn About</label>
-							<textarea class="form-control span6" rows="3" id="pflStrengths" ng-model="userInfo.pflStrengths"></textarea>
+							<textarea class="form-control span6" rows="6" id="pflStrengths" ng-model="userInfo.pflStrengths"></textarea>
 						</div>
 					</div>
-				</div>
-				<div class='row' ng-show="language=='default_en'">  
-					<div class='col-sm-12'>
+					<div class='col-xs-12 col-md-6' ng-show="language=='default_en'">
 						<div class="form-group row">
 							<label for="pflEvidence" class="col-form-label" >Dates and Descriptions of Activities Observed</label>
-							<textarea class="form-control span6" rows="3" id="pflEvidence" ng-model="userInfo.pflEvidence"></textarea>
+							<textarea class="form-control span6" rows="6" id="pflEvidence" ng-model="userInfo.pflEvidence"></textarea>
 						</div>
 					</div>
 				</div>	
@@ -149,18 +147,18 @@ get_header(); ?>
 		<div class="row content-row matrix-row" print-section >
 			<div class="col-xs-12">
 				<table class="matrixTable" >
-					<tr>
+					<tr class="pflGroupRow">
 						<th >
 						</th>
 						<th colspan=8 class="pflDiffGroups pflCont">Content</th>
-						<th colspan=9 style="height:80px;" class="pflDiffGroups pflProc">Process</th>
+						<th colspan=11 class="pflDiffGroups pflProc">Process</th>
 						<th colspan=6 class="pflDiffGroups pflProd">Product</th>
 					</tr>
 					<tr class="stratRow">
 						<th>Behaviours</th>
 						
 						<th ng-repeat="diffStrat in orderedDiffOptsArray"
-							ng-click="showDef(diffOptions[diffStrat.id])" 
+							ng-mouseover="showDef(diffOptions[diffStrat.id])" class="infotip-mouseover"
 							>
 							<div ng-show="diffStrat.id!='break'" >
 								<span ng-class="{'selected' :  topDiffOpts.indexOf(diffStrat.id)>=0 }" 
@@ -173,7 +171,7 @@ get_header(); ?>
 						
 					</tr>
 					<tr class="pflRow" ng-repeat="orderedIndic in orderdIndicators">
-						<td class="matrix-indicator infotip-mouseover" ng-click="showDef(indicators[orderedIndic])">
+						<td class="matrix-indicator infotip-mouseover" ng-mouseover="showDef(indicators[orderedIndic])">
 							<input type="checkbox" ng-model="indicators[orderedIndic].isSelected" ng-change="updateRank(indicators[orderedIndic]);" class="checkbox-indicator">{{indicators[orderedIndic].title}}
 						</td>
 						<td class="pflCell" ng-repeat="diffStrat in orderedDiffOptsArray" ng-class="(diffStrat.id=='break') ? 'breakColumn':diffStrat.htmlTitleClass">
@@ -215,21 +213,7 @@ get_header(); ?>
 				</div>				
 			</div>
 		</div>
-	
-	<!-- page break -->
-<div class="pageBreak"></div>
-
-<div style="color:white;margin-top:100px;" print-section class="printOnly">
-	</br></br></br></br>
-	<span>Behaviours</span><br>
-	<ul>
-		<li ng-repeat="orderedIndic in orderdIndicators"> 				
-			<span style="font-size:10px;font-weight:bold;">{{indicators[orderedIndic].title}}</span> : <span style="font-size:9px;" >{{indicators[orderedIndic].descriptions[language]}}</span>
-		</li>
-	</ul>	
-</div>
-
-<div class="row content-row settings-row ">
+		<div class="row content-row settings-row ">
 
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 text-right button-row">
 				<button class="btn" ng-click="savePflMatrix();">Save</button>
@@ -237,36 +221,49 @@ get_header(); ?>
 			</div>
 		</div>
 
-<div style="color:white;margin-top:10px;" print-section>
-	</br></br>
-	<span>Differentiation Strategies</span><br><br>
-	<span>Content</span><br>
-	<ul>
-		<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflCont'"> 				
-			<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
-		</li>
-	</ul>		
-	<br><br><span>Process</span><br>
-	<ul>
-		<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflProc'"> 				
-			<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
-		</li>
-	</ul>			
-	<br><br><span>Product</span><br>
-	<ul>
-		<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflProd'"> 				
-			<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
-		</li>
-	</ul>			
+
+	<div class="pageBreak"></div>
+	<!-- page break -->
+
+	<div print-section class="printOnly">
+		</br></br></br></br>
+		<span>Behaviours</span><br>
+		<ul>
+			<li ng-repeat="orderedIndic in orderdIndicators"> 				
+				<span style="font-size:10px;font-weight:bold;">{{indicators[orderedIndic].title}}</span> : <span style="font-size:9px;" >{{indicators[orderedIndic].descriptions[language]}}</span>
+			</li>
+		</ul>	
+	</div>
+
+	<div print-section class="printOnly">
+		</br></br>
+		<span>Differentiation Strategies</span><br><br>
+		<span>Content</span><br>
+		<ul>
+			<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflCont'"> 				
+				<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
+			</li>
+		</ul>		
+		<br><br><span>Process</span><br>
+		<ul>
+			<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflProc'"> 				
+				<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
+			</li>
+		</ul>			
+		<br><br><span>Product</span><br>
+		<ul>
+			<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflProd'"> 				
+				<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
+			</li>
+		</ul>			
+	</div>
+		
+
+		<?php include 'footer_index.php' ?>
 </div>
 
 
-
-			</div>
-
-			</div>
-
-		<div id="helpDialog" title="Instructions" style="display:none;background-color:beige;" print-remove>
+	<div id="helpDialog" title="Instructions" style="display:none;background-color:beige;" print-remove>
 			<ol ng-show="language=='default_en'">
 			<li>Print a copy of the Brilliant Behaviours to record the behaviours that appear. Use either an individual checklist, group checklist, or a copy of the Guide.</li>
 			<li>Record the information required information about the student and activity or activities at the top of the form.</li>
@@ -285,6 +282,9 @@ get_header(); ?>
 			<li>Share your Guide and the results with your teacher.</li>			
 			</ol>
 	</div>
+
+</div><!-- end main -->
+
 
 	<?php get_footer(); ?>
 

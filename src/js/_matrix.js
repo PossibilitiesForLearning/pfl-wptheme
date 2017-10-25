@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    console.log( "matrix ready!" );
     var infoTipTimer;
 
     // title hover tooltip functions
@@ -9,7 +8,7 @@ $( document ).ready(function() {
     }, function() {
         infoTipTimer = setInterval(function() {
              $(".container-infotip").fadeOut();
-        }, 3000);
+        }, 1500);
     });
 
     $(".pflCell, .matrix-indicator").hover(function() {
