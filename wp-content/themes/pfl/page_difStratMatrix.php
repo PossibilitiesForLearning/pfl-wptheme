@@ -58,7 +58,6 @@ get_header(); ?>
 	</div>
 
 	<div id="primary" class="container-fluid">
-
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero" print-remove>
 				<em><?php the_title(); ?></em>
@@ -68,12 +67,12 @@ get_header(); ?>
 		<div class="row content-row settings-row " print-remove>
 
 			<div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 toggle-row">
-				<span class="sku" ng-class="{'active' : language=='default_en'}">Teacher/Parent</span>
+				<span class="sku" ng-class="{'active' : language=='default_en'}" ng-click="isStudentText = false;setLanguage(isStudentText);">Teacher/Parent</span>
 				<label class="switch">
-					<input type="checkbox" ng-model="isStudentText" ng-click="setLanguage(isStudentText);">
+					<input id="studentCheckbox" type="checkbox" ng-model="isStudentText" ng-click="setLanguage(isStudentText);">
 					<div class="slider round"></div>
 				</label>
-				<span class="sku" ng-class="{'active' : language=='kids_en'}" ng-click="language!='kids_en' ? isStudentText.checked=true">Student</span>
+				<span class="sku" ng-class="{'active' : language=='kids_en'}" ng-click="isStudentText = true;setLanguage(isStudentText);">Student</span>
 			</div>
 
 			<div class="col-xs-12 col-sm-5 col-md-5 text-right button-row">
@@ -108,14 +107,14 @@ get_header(); ?>
 					</div>				
 				</div>
 				<div class='row'>
-					<div class='col-xs-12 col-md-6' ng-class="{'col-md-12' : language=='kids_en'}">
+					<div class='col-xs-12 col-sm-6' ng-class="{'col-md-12' : language=='kids_en'}">
 						<div class="form-group row">
 							<label for="pflStrengths" class="col-form-label" ng-show="language=='default_en'">Strengths</label>
 							<label for="pflStrengths" class="col-form-label" ng-show="language=='kids_en'">Things You LOVE to Learn About</label>
 							<textarea class="form-control span6" rows="6" id="pflStrengths" ng-model="userInfo.pflStrengths"></textarea>
 						</div>
 					</div>
-					<div class='col-xs-12 col-md-6' ng-show="language=='default_en'">
+					<div class='col-xs-12 col-sm-6' ng-show="language=='default_en'">
 						<div class="form-group row">
 							<label for="pflEvidence" class="col-form-label" >Dates and Descriptions of Activities Observed</label>
 							<textarea class="form-control span6" rows="6" id="pflEvidence" ng-model="userInfo.pflEvidence"></textarea>
