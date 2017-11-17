@@ -7,6 +7,25 @@
         display: block; 
         page-break-before: always;
     }
+
+    .body-content #primary {
+        top: 0px!important;
+    }
+
+    div.print-newline {
+        display: block!important;
+    }
+
+    div.recommendations-row {
+        margin-top: 40px!important;
+    }
+
+    ul.print-index {
+        li {
+            display: block;
+        }
+    }
+    
 }
 
 .body-matrix {
@@ -199,7 +218,11 @@
 
         .matrix-row {
 
-            overflow-x: scroll;
+            overflow-x: auto;
+
+            @media print {
+                overflow-x: initial;
+            }
 
             .pflDiffGroups{
                 text-align:center;

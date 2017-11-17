@@ -58,8 +58,8 @@ get_header(); ?>
 	</div>
 
 	<div id="primary" class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero" print-remove>
+		<div class="row" print-remove>
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 hero">
 				<em><?php the_title(); ?></em>
 			</div>
 		</div>
@@ -126,13 +126,13 @@ get_header(); ?>
 
 		<div class="row printOnly" >
 			<div class="row">
-				<div class="col-sm-2">Name: {{userInfo.pflName}}</div>
-				<div class="col-sm-2">Grade: {{userInfo.pflGrade}}</div>
-				<div class="col-sm-2">Date: {{userInfo.pflDateStr}}</div>
+				<div class="col-sm-2 print-newline"><b>Name:</b> {{userInfo.pflName}}</div>
+				<div class="col-sm-2 print-newline"><b>Grade:</b> {{userInfo.pflGrade}}</div>
+				<div class="col-sm-2 print-newline"><b>Date:</b> {{userInfo.pflDateStr}}</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6"><b>Strengths</b></br>{{userInfo.pflStrengths}}</div>
-				<div class="col-sm-6" ng-class="isStudentText ? 'printRemove' : 'printOnly'"><b>Evidence</b></br>{{userInfo.pflEvidence}}</div>
+				<div class="col-sm-6 print-newline"><b>Strengths</b></br>{{userInfo.pflStrengths}}</div>
+				<div class="col-sm-6 print-newline" ng-class="isStudentText ? 'printRemove' : 'printOnly'"><b>Evidence</b></br>{{userInfo.pflEvidence}}</div>
 			</div>
 		</div>
 
@@ -227,7 +227,7 @@ get_header(); ?>
 	<div print-section class="printOnly">
 		</br></br></br></br>
 		<span>Behaviours</span><br>
-		<ul>
+		<ul class="print-index">
 			<li ng-repeat="orderedIndic in orderdIndicators"> 				
 				<span style="font-size:10px;font-weight:bold;">{{indicators[orderedIndic].title}}</span> : <span style="font-size:9px;" >{{indicators[orderedIndic].descriptions[language]}}</span>
 			</li>
@@ -236,21 +236,21 @@ get_header(); ?>
 
 	<div print-section class="printOnly">
 		</br></br>
-		<span>Differentiation Strategies</span><br><br>
+		<span><b>Differentiation Strategies</b></span><br><br>
 		<span>Content</span><br>
-		<ul>
+		<ul class="print-index" >
 			<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflCont'"> 				
 				<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
 			</li>
 		</ul>		
 		<br><br><span>Process</span><br>
-		<ul>
+		<ul class="print-index" >
 			<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflProc'"> 				
 				<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
 			</li>
 		</ul>			
 		<br><br><span>Product</span><br>
-		<ul>
+		<ul class="print-index">
 			<li ng-repeat="diffStrat in orderedDiffOptsArray" ng-show="diffStrat.id!='break' && diffStrat.htmlTitleClass=='pflProd'"> 				
 				<span style="font-size:10px;font-weight:bold;">{{diffOptions[diffStrat.id].title}}</span> : <span style="font-size:9px;" >{{diffOptions[diffStrat.id].descriptions[language]}}</span>
 			</li>
