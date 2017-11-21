@@ -42,6 +42,10 @@
                         &:hover, &.active {
                             background-color: $primary-3;
                         }
+
+                        a {
+                            color: $light-1;
+                        }
                     }
                 }
 
@@ -104,11 +108,27 @@
             padding-left: 0px;
             li {
                 list-style-type: none;
-                line-height: 60px;
+                line-height: 48px;
                 cursor: pointer;
+                position: relative;
+
+                img.arrow {
+                    top: 15px;     
+                    position: absolute;
+                    right: -71px; 
+                    visibility: hidden;
+                }
 
                 &:hover {
                     text-decoration: underline;
+
+                    img.arrow {
+                        visibility: visible;
+                    }
+                }
+
+                a {
+                    color: $light-1;
                 }
             }
         }

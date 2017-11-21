@@ -1,0 +1,99 @@
+{
+    "Differentiation" : {
+        "Content"   : {
+            "URL" :     "179",
+            "Menu" :    {
+                "Abstractness"          :   "181",
+                "Complexity"            :   "183",
+                "Extracurricular"       :   "210",
+                "Lives & Living"        :   "382",
+                "Organization"          :   "384",
+                "Real Life"             :   "394",
+                "Self-Selected"         :   "398"
+            }
+        },
+        "Process"   : {
+            "URL"   :   "403",
+            "Menu"  :   {
+                "Complex Thinking"      :   "406",
+                "Expert Methods"        :   "408",
+                "Group Interaction"     :   "410",
+                "Individual Pursuits"   :   "412",
+                "Inquiry-Based"         :   "414",
+                "Open-Ended"            :   "417",
+                "Pacing"                :   "419",
+                "Reasoning & Reflection":   "421",
+                "Self-Selected"         :   "423",
+                "Variety"               :   "425"
+            }
+        },
+        "Product"   :   {
+            "URL"   :   "440",
+            "Menu"  :   {
+                "Authentic Audiences"   :   "440",
+                "Feedback & Assessment" :   "442",
+                "Self-Selected"         :   "446",
+                "Transformations"       :   "448",
+                "Variety"               :   "450"
+            }
+        },
+        "Learning Environment"  :   {
+            "URL" : "452",
+            "Menu"  :   {
+                "Accepting"             :   "454",
+                "Complex"               :   "456",
+                "Flexible"              :   "459",
+                "Grouping"              :   "469",
+                "High Mobility"         :   "461",
+                "Independent"           :   "463",
+                "Learner-Centered"      :   "465",
+                "Open"                  :   "467"   
+            }
+        }
+    }, 
+    "Strengths" : {
+        "Brilliant Behaviours"  : {
+            "URL"   :   "111",
+            "Menu"  :   {
+                "Directions"            :   "228",
+                "Forms"                 :   "245"
+            }
+        },
+        "Preference Survey"     :  {
+            "URL"   :   "125",
+            "Menu"  :   {
+                "Directions"            :   "503",
+                "Form"                  :   "505",
+                "Smiley Format"         :   "509",
+                "Summary Sheet"         :   "514",
+                "Dream Sheet"           :   "516"                
+            }
+        },
+        "Contracts"     :  {
+            "URL"   :   "125",
+            "Menu"  :{
+                "Directions"            :   "531",
+                "Wondering"             :   "533",
+                "Action Contract"       :   "535"
+            }
+        }
+    },
+    "About"     : {
+        "Team"  : {
+            "URL"   :   "33",
+            "Menu"  :   {
+            }
+        },
+        "Contact Us"     :  {
+            "URL"   :   "29",
+            "Menu"  :   {             
+            }
+        },
+        "Terms of Use"     :  {
+            "URL"   :   "",
+            "Menu"  :{
+            }
+        }
+
+    }
+}
