@@ -26,7 +26,7 @@
     <!-- container -->
 </div>
 
-<div id="nav-menu-mast">
+<div id="nav-menu-mast" class="hidden-xs hidden-sm">
     <div class="container">
         <div class="menu-mast menu-mast-right col-md-6 text-right">
             <ul id="navMenu-Tier2">
@@ -37,4 +37,10 @@
             </ul>
         </div>
     </div>
+</div>
+
+<div id="nav-menu-mast-mobile" class="hidden-md hidden-lg">
+    <ul>
+        <li>Home</li>
+    </ul>
 </div>
