@@ -53,25 +53,26 @@ get_header(); ?>
 					<?php
                     $s=get_search_query();
                     $args = array(
-                        's' =>$s
+                        's' =>$s, 'posts_per_page'   => -1,
                     );
                         // The Query
                     $the_query = new WP_Query( $args );
-                    if ( $the_query->have_posts() ) {
-                            _e("<h2 style='color: #2f343b'>Matches for: '" . get_query_var('s') . "'</h2>");
-                            while ( $the_query->have_posts() : $the_query->the_post()) {                               
-                                ?>
-                                <li>
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </li>
-                                <?php
-                            }
-                        }else{
-                    ?>
-                            <h4 style="color: #2f343b">No results found. <a href="/">Click here</a> to return to home page.</h4>
-                    <?php } 
-                    wp_reset_query();
-                    ?>
+					
+					?>
+					
+<?php if ( $the_query->have_posts() ) : ?>
+	<ul>
+	<!-- the loop -->
+	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+	<?php endwhile; ?>
+	<!-- end of the loop -->
+	</ul>
+	<?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+	<h4 style="color: #2f343b">No results found. <a href="/">Click here</a> to return to home page.</h4>
+<?php endif; ?>
 					</div>
 				</div>
 			</div>
