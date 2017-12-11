@@ -50,7 +50,7 @@ $(document).ready(function () {
         $("#navMenu-Tier3").empty();
 
         $.each(activeNavTree, function(k,v) {
-            $("#navMenu-Tier2").append("<li data-key='" + k + "'><a href='?id=" + v.URL + "'>" + k + "</a><img class='arrow' src='/wp-content/themes/pfl/images/navArrow.png'/></li>");
+            $("#navMenu-Tier2").append("<li data-key='" + k + "'><a href='/?page_id=" + v.URL + "'>" + k + "</a><img class='arrow' src='/wp-content/themes/pfl/images/navArrow.png'/></li>");
         });
 
         $("#navMenu-Tier2 li").mouseover(function () {
@@ -60,7 +60,7 @@ $(document).ready(function () {
             $("#navMenu-Tier3").empty();
             
             $.each(subMenuTree, function(k,v) {
-                $("#navMenu-Tier3").append("<li data-key='" + k + "'><a href='?id=" + v + "'>" + k + "</a></li>");
+                $("#navMenu-Tier3").append("<li data-key='" + k + "'><a href='/?page_id=" + v + "'>" + k + "</a></li>");
             });
         });
     }
