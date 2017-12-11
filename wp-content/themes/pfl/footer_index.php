@@ -42,6 +42,10 @@
                     <li class="t3">Complex</li>
                     <li class="t3">Flexible</li>
                     <li class="t3">Grouping</li>
+                    <li class="t3">High Mobility</li>
+                    <li class="t3">Independent</li>
+                    <li class="t3">Learner-Centred</li>
+                    <li class="t3">Open</li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-4">
