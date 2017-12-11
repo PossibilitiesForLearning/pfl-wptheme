@@ -14,7 +14,7 @@
         </div>
         <div class="navbar-items navbar-rightside hidden-xs hidden-sm">
             <ul>
-                <li class="navLink"><a href="/resources/">Resources</a></li>
+                <li>Resources</li>
                 <li>About</li>
                 <li class="search">Search</li>
             </ul>

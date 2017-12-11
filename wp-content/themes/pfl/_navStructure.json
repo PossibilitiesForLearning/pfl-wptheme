@@ -52,6 +52,9 @@
                 "Learner-Centered"      :   "465",
                 "Open"                  :   "467"   
             }
+        }, 
+        "Strategy Selection"    :   {
+            "URL"   :   "122"
         }
     }, 
     "Strengths" : {
@@ -73,12 +76,23 @@
             }
         },
         "Contracts"     :  {
-            "URL"   :   "125",
+            "URL"   :   "127",
             "Menu"  :{
                 "Directions"            :   "531",
                 "Wondering"             :   "533",
                 "Action Contract"       :   "535"
             }
+        }
+    },
+    "Resources"   :   {
+        "Materials"  : {
+            "URL"   :   "129"
+        },
+        "Online Preference Survey"     :  {
+            "URL"   :   "1337"
+        },
+        "Differentiation Strategy Guide"     :  {
+            "URL"   :   "191"
         }
     },
     "About"     : {
