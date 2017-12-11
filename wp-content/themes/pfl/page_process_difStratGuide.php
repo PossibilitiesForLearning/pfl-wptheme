@@ -1,4 +1,5 @@
 <?php /* Template name: Processing  Page*/ ?>
+
 <?php
 /**
  * The template for display the processing page for the upload of saved pfl data
@@ -14,14 +15,14 @@ get_header(); ?>
 <?php 
 	include_once('./wp.custom.src/pfl.php');
 ?>
-<link rel="stylesheet" href="./wp.custom.css/pfl.css" type="text/css">
+<link rel="stylesheet" href="/wp.custom.css/pfl.css" type="text/css">
 
-<script type="text/javascript" src="./wp.custom.src/cmn.fxns.js"></script>
+<script type="text/javascript" src="/wp.custom.src/cmn.fxns.js"></script>
 
 <div id="processPage" style="padding:15px;">
 
  <div id="divProcessing" style="text-align:center;display:block;">
-  <img src="./wp.images/page.diffStratGuide/processing.gif" /> 
+  <img src="/wp.images/page.diffStratGuide/processing.gif" /> 
  </div>
  <div id="divProcessingError" style="display:none;">
 The file you attempted to upload is either too large(must be less than 0.5Mb), does not have the correct file extension(.pfl or .txt), or is of the incorrect format.
@@ -32,12 +33,12 @@ The file you attempted to upload is either too large(must be less than 0.5Mb), d
 if(isset($_GET['loadsurvey']))
 {
 echo '<tr><td><a href="http://possibilitiesforlearning.com/?page_id=1359">Select Another File</a></td><tr>';
-echo '<tr><td><a href="./?page_id=1337">Return To PFL Survey</a></td></tr>';
+echo '<tr><td><a href="/?page_id=1337">Return To PFL Survey</a></td></tr>';
 }
 else
 {
 echo '<tr><td><a href="http://possibilitiesforlearning.com/?page_id=1279">Select Another File</a></td><tr>';
-echo '<tr><td><a href="./?page_id=191">Return To Learning Strategies Guide</a></td></tr>';
+echo '<tr><td><a href="/?page_id=191">Return To Learning Strategies Guide</a></td></tr>';
 }
 ?>
 </table>
@@ -50,13 +51,13 @@ echo '<tr><td><a href="./?page_id=191">Return To Learning Strategies Guide</a></
 if(isset($_GET['loadsurvey']))
 {
  //echo "<form action='./?page_id=421' method='post' name='frm' id='frm'>";
- echo "<form action='./?page_id=1337' method='post' name='frm' id='frm'>";
+ echo "<form action='/?page_id=1337' method='post' name='frm' id='frm'>";
 // echo 'pflSurvey';
  loadPFLSurveyFromFile();
 }
 else
 {
- echo "<form action='./?page_id=191' method='post' name='frm' id='frm'>";
+ echo "<form action='/?page_id=191' method='post' name='frm' id='frm'>";
  loadPFLDiffGuideFromFile();
 }
  ?>
@@ -85,7 +86,7 @@ function validateLoadedFile($tmpFilePrefix)
 
  if((!in_array($ext,$allowed_filetypes))||(filesize($_FILES['userfile']['tmp_name']) > $max_filesize))
  {
-  //echo 'here';
+  //echo 'here in death...';
    die('<script>toogleDiv("divProcessing");toogleDiv("divProcessingError");</script>');
  }
  return $tmpfpath;
@@ -198,8 +199,4 @@ function loadPFLSurveyFromFile()
  $fileContent=returnFileContents($_FILES['userfile']['tmp_name'],$tmpfpath);
  generatePostInput($fileContent);
 }
-
 ?>
-
-
-

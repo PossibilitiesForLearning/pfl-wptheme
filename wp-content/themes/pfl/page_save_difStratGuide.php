@@ -14,9 +14,9 @@ get_header(); ?>
 <?php 
 	include_once('./wp.custom.src/pfl.php');
 ?>
-<link rel="stylesheet" href="./wp.custom.css/pfl.css" type="text/css">
+<link rel="stylesheet" href="/wp.custom.css/pfl.css" type="text/css">
 
-<script type="text/javascript" src="./wp.custom.src/cmn.fxns.js"></script>
+<script type="text/javascript" src="/wp.custom.src/cmn.fxns.js"></script>
 
 <style>
 </style>
@@ -69,6 +69,7 @@ get_header(); ?>
   return $tmpfname;
  }
 
+ 
  function saveSurveyToFile()
  {
   $saveInfo='';

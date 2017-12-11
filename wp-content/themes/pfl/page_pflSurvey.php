@@ -22,7 +22,7 @@ get_header();
 	include_once('./wp.custom.src/pfl.survey.summary.php');
 	include_once('./wp.custom.src/pfl.survey.dreamsheet.php');
 ?>
-<link rel="stylesheet" href="./wp.custom.css/pfl.css" type="text/css">
+<link rel="stylesheet" href="/wp.custom.css/pfl.css" type="text/css">
 
 <style>
 #introTable td{width:150px;}
@@ -59,7 +59,7 @@ get_header();
 </style>
 
 
-<script type="text/javascript" src="./wp.custom.src/cmn.fxns.js"></script>
+<script type="text/javascript" src="/wp.custom.src/cmn.fxns.js"></script>
 
 
 <script type="text/javascript">
@@ -67,14 +67,16 @@ get_header();
 function printPFLSurvey()
 {
  toogleDiv('printSelBox');
+ 
  curSelector=document.getElementById("surveyPrintSelect");
  //alert(curSelector.selectedIndex); 
  //(0 - full)(1-analysis)(2-summary)(3-dream)
  targetAction="";
- if(curSelector.selectedIndex==0){ targetAction="./ext.print/survey.print.php?printSel=quest";}
- if(curSelector.selectedIndex==1){ targetAction="./ext.print/survey.print.php?printSel=strats";} 
- if(curSelector.selectedIndex==2){ targetAction="./ext.print/survey.print.php?printSel=sum";}
- if(curSelector.selectedIndex==3){ targetAction="./ext.print/survey.print.php?printSel=dream";}
+ 
+ if(curSelector.selectedIndex==0){ targetAction="/ext.print/survey.print.php?printSel=quest";}
+ //if(curSelector.selectedIndex==1){ targetAction="/ext.print/survey.print.php?printSel=strats";} 
+ if(curSelector.selectedIndex==1){ targetAction="/ext.print/survey.print.php?printSel=sum";}
+ if(curSelector.selectedIndex==2){ targetAction="/ext.print/survey.print.php?printSel=dream";}
  
  if(targetAction=="")
  {
@@ -541,7 +543,7 @@ function toogleBetweenDivs(divID1,divID2)
  Please select the part of the survey that you would like to print.<br><br>
     <select id="surveyPrintSelect">
       <option>Full Survey</option>
-      <option>Analysis by Strategy</option>
+      <!--option>Analysis by Strategy</option-->
       <option>Summary Sheet</option>
       <option>Dream Sheet</option>
     </select><br><br>         
@@ -564,7 +566,7 @@ function toogleBetweenDivs(divID1,divID2)
  echo '<input type="hidden" name="selAct" id="selAct" value="">';
 ?>
 
- <div id="pflSurveyAnalysisDiv" style="padding:10px;border-collapse: collapse; border: 0px solid black; position:absolute; top:50px; left: 525px; width:350px">
+ <div id="pflSurveyAnalysisDiv" style="padding:10px;border-collapse: collapse; border: 0px solid black; position:absolute; top:65px; left: 525px; width:350px">
 <table>
   <tr><th colspan=2> <u><b>Survey Progress</b></u></th></tr>
   <tr>
@@ -583,7 +585,7 @@ function toogleBetweenDivs(divID1,divID2)
     $lastViewStyle="";
     if(isset($_POST['lastViewedPart'])&&($_POST['lastViewedPart']==$pIndex)&&($isChecked==""))
     {
-	$setLastViewed = '<img height="15px" src="./wp.images/page.pflSurvey/last.page.png">';
+	$setLastViewed = '<img height="15px" src="/wp.images/page.pflSurvey/last.page.png">';
 	$lastViewStyle = 'style="color:red;"';
     }
 
@@ -608,7 +610,7 @@ function toogleBetweenDivs(divID1,divID2)
  $linkStyle="";
  if(!surveyComplete()){$linkStyle='style="pointer-events: none;opacity: 0.5;"';}
 
- echo '<tr><td><a href="javascript:jumpToSurvey(6,'.$curPart.');" id="surveyAnalysisLink" '.$linkStyle.'>Analysis by Strategy</a></td></tr>';	
+ //echo '<tr><td><a href="javascript:jumpToSurvey(6,'.$curPart.');" id="surveyAnalysisLink" '.$linkStyle.'>Analysis by Strategy</a></td></tr>';	
  echo '<tr><td><a href="javascript:jumpToSurvey(7,'.$curPart.');" id="surveySummaryLink"  '.$linkStyle.'>Summary Page</a></td></tr>';	
  echo '<tr><td><a href="javascript:jumpToSurvey(8,'.$curPart.');" id="surveyDreamLink"  '.$linkStyle.'>Dream Sheet</a></td></tr>';	
 ?>
