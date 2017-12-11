@@ -37,14 +37,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div class="container-fluid breadcrumb-container hidden-xs hidden-sm">
-			<div class="row breadcrumb-row">				
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
-					<?php custom_breadcrumbs(); ?>
-				</div>
-			</div>
-		</div>
-
+		<!-- #primary -->	
 		<div id="primary" class="container-fluid">
 
 			<div class="row">
@@ -72,8 +65,15 @@ get_header(); ?>
 
 			<?php include 'footer_index.php' ?>
 
+		</div>	
+
+		<div class="container-fluid breadcrumb-container hidden-xs hidden-sm">
+			<div class="row breadcrumb-row">				
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+					<?php custom_breadcrumbs(); ?>
+				</div>
+			</div>
 		</div>
-		<!-- #primary -->
 	</div>
 	
 	<?php get_footer(); ?>
