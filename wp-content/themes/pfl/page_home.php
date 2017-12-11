@@ -54,28 +54,28 @@ get_header(); ?>
 
 		<div class="row">
 			<div class="col-xs-11 col-xs-offset-1 col-md-7 col-md-offset-3 image-block block1">
-				<div class="white-block">
-					<div class="feature">Which students are high ability learners?</div>
+				<a class="white-block" href="/brilliant-behaviors/">
+					<div class="feature 111">Which students are high ability learners?</div>
 					<div class="description">These materials help you <strong>find students who need the nature or pace of their learning enhanced</strong> without testing—just observe, ask them and their peers.  They stand out when you know what to look for.</div>
-				</div>
+				</a>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-8 col-xs-offset-3 col-md-7 col-md-offset-4 image-block block2">
-				<div class="white-block">
-					<div class="feature">What and how to differentiate?</div>
+				<a class="white-block" href="/curriculum-differentiation/">
+					<div class="feature cirriculum differentiation">What and how to differentiate?</div>
 					<div class="description">The areas in greatest need of differentiation are the students’ strengths and interests.  Use the interactive <strong>Guide for Selecting Differentiation Strategies</strong> to determine which are recommended each student in any subject.</div>
-				</div>
+		</a>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-8 col-xs-offset-3 col-md-7 col-md-offset-3 image-block block3">
-				<div class="white-block">
+				<a class="white-block" href="/learning-preference-survey/">
 					<div class="feature">How do they want to learn?</div>
 					<div class="description">Students can complete the <strong>interactive survey to identify their favourite types of differentiation</strong>.  Students and their teachers can design activities, large and small, that involve them so their learning is personalized.</div>
-				</div>
+</a>
 			</div>
 		</div>
 

@@ -108,19 +108,22 @@
                 }
             }
 
-            .white-block {
+            a.white-block {
+                display: block;
                 background-color: rgba($light-1, 0.95);
                 //height: 60%;
                 margin: 5% 20% 0 -20%;
                 padding-bottom: 30px;
                 cursor: pointer;
                 transition: 0.5s;
+                text-decoration: none!important;
 
                 .feature {
                     font-style: italic;
                     font-size: 40px;
                     margin-left: -15%;
                     padding-top: 20px;
+                    color: $primary-2;
                 }
 
                 .description {
@@ -128,6 +131,7 @@
                     font-size: 24px;
                     line-height: 48px;
                     font-weight: 300;
+                    color: $dark-1;
 
                     strong {
                         font-weight: 400;
