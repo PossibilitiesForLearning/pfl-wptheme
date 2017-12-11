@@ -10,42 +10,42 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <ul>
-                    <li class="t1">Home</li>
-                    <li class="t1">Differentiation</li>
-                    <li class="t2">Content</li>
-                    <li class="t3">Abstractness</li>
-                    <li class="t3">Complexity</li>
-                    <li class="t3">Extracurricular</li>
-                    <li class="t3">Lives & Living</li>
-                    <li class="t3">Organization</li>
-                    <li class="t3">Real Life</li>
-                    <li class="t3">Self-Selected</li>
-                    <li class="t2">Process</li>                    
-                    <li class="t3">Complex Thinking</li>
-                    <li class="t3">Expert Methods</li>
-                    <li class="t3">Group Interaction</li>
-                    <li class="t3">Individual Pursuits</li>
-                    <li class="t3">Inquiry-Based</li>
-                    <li class="t3">Open-Ended</li>
-                    <li class="t3">Pacing</li>
-                    <li class="t3">Reasoning & Reflection</li>
-                    <li class="t3">Self-Selected</li>
-                    <li class="t3">Variety</li>
-                    <li class="t2">Product</li>         
-                    <li class="t3">Authentic Audiences</li>
-                    <li class="t3">Feedback & Assessment</li>
-                    <li class="t3">Self-Selected</li>
-                    <li class="t3">Transformations</li>
-                    <li class="t3">Variety</li>
-                    <li class="t2">Learning Environment</li>
-                    <li class="t3">Accepting</li>
-                    <li class="t3">Complex</li>
-                    <li class="t3">Flexible</li>
-                    <li class="t3">Grouping</li>
-                    <li class="t3">High Mobility</li>
-                    <li class="t3">Independent</li>
-                    <li class="t3">Learner-Centred</li>
-                    <li class="t3">Open</li>
+                     <li class="t1"><a href="/">Home</a></li>
+                    <li class="t1"><a href="/curriculum-differentiation">Differentiation</a></li>
+                    <li class="t2"><a href="/curriculum-differentiation/content-differentiation-options">Content</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/abstractness">Abstractness</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/complexity">Complexity</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/extracurricular-topics">Extracurricular</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/lives-and-living">Lives & Living</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/organization-for-learning-value">Organization</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/real-life-topics">Real Life</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/content-differentiation-options/self-selected-content">Self-Selected</a></li>
+                    <li class="t2"><a href="/curriculum-differentiation/process-differentiation-options">Process</a></li>                    
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/complex-thinking">Complex Thinking</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/expert-methods">Expert Methods</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/group-interaction">Group Interaction</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/individual-pursuits">Individual Pursuits</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/inquiry-based">Inquiry-Based</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/open-endedness">Open-Ended</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/pacing">Pacing</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/reasoning-and-reflection">Reasoning & Reflection</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/self-selected-process">Self-Selected</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/process-differentiation-options/variety">Variety</a></li>
+                    <li class="t2"><a href="/curriculum-differentiation/product-differentiation-options">Product</a></li>         
+                    <li class="t3"><a href="/curriculum-differentiation/product-differentiation-options/authentic-audiences">Authentic Audiences</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/product-differentiation-options/feedback-and-assessment">Feedback & Assessment</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/product-differentiation-options/self-selected-product">Self-Selected</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/product-differentiation-options/transformations">Transformations</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/product-differentiation-options/variety">Variety</a></li>
+                    <li class="t2"><a href="/curriculum-differentiation/differentiating-the-environment">Learning Environment</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/accepting-versus-judging">Accepting</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/complex-vs-simple">Complex</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/flexible-vs-rigid">Flexible</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/flexible-groupings-vs-fixed">Grouping</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/high-mobility-vs-low-mobility">High Mobility</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/independent-vs-dependent-2">Independent</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/learner-centered…teacher-centered">Learner-Centred</a></li>
+                    <li class="t3"><a href="/curriculum-differentiation/differentiating-the-environment/open-vs-closed">Open</a></li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-4">
