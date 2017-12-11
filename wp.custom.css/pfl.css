@@ -1,0 +1,162 @@
+/* PFL css */
+
+/*
+* PFL publication
+*/
+
+/*chapter objects*/
+.dtk-object {
+	float: left;
+	width: 160px;
+	min-height: 76px;
+	position: relative;
+	margin: 6px;
+	padding-left: 76px;
+}
+
+/*Chapters Div*/
+#chapContDiv{width:650px;}
+
+/*Text Headers (table implementation)*/
+.txtHeader 
+{
+	border-spacing:0px;
+	width:100%;
+	border-width:0px;
+}
+.txtHeader tr{background-color:#CCCCCC; border-width:0px; }
+.txtHeader td{font-weight:bold; }
+
+/*Inline Tables*/
+.chapTables 
+{
+	border-width:1px;
+	border-style:solid;
+	border-collapse:collapse;
+}
+.chapTables th{width:300px;font-weight:bold;padding:7px;border-width:1px;border-style:solid;}
+.chapTables td{width:300px;padding:7px;border-width:1px;border-style:solid;vertical-align:top;}
+.chapTables #indicHeaders{padding:5px;color:white;background-color:#666666;}
+
+.chapTablesNoBorder
+{
+	border-width:0px;
+	border-style:solid;
+	border-collapse:collapse;
+}
+.chapTablesNoBorder th{width:300px;font-weight:bold;padding:10px;border-width:0px;border-style:solid;}
+.chapTablesNoBorder td{width:300px;padding-top:5px;padding-bottom:5px;padding-right:20px;padding-left:20px;border-width:0px;border-style:solid;vertical-align:top;}
+
+
+
+/* Materials Div */
+.materialsDiv
+{
+	border:1px solid #CCCCCC; 
+	margin:5px; 
+	padding:10px;
+	/*must be changed in print version*/
+	display:none;
+}
+
+
+/*End Notes*/
+.endnoteparent
+{
+  	position:relative;
+	left:0px;
+	top:0px;
+
+}
+.endnotes
+{
+	border:1px solid #CCCCCC; 
+	margin:5px; 
+	padding:10px;
+	
+	width:200px;
+	
+	position:absolute;
+	left:25px;
+	top:-20px;
+	
+	background-color:#FFFFCC;
+	
+	/*must be changed in print version*/
+	display:none;
+	
+}
+
+/*Quotes*/
+.textQuote
+{
+		  padding-left:30px;
+		  padding-right:30px;
+}.
+
+
+/*Contributers Page*/
+.contNameCell{width:200px; text-align:center;}
+.contPicCell{vertical-align:top; text-align:center; height:50px;}
+.contPicCell img{width:80px;}
+.contInfoCell{vertical-align:top; width:200px;}
+ 
+ 
+.contTable
+{
+	border-width:0px;
+	border-style:solid;
+	border-collapse:collapse;
+}
+.contTable td{width:150px;padding-top:5px;padding-bottom:5px;padding-right:10px;padding-left:10px;border-width:0px;border-style:solid;vertical-align:top;}
+ 
+.contDropDiv {width:350px;display:none;margin:10px;}
+
+
+.bottomSpacerDiv img{height:50px;}
+
+/* PFL survey */
+.pflSurveyDiv
+{
+	border:1px solid #CCCCCC; 
+	margin:5px; 
+	padding:10px;
+	width: 750px;
+}
+
+.pflSurveyCmpl {	border-width:0px;
+	border-style:solid;
+	}
+	
+.pflSurveyCmpl td{
+	padding:3px;
+	vertical-align:middle;
+	border-width:2px;
+	border-style:outset;
+	width:70px;
+	text-align:center;
+	background-color: #E8E9EA;	
+	}
+
+.survQTable td{
+	padding-right:5px;
+	padding-left:5px;
+	vertical-align:middle;
+	width:20px;
+	text-align:center;	
+}
+
+.yourCornerDiv
+{
+	border:1px solid #CCCCCC; 
+	margin:5px; 
+	padding:10px;
+	
+}
+
+
+.summaryTableCell{padding:3px;vertical-align:top;}
+.resultsTable td{padding:3px;vertical-align:top;};
+
+.surveyHelpDiv{display:none;border-width:1px;border-style:solid;padding:20px;position:absolute;}
+.surveyHelpDiv #divSurveyInputHelp{left:200;top:150;}

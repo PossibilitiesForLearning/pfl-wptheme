@@ -1,0 +1,13 @@
+<div id="divDiffActInst" style="background-color: #e0d6df; width: 700px;"></div>
+<div style="background-color: #e0d6df; width: 700px;"><span style="text-decoration: underline;">Directions:</span></div>
+<div id="divDiffActInst" style="background-color: #e0d6df; width: 700px;">
+<ol>
+<li>Print a copy of the Brilliant Behaviors to record the behaviors that appear.  Use either an <a href="http://possibilitiesforlearning.com/?page_id=241">individual checklist</a>, <a href="http://possibilitiesforlearning.com/?page_id=267">group checklist</a>, or <a href="http://www.sfu.ca/%7Ekanevsky/PFL2/GuideTeacher.pdf">a copy of the Guide</a>.</li>
+<li>Record the information required information about the student and activity or activities at the top of the form.</li>
+<li>Observe a student while she or he is engaged in a challenging activity in an area of strength or interest.  <a href="http://possibilitiesforlearning.com/?page_id=228">Click here to see a description of suitable activities.</a></li>
+<li>Put a check to the left of each Behavior the student demonstrates frequently, intensely and consistently.</li>
+<li>Transfer the student information and behaviors observed from the <em>Brilliant Behaviors</em> form to the <em>Guide</em> online. The Guide will change the Xs to the right of each behavior you check into vs.</li>
+<li>The Guide will also highlight the differentiation strategies to emphasize for this student when she or he is working in this area of strength or interest.</li>
+<li>The definition of each strategy will appear when the cursor rests on it. Read the definitions for each of the strategies recommended by the Guide.  Do they seem appropriate?</li>
+</ol>
+</div>

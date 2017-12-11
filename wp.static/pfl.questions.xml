@@ -1,0 +1,603 @@
+<PFL>
+	<PART01 title="Settings For Learning">
+		<QUESTION stratids="pflAcc" text="I like talking with my teacher about my favorite subject." />
+		<QUESTION stratids="pflAcc" text="I like it when my teacher tries to understand what I'm trying to say orwhat I'm feeling." />		
+		<QUESTION stratids="pflAcc" text="I like it when I know my teacher gives me time to think after giving me a really difficult idea to understand or a problem to solve." />
+		<QUESTION stratids="pflAcc" text="I like to ask for extra help." />
+		<QUESTION stratids="pflCmplx" text="I like learning when I'm using the same materials, tools or skills that experts use at work." />
+		<QUESTION stratids="pflCmplx" text="I like learning from textbooks." />
+		<QUESTION stratids="pflFlex" text="I like to teach others in my class." />
+		<QUESTION  stratids="pflFlex" text="I like to teach children younger than me." />
+		<QUESTION  stratids="pflFlex" text="I like having others in my class teach me." />
+		<QUESTION  stratids="pflFlex" text="I like it when my teacher changes the schedule so the whole class can keep working on something fascinating or quit working on something boring." />
+		<QUESTION stratids="pflHM" text="I like going to places outside of school where people are doing work that uses my favorite school subject." />
+		<QUESTION stratids="pflHM"  text="I like moving around while I'm learning." />
+		<QUESTION stratids="pflHM"  text="I like going to the Public Library to do research on my favorite topics." />
+		<QUESTION stratids="pflInd,pflCmplx" text="I like learning centers." />
+		<QUESTION stratids="pflInd,pflVar" text="I like to work alone on big projects." />
+		<QUESTION stratids="pflInd" text="I like to know how much time I have for an assignment." />
+		<QUESTION stratids="pflInd"  text="I like to work on my assignments until I choose to stop. It might be longer or shorter than the time allowed in our timetable." />
+		<QUESTION stratids="pflLC" text="I like my teacher to plan my work on big projects." />
+		<QUESTION stratids="pflLC,pflFlex"  text="I like it when my teacher lets me stay on an interesting topic even if it is different from the work that the rest of the class is doing." />
+		<QUESTION stratids="pflLC,pflFlex" text="I like it when my teacher encourages me to try out a new way of doing something that I just thought up, even if it sounds weird." />
+		<QUESTION stratids="pflOpn" text="I like having visitors come to school to talk about my favorite topics." />
+		<QUESTION stratids="pflOpn" text="I like trying to figure out how or why something happens a certain way from listening to experts." />
+		<QUESTION stratids="pflOpn" text="I like trying to figure out how or why something happens a certain way from talking with experts." />
+		<QUESTION stratids="pflOpn,pflInd" text="I like learning from books I find outside of my school." />
+		<QUESTION stratids="pflOpn,pflInd" text="I like using computers to find new people and information through the Internet." />
+		<QUESTION stratids="pflVarGrp" text="I like to listen in group discussions." />
+		<QUESTION stratids="pflVarGrp" text="I like to talk in group discussions." />
+		<QUESTION stratids="pflVarGrp" text="I like sitting in groups of 3-6 desks" />
+		<QUESTION stratids="pflVarGrp" text="I like sitting alone." />
+		<QUESTION stratids="pflVarGrp" text="I like sitting with our desks in rows so there is someone in front of me and someone behind me." />
+		<QUESTION stratids="pflVarGrp" text="I like having my desk in a corner of the room, away from everyone, so I can have my privacy." />
+		<QUESTION stratids="pflVarGrp,pflLC" text="I like doing projects in a group when I get to choose my group." />
+		<QUESTION stratids="pflVarGrp,pflLC" text="I like doing projects in a group when my teacher tells us who will be in our groups." />
+		<QUESTION stratids="pflVarGrp" text="When I'm learning in a group, I like working with others who learn differently from the way I learn." />
+		<QUESTION stratids="pflVarGrp" text="When I'm learning in a group, I like working with others who learn more slowly than I do, so I can teach them what I already know." />
+		<QUESTION stratids="pflVarGrp" text="When I'm learning in a group, I like working with others who learn as quickly as I do." />
+		<QUESTION stratids="pflVarGrp" text="When I'm working in a group, I like working with others who learn more quickly than I do, so I have to work very hard to keep up with them." />
+		<QUESTION stratids="pflVarGrp" text="When I am learning with a partner, I like a partner who learns more slowly than I do, so I'm teaching what I already know." />
+		<QUESTION stratids="pflVarGrp" text="When I'm learning with a partner, I like a partner who learns differently from the way I learn." />
+		<QUESTION stratids="pflVarGrp" text="I like learning with a partner who learns as quickly as I do." />
+		<QUESTION stratids="pflVarGrp" text="When I'm working with a partner, I like it when my partner learns more quickly than I do, so I have to work very hard to keep up." />
+		<QUESTION stratids="pflVarGrp,pflLC" text="I like doing projects with a partner when I get to choose my partner." />
+		<QUESTION stratids="pflVarGrp,pflLC" text="I like doing projects with a partner when my teacher gives me a partner." />
+		<QUESTION  stratids="pflVarGrp" text="I only like to work in groups." />
+		<!--QUESTION text="" />
+		<QUESTION text="" />
+		<QUESTION text="" />
+		<QUESTION text="" /-->
+	</PART01>
+	<PART02  title="Ideas To Learn">
+		<QUESTION stratids="pflAbs" text="I like to learn with words (reading, writing, listening, speaking)." />
+		<QUESTION stratids="pflAbs"  text="I like to learn with numbers and math ideas" />
+		<QUESTION stratids="pflAbs"  text="I like to learn with symbols." />
+		<QUESTION stratids="pflAbs"  text="I like to learn with musical ideas." />
+		<QUESTION stratids="pflAbs"  text="I like to learn from pictures and drawings." />
+		<QUESTION stratids="pflAbs,pflCmplx"  text="I like learning lots of small bits of information, ideas and facts." />
+		<QUESTION stratids="pflCmplx"  text="I like understanding complicated ideas and problems." />
+		<QUESTION stratids="pflCmplx,pflOrg"  text="I like understanding the ways ideas are connected to each other." />
+		<QUESTION stratids="pflExtcur,pflRLT"  text="I need to understand how and why things happen." />
+		<QUESTION stratids="pflExtcur,pflRLT,pflSelfSel" text="I like learning about weird topics that I wonder about." />
+		<QUESTION stratids="pflLL" text="I'm curious about people's feelings." />
+		<QUESTION stratids="pflLL"  text="I like learning about the lives of people who love doing things with my favorite school subject. They could be famous now or famous in the past." />
+		<QUESTION stratids="pflLL"  text="I like learning about the jobs I could do that use my favorite school subject." />
+		<QUESTION  stratids="pflRLT" text="I like learning about real things that experts need to know to be experts." />
+		<QUESTION stratids="pflRLT"  text="I want to study today's world problems." />
+		<QUESTION stratids="pflExtcur,pflRLT,pflSelfSel" text="I like learning about topics I choose. It might be anything!" />
+		<QUESTION stratids="pflSelfSel" text="I like learning about topics my teacher chooses." />
+		<QUESTION stratids="pflVar" text="I like learning things that are different from what anyone else in my class is learning." />
+		<!--QUESTION text="" />
+		<QUESTION text="" /-->
+	</PART02>
+	<PART03 title="Ways To Learn">
+		<QUESTION stratids="pflCmplxThink" text="I like finding creative solutions to hard or weird problems." />
+		<QUESTION stratids="pflCmplxThink" text="I like taking ideas apart. I want to figure out how the parts work or what they mean." />
+		<QUESTION stratids="pflCmplxThink" text="I like memorizing facts and definitions." />
+		<QUESTION stratids="pflCmplxThink" text="I like to look at familiar things in new ways to discover new ideas." />
+		<QUESTION stratids="pflVar" text="I like doing things the way experts do them." />
+		<QUESTION  stratids="pflEM" text="I like trying to figure out how or why something happens a certain way from reading books." />
+		<QUESTION stratids="pflEM" text="I like discovering reasons for things I don't understand by doing research on my own." />
+		<QUESTION stratids="pflIndvPur" text="I like discovering reasons for things I don't understand by doing research with help from a teacher." />
+		<QUESTION stratids="pflInqBas" text="I like experimenting." />
+		<QUESTION stratids="pflInqBas" text="I like discovering reasons for things I don't understand by doing research with help from an expert." />
+		<QUESTION stratids="pflInqBas" text="I like to copy information and ways of doing things." />
+		<QUESTION stratids="pflOE" text="I like doing activities that have more than one right answer and more than one way to find them." />
+		<QUESTION stratids="pflPac" text="I like learning at a slow, easy speed." />
+		<QUESTION stratids="pflPac" text="I like learning lots of new ideas quickly." />
+		<QUESTION stratids="pflPac" text="I like assignments that can be finished in one class." />
+		<QUESTION stratids="pflPac" text="I like having lots of time to dig in to ideas and projects." />
+		<QUESTION stratids="pflPac,pflIndvPur" text="I like learning at my own speed." />
+		<QUESTION stratids="pflPac" text="I like waiting until everyone in the class or group understands the lesson before going on to a new idea." />
+		<QUESTION stratids="pflPac" text="I like learning under pressure, like when I've missed school and the rest of the class is ahead of me." />
+		<QUESTION stratids="pflPac" text="I like having a lot of practice and repetition in my assignments." />
+		<QUESTION stratids="pflPac" text="I like to have lots of practice with a new way of thinking in different assignments, so I feel sure I know it." />
+		<QUESTION stratids="pflRfl" text="I like hearing the ways other students are thinking about something I'm having trouble with." />
+		<QUESTION stratids="pflRfl" text="I like explaining my thinking to other students." />
+		<QUESTION stratids="pflRfl" text="I like creating pictures in my mind of what I'm learning." />
+		<QUESTION stratids="pflRfl" text="I like having time to think about my ideas before I start to work on an assignment." />
+		<QUESTION stratids="pflSelfSel" text="I like learning when I get to choose the way I'll be learning." />
+		<QUESTION stratids="pflVar" text="I like to learn different ways to learn." />
+	</PART03>
+	<PART04 title="Showing Your Learning">
+		<QUESTION stratids="pflAA" text="I like telling my class about what I've been learning." />
+		<QUESTION stratids="pflAA,pflFB" text="I like to hear an expert's thoughts about my work." />
+		<QUESTION stratids="pflAA" text="I like sharing my work with younger students." />
+		<QUESTION stratids="pflAA" text="I like sharing my work with older students." />
+		<QUESTION stratids="pflAA" text="I like sharing my work with adults outside of school." />
+		<QUESTION stratids="pflAA" text="I like sharing my work with my family." />
+		<QUESTION stratids="pflAA" text="I like to be able to choose who will hear about or see what I've learned." />
+		<QUESTION stratids="pflFB" text="I like my teacher to tell me how I'll be marked before I begin an assignment." />
+		<QUESTION stratids="pflFB" text="I like tests." />	
+		<QUESTION stratids="pflFB" text="I like to mark my own work." />
+		<QUESTION stratids="pflFB" text="I like to have my teacher mark my work." />
+		<QUESTION stratids="pflFB" text="I like discussing my mark with my teacher." />
+		<QUESTION stratids="pflFB" text="I like to have an expert mark my work." />
+		<QUESTION text="I like to have my work marked the same way an expert's would be judged." />
+		<QUESTION stratids="pflFB" text="I like to choose who will mark my work." />
+		<QUESTION stratids="pflFB" text="I like to choose the way my teacher will mark my assignments." />
+		<QUESTION stratids="pflFB,pflSelfSel" text="Before I start working on a project, I like to talk about who will mark it and how it will be marked with my teacher so we can decide together." />
+		<QUESTION stratids="pflFB" text="Even when I get a good mark I like hearing about ways it could be improved." />
+		<QUESTION stratids="pflFB" text="I like to hear about the good parts of my work but it upsets me to hear about the things that could be improved." />
+		<QUESTION stratids="pflFB" text="I like knowing if my mark is better or worse than my classmates." />
+		<QUESTION  stratids="pflSelfSel" text="I like big projects." />
+		<QUESTION stratids="pflSelfSel" text="I like to choose the way I'll show what I've learned." />
+		<QUESTION stratids="pflSelfSel" text="I like to have my teacher tell me the way I should show what I have learned." />
+		<QUESTION  stratids="pflTrans" text="I like to change ideas from one form to another, like changing a story into a play or a math problem into music, or changing a feeling I get from a picture into a poem." />
+		<QUESTION stratids="pflVar" text="I like to be able to show what I've learned in different ways for different assignments." />
+	</PART04>
+
+	<PART05>
+				<OPTION sid="liketolearn" id="animals" value="animals"/>
+				<OPTION sid="liketolearn" id="architecture" value="architecture"/>
+				<OPTION sid="liketolearn" id="art" value="art"/>
+				<OPTION sid="liketolearn" id="astronomy" value="astronomy"/>
+				<OPTION sid="liketolearn" id="aviation" value="aviation"/>
+				<OPTION sid="liketolearn" id="beauty" value="beauty"/>
+				<OPTION sid="liketolearn" id="brains" value="brains"/>
+				<OPTION sid="liketolearn" id="building" value="building"/>
+				<OPTION sid="liketolearn" id="business" value="business"/>
+				<OPTION sid="liketolearn" id="calculus" value="calculus"/>
+				<OPTION sid="liketolearn" id="cars" value="cars"/>
+				<OPTION sid="liketolearn" id="change" value="change"/>
+				<OPTION sid="liketolearn" id="chaos" value="chaos"/>
+				<OPTION sid="liketolearn" id="chaostheory" value="chaos theory"/>
+				<OPTION sid="liketolearn" id="chemistry" value="chemistry"/>
+				<OPTION sid="liketolearn" id="comedy" value="comedy"/>
+				<OPTION sid="liketolearn" id="communication" value="communication"/>
+				<OPTION sid="liketolearn" id="conflict" value="conflict"/>
+				<OPTION sid="liketolearn" id="courage" value="courage"/>
+				<OPTION sid="liketolearn" id="crafts" value="crafts"/>
+				<OPTION sid="liketolearn" id="cultures" value="cultures"/>
+				<OPTION sid="liketolearn" id="dancing" value="dancing"/>
+				<OPTION sid="liketolearn" id="design" value="design"/>
+				<OPTION sid="liketolearn" id="dinosaurs" value="dinosaurs"/>
+				<OPTION sid="liketolearn" id="dramaandacting" value="drama and acting"/>
+				<OPTION sid="liketolearn" id="dreams" value="dreams"/>
+				<OPTION sid="liketolearn" id="ecology" value="ecology"/>
+				<OPTION sid="liketolearn" id="endangeredspecies" value="endangered species"/>
+				<OPTION sid="liketolearn" id="engineering" value="engineering"/>
+				<OPTION sid="liketolearn" id="environment" value="environment"/>
+				<OPTION sid="liketolearn" id="ethics" value="ethics"/>
+				<OPTION sid="liketolearn" id="exploration" value="exploration"/>
+				<OPTION sid="liketolearn" id="force" value="force"/>
+				<OPTION sid="liketolearn" id="foreigncountries" value="foreign countries"/>
+				<OPTION sid="liketolearn" id="foreignlanguages" value="foreign languages"/>
+				<OPTION sid="liketolearn" id="fractals" value="fractals"/>
+				<OPTION sid="liketolearn" id="freedom" value="freedom"/>
+				<OPTION sid="liketolearn" id="geography" value="geography"/>
+				<OPTION sid="liketolearn" id="geology" value="geology"/>
+				<OPTION sid="liketolearn" id="geometry" value="geometry"/>
+				<OPTION sid="liketolearn" id="ghosts" value="ghosts"/>
+				<OPTION sid="liketolearn" id="government" value="government"/>
+				<OPTION sid="liketolearn" id="history" value="history"/>
+				<OPTION sid="liketolearn" id="humanbody" value="human body"/>
+				<OPTION sid="liketolearn" id="insects" value="insects"/>
+				<OPTION sid="liketolearn" id="inventions" value="inventions"/>
+				<OPTION sid="liketolearn" id="inventors" value="inventors"/>
+				<OPTION sid="liketolearn" id="justice" value="justice"/>
+				<OPTION sid="liketolearn" id="languages" value="languages"/>
+				<OPTION sid="liketolearn" id="law" value="law"/>
+				<OPTION sid="liketolearn" id="literature" value="literature"/>
+				<OPTION sid="liketolearn" id="love" value="love"/>
+				<OPTION sid="liketolearn" id="medicine" value="medecine"/>
+				<OPTION sid="liketolearn" id="meteorology" value="meteorology"/>
+				<OPTION sid="liketolearn" id="money" value="money"/>
+				<OPTION sid="liketolearn" id="music" value="music"/>
+				<OPTION sid="liketolearn" id="mythology" value="mythology"/>
+				<OPTION sid="liketolearn" id="naturalcatastrophes" value="natural catastrophes"/>
+
+				<OPTION sid="liketolearn" id="oceans" value="oceans"/>
+				<OPTION sid="liketolearn" id="patterns" value="patterns"/>
+				<OPTION sid="liketolearn" id="peace" value="peace"/>
+				<OPTION sid="liketolearn" id="philosophy" value="philosophy"/>
+				<OPTION sid="liketolearn" id="physics" value="physics"/>
+				<OPTION sid="liketolearn" id="poetry" value="poetry"/>
+				<OPTION sid="liketolearn" id="politics" value="politics"/>
+				<OPTION sid="liketolearn" id="power" value="power"/>
+				<OPTION sid="liketolearn" id="psychology" value="psychology"/>
+				<OPTION sid="liketolearn" id="religion" value="religion"/>
+				<OPTION sid="liketolearn" id="robotics" value="robotics"/>
+				<OPTION sid="liketolearn" id="sciencefiction" value="science fiction"/>
+				<OPTION sid="liketolearn" id="sculpture" value="sculpture"/>
+				<OPTION sid="liketolearn" id="sourcesofenergy" value="sources of energy"/>
+				<OPTION sid="liketolearn" id="spacetravelandtechnology" value="space travel and technology"/>
+				<OPTION sid="liketolearn" id="sports" value="sports"/>
+				<OPTION sid="liketolearn" id="structures" value="structures"/>
+				<OPTION sid="liketolearn" id="supernatural events" value="supernatural events"/>
+				<OPTION sid="liketolearn" id="systems" value="systems"/>
+				<OPTION sid="liketolearn" id="technology" value="technology"/>
+
+				<OPTION sid="liketolearn" id="thefuture" value="the future"/>
+				<OPTION sid="liketolearn" id="theuniverse" value="the universe"/>
+				<OPTION sid="liketolearn" id="theaterandacting" value="theater and acting"/>
+				<OPTION sid="liketolearn" id="time" value="time"/>
+				<OPTION sid="liketolearn" id="travel" value="travel"/>
+				<OPTION sid="liketolearn" id="TV" value="TV"/>
+				<OPTION sid="liketolearn" id="UFOs" value="UFOs"/>
+				<OPTION sid="liketolearn" id="values" value="values"/>
+				<OPTION sid="liketolearn" id="war" value="war"/>
+				
+				
+				
+				<OPTION sid="waystolearn" id="adapt" value="adapt"/>
+				<OPTION sid="waystolearn" id="analyze" value="analyze"/>
+				<OPTION sid="waystolearn" id="appraise" value="appraise"/>
+				<OPTION sid="waystolearn" id="arbitrate" value="arbitrate"/>
+				<OPTION sid="waystolearn" id="argue" value="argue"/>
+				<OPTION sid="waystolearn" id="arrange" value="arrange"/>
+				<OPTION sid="waystolearn" id="assess" value="assess"/>
+				<OPTION sid="waystolearn" id="award" value="award"/>
+				<OPTION sid="waystolearn" id="blend" value="blend"/>
+				<OPTION sid="waystolearn" id="calculate" value="calculate"/>
+				<OPTION sid="waystolearn" id="change" value="change"/>
+				<OPTION sid="waystolearn" id="choose" value="choose"/>
+				<OPTION sid="waystolearn" id="classify" value="classify"/>
+				<OPTION sid="waystolearn" id="collect" value="collect"/>
+				<OPTION sid="waystolearn" id="combine" value="combine"/>
+				<OPTION sid="waystolearn" id="compare" value="comapre"/>
+				<OPTION sid="waystolearn" id="compile" value="compile"/>
+				<OPTION sid="waystolearn" id="compose" value="compose"/>
+				<OPTION sid="waystolearn" id="conclude" value="conclude"/>
+				<OPTION sid="waystolearn" id="construct" value="construct"/>
+				<OPTION sid="waystolearn" id="contrast" value="contrast"/>
+				<OPTION sid="waystolearn" id="count" value="count"/>
+				<OPTION sid="waystolearn" id="create" value="create"/>
+				<OPTION sid="waystolearn" id="critique" value="critique"/>
+				<OPTION sid="waystolearn" id="debate" value="debate"/>
+				<OPTION sid="waystolearn" id="decide" value="decide"/>
+				<OPTION sid="waystolearn" id="deconstruct" value="deconstruct"/>
+				<OPTION sid="waystolearn" id="defend" value="defend"/>
+				<OPTION sid="waystolearn" id="define" value="define"/>
+				<OPTION sid="waystolearn" id="demonstrate" value="demonstrate"/>
+				<OPTION sid="waystolearn" id="describe" value="describe"/>
+				<OPTION sid="waystolearn" id="design" value="design"/>
+				<OPTION sid="waystolearn" id="determine" value="determine"/>
+				<OPTION sid="waystolearn" id="develop" value="develop"/>
+				<OPTION sid="waystolearn" id="diagram" value="diagram"/>
+				<OPTION sid="waystolearn" id="differentiate" value="differentiate"/>
+				<OPTION sid="waystolearn" id="discuss" value="discuss"/>
+				<OPTION sid="waystolearn" id="disprove" value="disprove"/>
+				<OPTION sid="waystolearn" id="dispute" value="dispute"/>
+				<OPTION sid="waystolearn" id="dissect" value="dissect"/>
+				<OPTION sid="waystolearn" id="distinguish" value="distinguish"/>
+				<OPTION sid="waystolearn" id="divide" value="divide"/>
+				<OPTION sid="waystolearn" id="elaborate" value="elaborate"/>
+				<OPTION sid="waystolearn" id="estimate" value="estimate"/>
+				<OPTION sid="waystolearn" id="evaluate" value="evaluate"/>
+				<OPTION sid="waystolearn" id="explain" value="explain"/>
+				<OPTION sid="waystolearn" id="form" value="form"/>
+				<OPTION sid="waystolearn" id="formulate" value="formulate"/>
+				<OPTION sid="waystolearn" id="grade" value="grade"/>
+				<OPTION sid="waystolearn" id="group" value="group"/>
+				<OPTION sid="waystolearn" id="hypothesize" value="hypothesize"/>
+				<OPTION sid="waystolearn" id="illustrate" value="illustrate"/>
+				<OPTION sid="waystolearn" id="imagine" value="imagine"/>
+				<OPTION sid="waystolearn" id="improve" value="improve"/>
+				<OPTION sid="waystolearn" id="integrate" value="integrate"/>
+				<OPTION sid="waystolearn" id="interpret" value="interpret"/>
+				<OPTION sid="waystolearn" id="invent" value="invent"/>
+				<OPTION sid="waystolearn" id="investigate" value="investigate"/>
+				<OPTION sid="waystolearn" id="judge" value="judge"/>
+				<OPTION sid="waystolearn" id="justify" value="justify"/>
+				<OPTION sid="waystolearn" id="mediate" value="mediate"/>
+				<OPTION sid="waystolearn" id="modify" value="modify"/>
+				<OPTION sid="waystolearn" id="monitor" value="monitor"/>
+				<OPTION sid="waystolearn" id="organize" value="organize"/>
+				<OPTION sid="waystolearn" id="outline" value="outline"/>
+				<OPTION sid="waystolearn" id="paint" value="paint"/>
+				<OPTION sid="waystolearn" id="plan" value="plan"/>
+				<OPTION sid="waystolearn" id="predict" value="predict"/>
+				<OPTION sid="waystolearn" id="prepare" value="prepare"/>
+				<OPTION sid="waystolearn" id="prioritize" value="prioritize"/>
+				<OPTION sid="waystolearn" id="produce" value="produce"/>
+				<OPTION sid="waystolearn" id="propose" value="propose"/>
+				<OPTION sid="waystolearn" id="rank" value="rank"/>
+				<OPTION sid="waystolearn" id="rate" value="rate"/>
+				<OPTION sid="waystolearn" id="recite" value="recite"/>
+				<OPTION sid="waystolearn" id="recommend" value="recoment"/>
+				<OPTION sid="waystolearn" id="relate" value="relate"/>
+				<OPTION sid="waystolearn" id="revise" value="revise"/>
+				<OPTION sid="waystolearn" id="rewrite" value="rewrite"/>
+				<OPTION sid="waystolearn" id="roleplay" value="role-play"/>
+				<OPTION sid="waystolearn" id="separate" value="separate"/>
+				<OPTION sid="waystolearn" id="simplify" value="simplify"/>
+				<OPTION sid="waystolearn" id="solve" value="solve"/>
+				<OPTION sid="waystolearn" id="sort" value="sort"/>
+				<OPTION sid="waystolearn" id="strengthen" value="strengthen"/>
+				<OPTION sid="waystolearn" id="summarize" value="summarize"/>
+				<OPTION sid="waystolearn" id="support" value="support"/>
+				<OPTION sid="waystolearn" id="survey" value="survey"/>
+				<OPTION sid="waystolearn" id="synthesize" value="synthesize"/>
+				<OPTION sid="waystolearn" id="test" value="test"/>
+				<OPTION sid="waystolearn" id="track" value="track"/>
+				<OPTION sid="waystolearn" id="verify" value="verify"/>
+				<OPTION sid="waystolearn" id="weigh" value="weigh"/>
+
+
+				<OPTION sid="showlearn" id="3Dmodel" value="3-D model"/>
+				<OPTION sid="showlearn" id="abstract" value="abstract"/>
+				<OPTION sid="showlearn" id="advertisement" value="advertisement"/>
+				<OPTION sid="showlearn" id="amusementparkride" value="amusement park ride"/>
+				<OPTION sid="showlearn" id="animation" value="animation"/>
+				<OPTION sid="showlearn" id="app" value="app"/>
+				<OPTION sid="showlearn" id="archive" value="archive"/>
+				<OPTION sid="showlearn" id="articleformagazine" value="article for magazine"/>
+				<OPTION sid="showlearn" id="autobiography" value="autobiography"/>
+				<OPTION sid="showlearn" id="banner" value="banner"/>
+				<OPTION sid="showlearn" id="bibliography" value="bibliography"/>
+				<OPTION sid="showlearn" id="biography" value="biography"/>
+				<OPTION sid="showlearn" id="blog" value="blog"/>
+				<OPTION sid="showlearn" id="blueprint" value="blueprint"/>
+				<OPTION sid="showlearn" id="book" value="book"/>
+				<OPTION sid="showlearn" id="bookjacket" value="book jacket"/>
+				<OPTION sid="showlearn" id="bookreview" value="book review"/>
+				<OPTION sid="showlearn" id="broadcast" value="broadcast"/>
+				<OPTION sid="showlearn" id="brochure" value="brochure"/>
+				<OPTION sid="showlearn" id="bumpersticker" value="bumpersticker"/>
+				<OPTION sid="showlearn" id="businessplan" value="business plan"/>
+				<OPTION sid="showlearn" id="campaign" value="campaign"/>
+				<OPTION sid="showlearn" id="cartoon" value="cartoon"/>
+				<OPTION sid="showlearn" id="carving" value="carving"/>
+				<OPTION sid="showlearn" id="celebration" value="celebration"/>
+				<OPTION sid="showlearn" id="chapter" value="chapter"/>
+				<OPTION sid="showlearn" id="chart" value="chart"/>
+				<OPTION sid="showlearn" id="checklist" value="checklist"/>
+				<OPTION sid="showlearn" id="club" value="club"/>
+				<OPTION sid="showlearn" id="collage" value="collage"/>
+				<OPTION sid="showlearn" id="collection" value="collection"/>
+				<OPTION sid="showlearn" id="comedyskit" value="comedy skit"/>
+				<OPTION sid="showlearn" id="comicstrip" value="comic strip"/>
+				<OPTION sid="showlearn" id="commentary" value="commentary"/>
+				<OPTION sid="showlearn" id="commercial" value="commercial"/>
+				<OPTION sid="showlearn" id="computergraphic" value="computer graphic"/>
+				<OPTION sid="showlearn" id="computerprogram" value="computer program"/>
+				<OPTION sid="showlearn" id="conferencepresentation" value="conference presentation"/>
+				<OPTION sid="showlearn" id="critique" value="critique"/>
+				<OPTION sid="showlearn" id="dance" value="dance"/>
+				<OPTION sid="showlearn" id="database" value="database"/>
+				<OPTION sid="showlearn" id="debate" value="debate"/>
+				<OPTION sid="showlearn" id="demonstration" value="demonstration"/>
+				<OPTION sid="showlearn" id="diagram" value="diagram"/>
+				<OPTION sid="showlearn" id="dialogue" value="dialogue"/>
+				<OPTION sid="showlearn" id="diary" value="diary"/>
+				<OPTION sid="showlearn" id="dictionary" value="dictionary"/>
+				<OPTION sid="showlearn" id="display" value="display"/>
+				<OPTION sid="showlearn" id="documentary" value="documentary"/>
+
+				<OPTION sid="showlearn" id="dramatization" value="dramatization"/>
+				<OPTION sid="showlearn" id="drawing" value="drawing"/>
+				<OPTION sid="showlearn" id="editorial" value="editorial"/>
+				<OPTION sid="showlearn" id="encyclopedia" value="encyclopedia"/>
+				<OPTION sid="showlearn" id="equation" value="equation"/>
+				<OPTION sid="showlearn" id="essay" value="essay"/>
+				<OPTION sid="showlearn" id="etching" value="etching"/>
+				<OPTION sid="showlearn" id="evaluationchecklist" value="evaluation checklist"/>
+				<OPTION sid="showlearn" id="event" value="event"/>
+				<OPTION sid="showlearn" id="exhibit" value="exhibit"/>
+				<OPTION sid="showlearn" id="experiment" value="experiment"/>
+				<OPTION sid="showlearn" id="fabric" value="fabric"/>
+				<OPTION sid="showlearn" id="factfile" value="fact file"/>
+				<OPTION sid="showlearn" id="fairytale" value="fairy tale"/>
+				<OPTION sid="showlearn" id="familytree" value="family tree"/>
+				<OPTION sid="showlearn" id="filmorfilmstrip" value="film or filmstrip"/>
+				<OPTION sid="showlearn" id="flag" value="flag"/>
+				<OPTION sid="showlearn" id="flipbook" value="flip book"/>
+				<OPTION sid="showlearn" id="floorplan" value="floor plan"/>
+				<OPTION sid="showlearn" id="flowchart" value="flow chart"/>
+				<OPTION sid="showlearn" id="flyer" value="flyer"/>
+				<OPTION sid="showlearn" id="gallery" value="gallery"/>
+				<OPTION sid="showlearn" id="game" value="game "/>                                                         
+				<OPTION sid="showlearn" id="gameshow" value="game show"/>
+				<OPTION sid="showlearn" id="geometricmodel" value="geometric model"/>
+				<OPTION sid="showlearn" id="glossary" value="glossary"/>
+				<OPTION sid="showlearn" id="graph" value="graph"/>
+				<OPTION sid="showlearn" id="graphic" value="graphic"/>
+				<OPTION sid="showlearn" id="graphicorganizer" value="graphic organizer"/>
+				<OPTION sid="showlearn" id="greetingcard" value="greeting card"/>
+				<OPTION sid="showlearn" id="grouppresentation" value="group presentation"/>
+				<OPTION sid="showlearn" id="guestspeaker" value="guest speaker"/>
+				<OPTION sid="showlearn" id="guide" value="guide"/>
+				<OPTION sid="showlearn" id="handbook" value="handbook"/>
+				<OPTION sid="showlearn" id="histogram" value="histogram"/>
+				<OPTION sid="showlearn" id="hologram" value="hologram"/>
+				<OPTION sid="showlearn" id="“howto” book" value="how-to"/>
+				<OPTION sid="showlearn" id="illusion" value="illusion"/>
+				<OPTION sid="showlearn" id="illustratedstory" value="illustrated story"/>
+				<OPTION sid="showlearn" id="illustration" value="illustration"/>
+				<OPTION sid="showlearn" id="instructions" value="instruction"/>
+				<OPTION sid="showlearn" id="internetsearch" value="internet search"/>
+				<OPTION sid="showlearn" id="interview" value="interview"/>
+				<OPTION sid="showlearn" id="invention" value="invention"/>
+				<OPTION sid="showlearn" id="investigation" value="investigation"/>
+				<OPTION sid="showlearn" id="itinerary" value="itinerary"/>
+				<OPTION sid="showlearn" id="jewelry" value="jewelry"/>
+				<OPTION sid="showlearn" id="jingle" value="jingle"/>
+				<OPTION sid="showlearn" id="joke" value="joke"/>
+				<OPTION sid="showlearn" id="journal" value="journal"/>
+
+				<OPTION sid="showlearn" id="kit" value="kit"/>
+				<OPTION sid="showlearn" id="learningcenter" value="learning center"/>
+				<OPTION sid="showlearn" id="lecture" value="lecture"/>
+				<OPTION sid="showlearn" id="lesson" value="lesson"/>
+				<OPTION sid="showlearn" id="letter" value="letter"/>
+				<OPTION sid="showlearn" id="limerick" value="limerick"/>
+				<OPTION sid="showlearn" id="literaryanalysis" value="literary analysis"/>
+				<OPTION sid="showlearn" id="log" value="log"/>
+				<OPTION sid="showlearn" id="logicpuzzle" value="logic puzzle"/>
+				<OPTION sid="showlearn" id="logo" value="logo"/>
+				<OPTION sid="showlearn" id="machine" value="machine"/>
+				<OPTION sid="showlearn" id="magazine" value="magazine"/>
+				<OPTION sid="showlearn" id="magazinearticle" value="magazine article"/>
+				<OPTION sid="showlearn" id="magicshow" value="magic show"/>
+				<OPTION sid="showlearn" id="manual" value="manual"/>
+				<OPTION sid="showlearn" id="map" value="map"/>
+				<OPTION sid="showlearn" id="mask" value="mask"/>
+				<OPTION sid="showlearn" id="matrix" value="matrix"/>
+				<OPTION sid="showlearn" id="menu" value="menu"/>
+				<OPTION sid="showlearn" id="metaphor" value="metaphor"/>
+				<OPTION sid="showlearn" id="mobile" value="mobile"/>
+				<OPTION sid="showlearn" id="mocktrial" value="mock trial"/>
+				<OPTION sid="showlearn" id="model" value="model"/>
+				<OPTION sid="showlearn" id="monologue" value="monologue"/>
+				<OPTION sid="showlearn" id="montage" value="montage"/>
+				<OPTION sid="showlearn" id="monument" value="monument"/>
+				<OPTION sid="showlearn" id="motto" value="motto"/>
+				<OPTION sid="showlearn" id="multimediapresentation" value="multimedia presentation"/>
+				<OPTION sid="showlearn" id="mural" value="mural"/>
+				<OPTION sid="showlearn" id="museum" value="museum"/>
+				<OPTION sid="showlearn" id="musicalcomposition" value="musical composition"/>
+				<OPTION sid="showlearn" id="mystery" value="mystery"/>
+				<OPTION sid="showlearn" id="narrative" value="narrative"/>
+				<OPTION sid="showlearn" id="newsreport" value="news report"/>
+				<OPTION sid="showlearn" id="newsletter" value="newsletter"/>
+				<OPTION sid="showlearn" id="newspaper" value="newspaper"/>
+				<OPTION sid="showlearn" id="newspaperarticle" value="newspaper article"/>
+				<OPTION sid="showlearn" id="novel" value="novel"/>
+				<OPTION sid="showlearn" id="oralreport" value="oral report"/>
+				<OPTION sid="showlearn" id="organization" value="organization"/>
+				<OPTION sid="showlearn" id="origami" value="origami"/>
+				<OPTION sid="showlearn" id="outline" value="outline"/>
+				<OPTION sid="showlearn" id="painting" value="painting"/>
+				<OPTION sid="showlearn" id="pamphlet" value="pamphlet"/>
+				<OPTION sid="showlearn" id="paneldiscussion" value="panel discussion"/>
+				<OPTION sid="showlearn" id="pantomime" value="pantomime"/>
+				<OPTION sid="showlearn" id="papermache" value="paper mache"/>
+				<OPTION sid="showlearn" id="party" value="party"/>
+				<OPTION sid="showlearn" id="pattern" value="pattern"/>
+				<OPTION sid="showlearn" id="performance" value="performance"/>
+				<OPTION sid="showlearn" id="personalexperience" value="personal experience"/>
+				<OPTION sid="showlearn" id="photoalbum" value="photo album"/>
+
+				<OPTION sid="showlearn" id="photoessay" value="photo essay"/>
+				<OPTION sid="showlearn" id="picturedictionary" value="picture dictionary"/>
+				<OPTION sid="showlearn" id="picturestory" value="picture story"/>
+				<OPTION sid="showlearn" id="piechart" value="pie chart"/>
+				<OPTION sid="showlearn" id="plan" value="plan"/>
+				<OPTION sid="showlearn" id="play" value="play"/>
+				<OPTION sid="showlearn" id="podcast" value="podcast"/>
+				<OPTION sid="showlearn" id="poem" value="poem"/>
+				<OPTION sid="showlearn" id="politicalcartoon" value="political cartoon"/>
+				<OPTION sid="showlearn" id="popupbook" value="pop-upbook"/>
+				<OPTION sid="showlearn" id="portfolio" value="portfolio"/>
+				<OPTION sid="showlearn" id="positionpaper" value="position paper"/>
+				<OPTION sid="showlearn" id="poster" value="poster"/>
+				<OPTION sid="showlearn" id="prediction" value="prediction"/>
+				<OPTION sid="showlearn" id="presentation" value="presentation"/>
+				<OPTION sid="showlearn" id="program" value="program"/>
+				<OPTION sid="showlearn" id="projectcube" value="project cube"/>
+				<OPTION sid="showlearn" id="puppet" value="puppet"/>
+				<OPTION sid="showlearn" id="puppetshow" value="puppet show"/>
+				<OPTION sid="showlearn" id="puzzle" value="puzzle"/>
+				<OPTION sid="showlearn" id="questionnaire" value="questionnaire"/>
+				<OPTION sid="showlearn" id="quilt" value="quilt"/>
+				<OPTION sid="showlearn" id="radioshow" value="radio show"/>
+				<OPTION sid="showlearn" id="rap" value="rap"/>
+				<OPTION sid="showlearn" id="rebusstory" value="rebus story"/>
+				<OPTION sid="showlearn" id="recipe" value="recipe"/>
+				<OPTION sid="showlearn" id="recitation" value="recitation"/>
+				<OPTION sid="showlearn" id="reenactment" value="reenactment"/>
+				<OPTION sid="showlearn" id="reliefmap" value="relief map"/>
+				<OPTION sid="showlearn" id="report" value="report"/>
+				<OPTION sid="showlearn" id="researchreport" value="research report"/>
+				<OPTION sid="showlearn" id="review" value="review"/>
+				<OPTION sid="showlearn" id="roleplay" value="role play"/>
+				<OPTION sid="showlearn" id="rubric" value="rubric"/>
+				<OPTION sid="showlearn" id="samples" value="samples"/>
+				<OPTION sid="showlearn" id="scavengerhunt" value="scavenger hunt"/>
+				<OPTION sid="showlearn" id="scenario" value="scenario"/>
+				<OPTION sid="showlearn" id="sciencefictionstory" value="science fiction story"/>
+				<OPTION sid="showlearn" id="scrapbook" value="scrapbook"/>
+				<OPTION sid="showlearn" id="script" value="script"/>
+				<OPTION sid="showlearn" id="sculpture" value="sculpture"/>
+				<OPTION sid="showlearn" id="secretcode" value="secret code"/>
+				<OPTION sid="showlearn" id="selfportrait" value="self-portrait"/>
+				<OPTION sid="showlearn" id="seminar" value="seminar"/>
+				<OPTION sid="showlearn" id="sermon" value="sermon"/>
+				<OPTION sid="showlearn" id="serviceproject" value="service project"/>
+				<OPTION sid="showlearn" id="shortstory" value="short story"/>
+				<OPTION sid="showlearn" id="sign" value="sign"/>
+				<OPTION sid="showlearn" id="silkscreening" value="silk screening"/>
+				<OPTION sid="showlearn" id="simulation" value="simulation"/>
+
+				<OPTION sid="showlearn" id="sketch" value="sketch"/>
+				<OPTION sid="showlearn" id="skit" value="skit"/>
+				<OPTION sid="showlearn" id="slideshow" value="slide show"/>
+				<OPTION sid="showlearn" id="sociogram" value="sociogram"/>
+				<OPTION sid="showlearn" id="song" value="song"/>
+				<OPTION sid="showlearn" id="speech" value="speech"/>
+				<OPTION sid="showlearn" id="spreadsheet" value="spreadsheet"/>
+				<OPTION sid="showlearn" id="stainedglass" value="stained glass"/>
+				<OPTION sid="showlearn" id="story" value="story"/>
+				<OPTION sid="showlearn" id="summary" value="summary"/>
+				<OPTION sid="showlearn" id="survey" value="survey"/>
+				<OPTION sid="showlearn" id="table" value="table"/>
+				<OPTION sid="showlearn" id="taperecording" value="tape-recording"/>
+				<OPTION sid="showlearn" id="telegram" value="telegram"/>
+				<OPTION sid="showlearn" id="terrarium" value="terrarium"/>
+				<OPTION sid="showlearn" id="tessellation" value="tessellation"/>
+				<OPTION sid="showlearn" id="textbook" value="textbook"/>
+				<OPTION sid="showlearn" id="theory" value="theory"/>
+				<OPTION sid="showlearn" id="timecapsule" value="time capsule"/>
+				<OPTION sid="showlearn" id="timeline" value="timeline"/>
+				<OPTION sid="showlearn" id="trademark" value="trademark"/>
+				
+				<OPTION sid="showlearn" id="travelogue" value="travelogue"/>
+				<OPTION sid="showlearn" id="triptych" value="triptych"/>
+				<OPTION sid="showlearn" id="TVshow" value="TV show"/>
+				<OPTION sid="showlearn" id="venndiagram" value="venn diagram"/>
+				<OPTION sid="showlearn" id="videogame" value="video game"/>
+				<OPTION sid="showlearn" id="wallhanging" value="wall hanging"/>
+				<OPTION sid="showlearn" id="weaving" value="weaving"/>
+				<OPTION sid="showlearn" id="webpage" value="webpage"/>
+				<OPTION sid="showlearn" id="website" value="website"/>
+				<OPTION sid="showlearn" id="wiki" value="wiki"/>
+				<OPTION sid="showlearn" id="writtenpaper" value="written paper"/>
+
+				
+	</PART05>
+	
+
+	<STRATIDS>
+		<STRAT id="pflAcc" title="Accepting"/>
+		<STRAT id="pflCmplx" title="Complex"/>
+		<STRAT id="pflCmplxEnv" title="Complex Environment"/>
+		<STRAT id="pflCmplxCont" title="Complex Content"/>
+		<STRAT id="pflFlex" title="Flexible"/>
+		<STRAT id="pflHM" title="High mobility"/>
+		<STRAT id="pflInd" title="Independent"/>  
+		<STRAT id="pflVar" title="Variety" />
+		<STRAT id="pflVarProc" title="Variety of process" />
+		<STRAT id="pflVarProd" title="Variety of product" />
+		<STRAT id="pflLC" title="Learner-centered"/>
+		<STRAT id="pflOpn" title="Open"/>
+		<STRAT id="pflVarGrp" title="Varied Groupings"/>		
+		<STRAT id="pflGrpInt" title="Group Interactions"/>		
+		<STRAT id="pflAbs" title="Abstract"/>
+		<STRAT id="pflAbsCont" title="Abstract Content"/>
+		<STRAT id="pflOrg" title="Organization"/>
+		<STRAT id="pflOrgForLV" title="Organization for learning value"/>
+		<STRAT id="pflExtcur" title="Extracurricular"/>
+		<STRAT id="pflExtcurTop" title="Extracurricular Topics"/>
+		<STRAT id="pflRLT" title="Real life topics"/>
+		<STRAT id="pflSelfSel" title="Self-selected"/>
+		<STRAT id="pflSelfSelCont" title="Self-selected content"/>
+		<STRAT id="pflSelfSelProc" title="Self-selected process"/>
+		<STRAT id="pflSelfSelProd" title="Self-selected product"/>
+		<STRAT id="pflLL" title="Lives And Living"/>
+		<STRAT id="pflCmplxThink" title="Complex Thinking"/>
+		<STRAT id="pflEM" title="Expert methods"/>
+		<STRAT id="pflEMoI" title="Expert methods of inquiry"/>
+		<STRAT id="pflIndvPur" title="Individual pursuits"/>
+		<STRAT id="pflInqBas" title="Inquiry-based"/>
+		<STRAT id="pflOE" title="Open-ended"/>
+		<START id="pflPac" title="Pacing"/>
+		<START id="pflRfl" title="Reflective"/>
+		<START id="pflReaRfl" title="Reasoning and Reflection"/>
+		<START id="pflAA" title="Authentic audience"/>
+		<START id="pflFB" title="Feedback and evaluation"/>
+		<STRAT id="pflTrans" title="Transformations"/>
+	</STRATIDS>
+	
+</PFL>	

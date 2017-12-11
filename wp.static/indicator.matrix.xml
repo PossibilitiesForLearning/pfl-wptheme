@@ -1,0 +1,339 @@
+
+<IMATRIX>
+
+<INDICATORS>
+	
+	<INDICATOR 
+		   id="ixSH"
+		   title="Humor"
+		   description="Exceptionally keen sense of the comical, the bizarre, or absurd."
+	/>	
+	
+	<INDICATOR 
+		   id="ixEIC"
+		   title="Imagination and creativity"
+		   description="Extraordinary ability to use ideas, processes, materials or anything else in ingenious, flexible or surprising ways."
+	/>	
+	
+	<INDICATOR 
+		   id="ixPIM"
+		   title="Inquiry"
+		   description="Probes deeply while exploring ideas &amp; topics; asks deep questions; experiments with events, ideas, feelings, sounds, symbols, movement, etc."
+	/>
+	
+	
+	<INDICATOR 
+	id="ixTM"
+	title="Memory and processing"
+	description="Tremendous capacity for dealing with large amounts of information and skills"
+	/>
+
+	<INDICATOR 
+		   id="ixISA"
+		   title="Sensitivity"
+		   description="Unusually aware of or responsive to her/his own experiences and feelings and/or those of others."
+	/>	
+		
+	<INDICATOR 
+	id="ixGC"
+	title="Expressiveness"
+	description="Extraordinary ability to communicate meaning or emotion through words, actions, symbols, sounds, or media."
+	
+	/>	
+
+	<INDICATOR 
+	id="ixRTW"
+	title="Reasoning"
+	description="Loves to think; thinks things through, considers implications or alternatives; rich, flexible, highly conscious, analytical or logical thought. Thinking is not necessarily directed toward a goal or solution."
+	/>	
+	 
+
+	<INDICATOR 
+	id="ixSCP"
+	title="Problem-solving"
+	description="Outstanding ability to find systematic solutions to problems; is able to invent and monitor many paths to a goal; seeks out challenging problems."
+	/>	
+		
+	<INDICATOR 
+		   id="ixIU"
+		   title="Intuition"
+		   description="Suddenly discovers connections or deeper meanings without conscious awareness of reasoning or thought."
+	/>
+	
+	
+	<INDICATOR 
+	id="ixLE"
+	title="Learning"
+	description="Extremely able to grasp and use sophisticated new understandings quickly and easily."
+	/>	
+	
+	<INDICATOR 
+		   id="ixAPI"
+		   title="Interests"
+		   description="Advanced, intensely focused curiousity; passionate; may focus on unusual topics; interest is sometimes fleeting but always intense."
+	/>	
+
+	<INDICATOR 
+	id="ixMEC"
+	title="Moral and ethical concerns"
+	description="Extreme need for fairness and justice; will take action to resolve injustices; deeply concerned with the consequences of her or his actions."
+	/>	
+	
+	 
+	<INDICATOR 
+	id="ixHMP"
+	title="Motivation"
+	description="Persistent, intense need to know, do, feel, create, or understand."
+	/>		
+	  
+
+</INDICATORS>
+
+
+    
+    
+
+<DIFFERENTIATION>
+	<DIFFOPT
+	id="contAbs" 
+	type="content"
+	title="Abstractness"
+	indicators="ixTM;ixGC;ixSCP;ixRTW;ixLE;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/abstractness.png"
+	description="The content focuses on abstract concepts, themes, generalizations and 
+	theories, not concrete facts. It addresses ideas that have a wide range of applicability."
+	refid="181"/>
+	
+		
+	<DIFFOPT 
+	id="contComp"
+	type="content"
+	title="Complexity"
+	indicators="ixSH;ixPIM;ixTM;ixRTW;ixSCP;ixIU;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/complexity.png"
+	description="Complex content focuses on the interconnections among concepts, principles, 
+	generalizations and theories. It is usually interdisciplinary."
+	refid="183"/>	
+	
+	<DIFFOPT 
+	id="extTop"
+	type="content"
+	title="Extracurricular Topics"
+	indicators="ixSH;ixEIC;ixPIM;ixTM;ixLE;ixAPI;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/extra.curr.topics.png"
+	description="The content includes ideas and content areas not taught in the regular
+	curriculum in any grade. It may include the student's interests."
+	refid="210"/>	
+
+	<DIFFOPT 
+	id="livLiv"
+	type="content"
+	title="Lives and Living"
+	indicators="ixEIC;ixISA;ixMEC;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/lives.and.living.png"
+	description="The content involves the study of creative, productive people (living or dead), 
+	their motivations, social characteristics, challenges and career paths."
+	refid="382"/>	
+
+	<DIFFOPT 
+	id="orgLivVal"
+	type="content"
+	title="Organization for learning value"
+	indicators="ixTM;ixRTW;ixIU;ixLE;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/org.values.png"
+	description="The content of an entire unit addresses a broad, interdisciplinary theme 
+	(like &quot;systems&quot; or &quot;patterns&quot;) rather than small, sequential bits
+	of information. "
+	refid="384"/>	
+
+	<DIFFOPT 
+	id="relLiTop"
+	type="content"
+	title="Real Life Topics"
+	indicators="ixPIM;ixGC;ixRTW;ixSCP;ixAPI;ixMEC;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/real.life.topics.png"
+	description="The content addresses issues, controversies, problems or provocative
+	questions inspired by students' interests, experiences, questions and concerns.
+	Students may need help focusing, analyzing, and/or defining their topic or questions."
+	refid="394"/>	
+
+	<DIFFOPT 
+	id="selSelCont"
+	type="content"
+	title="Self-Selected Content"
+	indicators="ixEIC;ixPIM;ixRTW;ixSCP;ixIU;ixAPI;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/self.sel.cont.png"
+	description="The student chooses the content. Some will need help choosing and
+	reducing their interests to topics that are manageable."
+	refid="398"/>	
+
+	<DIFFOPT 
+	id="cmplxThink"
+	type="process"
+	title="Complex Thinking"
+	indicators="ixSH;ixPIM;ixTM;ixSCP;ixLE;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/cmplx.thinking.png"
+	description="Emphasize learning processes (verbs) that stress the use, rather than the 
+	acquisition of information (higher level thinking, critical thinking, creative thinking, etc.)."
+	refid="406"/>		
+
+	<DIFFOPT 
+	id="expMeths"
+	type="process"
+	title="Expert Methods"
+	indicators="ixPIM;ixTM;ixGC;ixRTW;ixSCP;ixAPI;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/expert.methods.png"
+	description="Learning with and about methods used by experts in a discipline."
+	refid="408"/>	
+
+	<DIFFOPT 
+	id="groupInt"
+	type="process"
+	title="Group Interaction"
+	indicators="ixSH;ixISA;ixGC;ixSCP"
+	img="./wp.images/page.diffStratGuide/strat.titles/grp.interactions.png"
+	description="Students collaborate with peers who have similar abilities and share 
+	their passions in order to enhance their social and leadership skills, learn
+	perspective-taking and become more empathetic."
+	refid="410"/>	
+
+	<DIFFOPT 
+	id="indvPurs"
+	type="process"
+	title="Individual Pursuits"
+	indicators="ixEIC;ixPIM;ixISA;ixIU;ixAPI;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/indiv.pursuits.png"
+	description="Individual projects on which students work relatively independently
+	but with the support of a teacher or mentor available as needed."
+	refid="412"/>		   
+
+
+	<DIFFOPT 
+	id="inqBasLea"
+	type="process"
+	title="Inquiry-based learning"
+	indicators="ixEIC;ixPIM;ixTM;ixRTW;ixSCP;ixIU;ixLE;ixAPI;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/inq.based.learning.png"
+	description="Inductive reasoning processes are used to discover patterns, 
+	underlying principles and generalizations. Students take greater responsibility
+	for their learning than in deductive learning experiences."
+	refid="414"/>	
+
+
+	<DIFFOPT 
+	id="opEnd"
+	type="process"
+	title="Open-endedness"
+	indicators="ixSH;ixEIC;ixPIM;ixISA;ixSCP;ixLE;ixAPI"
+	img="./wp.images/page.diffStratGuide/strat.titles/open.endedness.png"
+	description="Activities involve open-ended questions, activities, projects and methods.
+	These have no predetermined correct outcome. They are provocative, stimulating students to think
+	broadly."
+	refid="417"/>	
+    
+	<DIFFOPT 
+	id="pacProc"
+	type="process"
+	title="Pacing"
+	indicators="ixPIM;ixTM;ixRTW;ixSCP;ixIU;ixLE;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/pacing.png"
+	description="Students learn at a pace commensurate with their ability to go quickly through
+	or deeply into content. Examples include pretesting, &quot;compacting&quot;, or &quot;telescoping&quot; 
+	curriculum, or other forms of acceleration."
+	refid="419"/>	
+
+
+	<DIFFOPT 
+	id="reasRefl"
+	type="process"
+	title="Reasoning and Reflection"
+	indicators="ixPIM;ixISA;ixGC;ixRTW;ixSCP;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/reason.and.refl.png"
+	description="Students explain their conclusions and the reasoning that led to them as well
+	as the metacognitive aspect of their thinking. They are encouraged to evaluate both the 
+	process and products of their own and others' thinking."
+	refid="421"/>	
+	
+	
+	<DIFFOPT 
+	id="selSelProc"
+	type="process"
+	title="Self-selected Process"
+	indicators="ixEIC;ixPIM;ixTM;ixSCP;ixIU;ixLE;ixAPI;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/self.sel.proc.png"
+	description="Students choose the ways they will learn. Some
+	may need assistance identifying their preferences or following through on their choices."
+	refid="423"/>	
+	
+
+	<DIFFOPT 
+	id="procVariety"
+	type="process"
+	title="Variety"
+	indicators="ixSH;ixEIC;ixTM;ixGC;ixRTW;ixSCP;ixLE;ixAPI"
+	img="./wp.images/page.diffStratGuide/strat.titles/variety.png"
+	description="A range of methods of thinking and feeling involved in learning
+	by using different types of problems, resources and technologies."
+	refid="425"/>	
+
+
+	<DIFFOPT 
+	id="authAud"
+	type="product"
+	title="Authentic Audiences"
+	indicators="ixSH;ixEIC;ixPIM;ixGC;ixRTW;ixSCP;ixMEC"
+	img="./wp.images/page.diffStratGuide/strat.titles/auth.aud.png"
+	description="Results of the learning activity should be shared with real and appropriate audiences 
+	to the greatest extent possible. This may involve the scientific community, the city council, a
+	government agency, art critic, etc."
+	refid="442"/>	
+	
+
+	<DIFFOPT 
+	id="feedAssProd"
+	type="product"
+	title="Feedback and Assessment"
+	indicators="ixSH;ixEIC;ixISA;ixRTW;ixSCP;ixMEC;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/feed.and.assess.png"
+	description="Products should be assessed using real, predetermined procedures and criteria, and as often as possible, 
+	by a member or members of the real audience for the product. Students should also be encouraged or required
+	to self-evaluate their products using the same criteria."
+	refid="444"/>	
+	
+	<DIFFOPT 
+	id="selSelProd"
+	type="product"
+	title="Self-selected Product"
+	indicators="ixEIC;ixPIM;ixTM;ixGC;ixLE;ixAPI;ixHMP"
+	img="./wp.images/page.diffStratGuide/strat.titles/self.sel.prod.png"
+	description="The student chooses an appropriate format for the product that reflects what was learned. 
+	Students' interests, strengths and prior experiences may influence these choices. Teachers may need to 
+	provide assistance in the selection and development of the product."
+	refid="446"/>	
+	
+	<DIFFOPT 
+	id="transProd"
+	type="product"
+	title="Transformations"
+	indicators="ixSH;ixEIC;ixTM;ixGC;ixRTW;ixLE"
+	img="./wp.images/page.diffStratGuide/strat.titles/transformations.png"
+	description="The results of the learning process should represent a &quot;conversion of known
+	information into new entities - changes in meaning, significance, use, interpretation, mood, 
+	sensory qualities,or shape&quot; (Guilford, 1967)."
+	refid="448"/>	
+	
+	<DIFFOPT 
+	id="prodVariety"
+	type="product"
+	title="Variety"
+	indicators="ixEIC;ixPIM;ixGC;ixSCP;ixIU;ixLE;ixAPI;ixHMP"				
+	img="./wp.images/page.diffStratGuide/strat.titles/variety.png"
+	description="Students learn about and use different types of production techniques and
+	media throughout the school year or term. They should also learn to select an appropriate
+	format for the audience and content."
+	refid="450"/>		
+	
+	
+</DIFFERENTIATION>
+
+</IMATRIX>

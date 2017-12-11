@@ -1,0 +1,23 @@
+/*IE browser overrides */
+
+/*chapter publication area*/
+.mainPubArea {position:relative;left:-100px;top:-30px;height:100%;width:100%;}
+
+/*differentiation strategies guide*/
+.diffStratsTitles {}
+/*left:130;top:285;*/
+
+.onlyIEDisplay		  
+		  {
+		  z-index:2;
+		  padding:20px; 
+		  background-color:#666666; 
+		  color:white; 
+		  width:800px; 
+		  height:800px;
+		  position:absolute; 
+		  left:10;
+		  top:100;
+		  display:block;
+		  text-align:right;
+		  }

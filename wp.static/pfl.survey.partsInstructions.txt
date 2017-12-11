@@ -1,0 +1,53 @@
+[INSTRUCTIONS:PART1]
+<span style="color:red;font-size:14pt;">PART ONE: SETTINGS FOR LEARNING</span><br>
+This part of the form is about the places, people and things you like to have around you while you are learning your favorite subject. Always think about the school subject you said was your <span style="font-weight:bold;">FAVORITE</span> when you are rating the sentences in all parts of this form. Use the letters to show how much you agree with each sentence:<br><br>
+
+Now, please rate each of these sentences. 
+<div style="padding-left:50px;">
+<span style="font-weight:bold;">SA =</span> Strongly agree<br> <span style="font-weight:bold;">A =</span> Agree<br> <span style="font-weight:bold;">N =</span> Neither agree nor disagree<br> <span style="font-weight:bold;">D =</span> Disagree<br> <span style="font-weight:bold;">SD =</span> Strongly Disagree
+</div>
+ 
+[INSTRUCTIONSEND]
+
+
+[INSTRUCTIONS:PART2]
+<span style="color:red;font-size:14pt;">PART TWO: IDEAS TO LEARN</span><br>
+This part of the form is about the kinds of ideas you like to think about in your favorite subject. Remember to think of the school subject you said was your <span style="font-weight:bold;">FAVORITE</span> when you are rating the sentences. <br><br>
+
+Now, please rate each of these sentences. 
+<div style="padding-left:50px;">
+<span style="font-weight:bold;">SA =</span> Strongly agree<br> <span style="font-weight:bold;">A =</span> Agree<br> <span style="font-weight:bold;">N =</span> Neither agree nor disagree<br> <span style="font-weight:bold;">D =</span> Disagree<br> <span style="font-weight:bold;">SD =</span> Strongly Disagree
+</div>
+
+[INSTRUCTIONSEND]
+
+[INSTRUCTIONS:PART3]
+<span style="color:red;font-size:14pt;">PART THREE: WAYS TO LEARN</span><br>
+This part of the form is about ways you might like to think and work while you are learning your favorite subject.<br><br>
+
+Now, please rate each of these sentences. 
+<div style="padding-left:50px;">
+<span style="font-weight:bold;">SA =</span> Strongly agree<br> <span style="font-weight:bold;">A =</span> Agree<br> <span style="font-weight:bold;">N =</span> Neither agree nor disagree<br> <span style="font-weight:bold;">D =</span> Disagree<br> <span style="font-weight:bold;">SD =</span> Strongly Disagree
+</div>
+
+[INSTRUCTIONSEND]
+
+[INSTRUCTIONS:PART4]
+<span style="color:red;font-size:14pt;">PART FOUR: SHOWING YOUR LEARNING</span><br>
+This part of the form asks about ways you like to show what you've learned. Keep thinking about the favorite school subject you circled on the first page when you are rating these sentences. <br><br>
+
+Now, please rate each of these sentences. 
+<div style="padding-left:50px;">
+<span style="font-weight:bold;">SA =</span> Strongly agree<br> <span style="font-weight:bold;">A =</span> Agree<br> <span style="font-weight:bold;">N =</span> Neither agree nor disagree<br> <span style="font-weight:bold;">D =</span> Disagree<br> <span style="font-weight:bold;">SD =</span> Strongly Disagree
+</div>
+
+[INSTRUCTIONSEND]
+
+[INSTRUCTIONS:PART5]
+<span style="color:red;font-size:14pt;">PART FIVE: LISTS OF POSSIBILITIES</span><br>
+On each of the next three sections, please choose as many of the things in the lists as you like. <br><br>
+[INSTRUCTIONSEND]
+
+[INSTRUCTIONS:PART6]
+<span style="color:red;font-size:14pt;">Analysis by Strategy</span>
+[INSTRUCTIONSEND]

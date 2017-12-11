@@ -1,0 +1,20 @@
+/*Defauts for all browsers */
+/*chapter publication area*/
+.mainPubArea{position:absolute;top:8.3em;bottom:0;left:0;right:0;}
+
+/*differentiation strategies guide*/
+.diffStratsTitles{position:relative;left:0;top:0;}
+.diffStratsDesc 
+		  {
+		  z-index:999;
+		  padding:20px; 
+		  background-color:#666666; 
+		  color:white; 
+		  width:200px; 
+		  position:absolute; 
+		  left:10;
+		  top:100;
+		  display:none;
+		  }
+		  
+.onlyIEDisplay	{ display:none; }

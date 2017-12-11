@@ -1,0 +1,9 @@
+<div id="divDiffActInst" style="background-color: #e0d6df; width: 700px;">
+<ol>
+<li>Fill in the information at the top of the form.</li>
+<li>Read the list of Behaviors in the form.  Let the cursor rest on the name of a behavior and a description of it will appear.  Click here if you want more information about any of them.</li>
+<li>Do you experience any of those behaviors when you are learning something challenging about a topic you love?  Put a check mark (v) in the column to the left of each Behavior that is consistently, intensely true of you while you&#8217;re learning something fascinating.</li>
+<li>Now look at the names of the strategies the Guide is recommending for you.  They will be highlighted in green.  A brief definition for each strategy will appear if you put your cursor over the name. Click on the name if you want more information and examples. The Guide thinks activities like that involve the strategies highlighted in green will challenge you in ways you&#8217;ll like when you are learning about your favorite topic.  Do you agree with some or all of what the Guide has recommended?</li>
+<li>Share your Guide and the results with your teacher.</li>
+</ol>
+</div>

@@ -1,0 +1,31 @@
+<p>A temporary file has been created that holds the information you&#8217;ve entered.<br />
+In order to protect the security of this information, this file will be deleted by <span id="delDateSpan1"></span></p>
+<p><u><b>Instructions to save your file:</b></u></p>
+<table style="font-size:12px">
+<tr>
+<td>
+On a PC:</p>
+<ol>
+<li>Right click on the word &#8220;Download&#8221; below.</li>
+<li>Select &#8220;Save link as&#8221;.</li>
+<li>Save the file in a safe place.</li>
+</ol>
+</td>
+<td>
+On a Mac:</p>
+<ol>
+<li>Press the control button and click on the word &#8220;Download&#8221; below.</li>
+<li>From the options that appear, select:
+<ul>
+<li>&#8220;Download linked file as&#8221; if you are using Safari as your browser.</li>
+<li>&#8220;Save link as&#8221; if you are using Firefox or Chrome as your browser.</li>
+</ul>
+</li>
+<li>Save the file in a safe place you&#8217;ll remember on your computer.</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td colspan="2">As mentioned above, you will not be able to retrieve the information you&#8217;ve entered after <span id="delDateSpan2"></span>.</td>
+</tr>
+</table>
