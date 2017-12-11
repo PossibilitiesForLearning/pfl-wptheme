@@ -1,5 +1,3 @@
-<?php /* Template Name: General Content */ ?>
-
 <?php
 /**
  * Template for displaying all pages
