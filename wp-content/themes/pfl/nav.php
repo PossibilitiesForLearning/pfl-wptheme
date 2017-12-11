@@ -14,9 +14,9 @@
         </div>
         <div class="navbar-items navbar-rightside hidden-xs hidden-sm">
             <ul>
-                <li class="navLink"><a href="/?id=129">Resources</a></li>
+                <li class="navLink"><a href="/resources/">Resources</a></li>
                 <li>About</li>
-                <li>Search</li>
+                <li class="search">Search</li>
             </ul>
         </div>
         <div class="navbar-mobile navbar-mobile-rightside hidden-md hidden-lg pull-right">
@@ -43,4 +43,20 @@
     <ul>
         <li>Home</li>
     </ul>
+</div>
+
+
+<div id="nav-menu-search">
+    <div class="container">
+        <div class="col-xs-12 search-container">
+
+        <form id="searchform" method="get" action="/index.php">
+        <div class="search-box">
+            <input type="text" name="s" id="s" size="15" />
+            <input type="submit" value="Search" />
+        </div>
+     </form>
+
+        </div>
+    </div>
 </div>

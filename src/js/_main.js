@@ -26,11 +26,26 @@ $(document).ready(function () {
         if ($(this).hasClass("navLink")) {
             // If no menu items, treat it as a link
             window.location.href = $(this).find("a").first().attr("href");
+        } else if ($(this).hasClass("search") && $(this).hasClass("active")) {            
+            $("#nav-menu-search").slideToggle(500);
+            $(".navbar-items li").removeClass("active");
+        } else if ($(this).hasClass("search")) {   
+            if ($(".navbar-items li").hasClass("active")) {                
+                $("#nav-menu-mast").slideToggle(500);
+                $(".navbar-items li").removeClass("active");
+            }       
+            $("#nav-menu-search").slideToggle(500);
+            $(this).addClass("active");
         } else if ($(this).hasClass("active")) {
             // If already open, close the menu back down
             $("#nav-menu-mast").slideToggle(500);
             $(".navbar-items li").removeClass("active");
         } else {
+            if ($(".navbar-items li.search").hasClass("active")) {      
+                $("#nav-menu-search").slideToggle(500);
+                $(".navbar-items li").removeClass("active");
+            }
+
             $(".navbar-items li").removeClass("active");
             $(this).addClass("active");
             navItemFill($(this).text());
