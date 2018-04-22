@@ -1,719 +1,579 @@
 <?php /* Template name: PFL Survey */ ?>
 <?php
 /**
- * The template for the main pfl surevy questions.
+ * The template for displaying all pages.
+ * This is a template specifically to work with the pfl differentation strategy guide
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
 
-get_header(); 
-?>
+get_header(); ?>
 
-
-<?php 
-	include_once('./wp.custom.src/pfl.php');
-	include_once('./wp.custom.src/pfl.survey.cmn.php');
-	include_once('./wp.custom.src/pfl.survey.intro.php');
-	include_once('./wp.custom.src/pfl.survey.question.parts.php');
-	include_once('./wp.custom.src/pfl.survey.topics.php');
-	include_once('./wp.custom.src/pfl.survey.analysis.php');
-	include_once('./wp.custom.src/pfl.survey.summary.php');
-	include_once('./wp.custom.src/pfl.survey.dreamsheet.php');
-?>
-<link rel="stylesheet" href="/wp.custom.css/pfl.css" type="text/css">
+<!--style-->
 
 <style>
-#introTable td{width:150px;}
-
-#pflSurveyNavTbl{width:500px;}
-#pflSurveyNavLeft{text-align:left;width:100px;}
-#pflSurveyNavRight{text-align:right;width:100px;}
-
-#survAnalysisTable{width:300px; border-collapse: collapse; border: 1px solid black;}
-#survAnalysisTable th{ border: 2px solid black; text-align: center; padding: 5px; vertical-align:middle;}
-#survAnalysisTable td{ border: 2px solid black;  padding: 0px; font-size:10px;}
-
-#topicsLists div{width:800px; border-collapse: collapse; border: 0px solid black;}
-#topicsLists #topicTitle{font-weight:bold;font-size:14pt;}
-#topicsLists #topicInstr{font-style:italic;font-size:12pt;color:blue;}
-#topicsLists #topicYC{font-style:underline;font-weight:bold;font-size:13pt; color:green;} 
-#topicsLists #topicYCQ{font-style:italic;font-size:12pt;}
-
-
-#summaryInfoDiv{ width:700px; border-collapse: collapse; border: 1px solid black; padding:10px;}
-#summaryInfoDiv th{text-align: left;font-weight:bold; padding:5px;}
-
-#summaryInfoLikesDiv{ width:700px; border-collapse: collapse; border: 1px solid black; padding:10px;}
-#summaryInfoLikesDiv th{text-align: left;font-weight:bold; padding:5px;}
-
-#summaryInfoTopicsDiv{ width:700px; border-collapse: collapse; border: 1px solid black; padding:10px;}
-#summaryInfoTopicsDiv th{text-align: left;font-weight:bold; padding:5px;}
-
-#summaryInfoDislikesDiv{ width:700px; border-collapse: collapse; border: 1px solid black; padding:10px;}
-#summaryInfoDislikesDiv th{text-align: left;font-weight:bold; padding:5px;}
-
-
-#survProg td{color:grey;font-style:oblique;font-size:8pt;}
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
 </style>
-
-
-<script type="text/javascript" src="/wp.custom.src/cmn.fxns.js"></script>
-
-
-<script type="text/javascript">
-//submit form for print
-function printPFLSurvey()
-{
- toogleDiv('printSelBox');
- 
- curSelector=document.getElementById("surveyPrintSelect");
- //alert(curSelector.selectedIndex); 
- //(0 - full)(1-analysis)(2-summary)(3-dream)
- targetAction="";
- 
- if(curSelector.selectedIndex==0){ targetAction="/ext.print/survey.print.php?printSel=quest";}
- //if(curSelector.selectedIndex==1){ targetAction="/ext.print/survey.print.php?printSel=strats";} 
- if(curSelector.selectedIndex==1){ targetAction="/ext.print/survey.print.php?printSel=sum";}
- if(curSelector.selectedIndex==2){ targetAction="/ext.print/survey.print.php?printSel=dream";}
- 
- if(targetAction=="")
- {
-  alert("The option that you have selected is unavailable.");
- }
- else
- {
-  document.surveyNavForm.target="_blank";
-  document.surveyNavForm.action=targetAction;
-  document.getElementById("surveyNavForm").submit();
- }
+	   
+<style>
+.formError{
+    border: 1px solid red;
 }
-//submit form to save data
-function savePFLSurveyData()
-{
- document.surveyNavForm.target="_blank";
-
- //document.surveyNavForm.action="./?page_id=407";
- document.surveyNavForm.action="./?page_id=1287";
- document.getElementById("surveyNavForm").submit();
+.completedPartBtn{background-color: #68da68;}
+.progressPartBtn{background-color: #a1a1da;}
+</style>	
+	   
+	<style>
+		/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
 }
 
-function loadPFLSurveyData()
-{
- //document.surveyNavForm.action="./?page_id=464";
- document.surveyNavForm.action="./?page_id=1359"; 
- document.getElementById("surveyNavForm").submit();
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-
-//run navigation procedures
-function pflAnalysisNav(analysisPart,curPart)
-{
- //document.surveyNavForm.action="./?page_id=421&part="+analysisPart+"&prevPart="+curPart;
- document.surveyNavForm.action="./?page_id=1337&part="+analysisPart+"&prevPart="+curPart;
- saveSelections(curPart);
- document.getElementById("surveyNavForm").submit();
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-//TO BE REMOVED: function toogleAnalysisButtons()
-//{
-// survButtState=document.getElementById("summaryButton").disabled;
-// dreamButtState=document.getElementById("dreamButton").disabled;
-//  //alert(survButtState);
-//  if(survButtState){document.getElementById("summaryButton").disabled=false;}
-//  else{document.getElementById("summaryButton").disabled=true;}
-//
-//  if(dreamButtState){document.getElementById("dreamButton").disabled=false;}
-//  else{document.getElementById("dreamButton").disabled=true;}
-//
-//  
-//}
-
-function returnToSurvey(prevPart)
-{
- //document.surveyNavForm.action="./?page_id=421&part="+prevPart;
- //document.surveyNavForm.action="./?page_id=1337&part="+prevPart;
- document.surveyNavForm.action=document.URL+"&part="+selPart;
- document.getElementById("surveyNavForm").submit();
+input:checked + .slider {
+  background-color: #2196F3;
 }
 
-function jumpToSurvey(selPart,curPart)
-{
- //alert(document.URL+"&part="+selPart);
- document.surveyNavForm.action=document.URL+"&part="+selPart;
- saveSelections(curPart);
- document.getElementById("surveyNavForm").submit();
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
 }
 
-function pflNav(curPart,direction)
-{
- document.getElementById("selAct").value=direction; 
- saveSelections(curPart);
- //progress info
-
- isFormComplete=checkFormCompletion(curPart,direction); 
- if((isFormComplete==false)&&(curPart!=5))
- {
-  alert('Please fill in the 4 "Like Best" & "Like Least" before continuing to the next stage of the survey.')
- }
- if((isFormComplete==true) && (direction=="next"))
- {
-  document.getElementById("p"+curPart+"stat").value="1";
-  //set next view 
-  lastView=parseInt(document.getElementById("lastViewedPart").value);
-  nextView=curPart+1;
-
-  if(nextView>lastView){document.getElementById("lastViewedPart").value=nextView;}
- }
-
- if(isFormComplete)
- {
-  document.getElementById("surveyNavForm").submit();
- }
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
 }
 
-//check that the form is complete
-function checkFormCompletion(curPart,direction)
-{
-//verify that the like/dislike forms are filled
- if((curPart!=0)&&(curPart!=5)&&(curPart!=6)&&(curPart!=7)&&(direction!="back"))
- {
-   for(qIndex=1;qIndex<=2;qIndex++)
-   {
-    //alert("pflP0"+curPart+"LikeBest0"+qIndex);
-    if(document.getElementById("pflP0"+curPart+"LikeBest0"+qIndex).value.length==0){return false;}
-    if(document.getElementById("pflP0"+curPart+"LikeLeast0"+qIndex).value.length==0){return false;}
-   }
-  return true;
- }
-
- if(curPart==5){ return checkPart5();}
-
- return true; //everything else
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
 }
 
-function checkPart5()
-{
-   allInpts = document.getElementsByTagName('input');
-   for(i=0;i<allInpts.length;i++)
-   {
-    if((allInpts[i].type=="checkbox")&&(allInpts[i].checked))
-    {
-   //alert('here');
-     return true;
-    }
-   }
-   return false	 
-}
-
-//verify numeric input based on criteria
-function isNumeric(value,minRange,maxRange,id) 
-{
-
-  if (value != null && !value.toString().match(/^[-]?\d*\.?\d*$/)) 
-  {
-  	alert("You must enter a number between " + minRange + " and " + maxRange);
-  	document.getElementById(id).value="";
-  	return false;
-  }
-  if((value>=minRange)&&(value<=maxRange))
-  {
-  		return true;
-  }
-  else
-  {
-  	alert("You must enter a number between " + minRange + " and " + maxRange);
-  	document.getElementById(id).value="";
-  	return false;
-  	}
-  
-}
-
-//save sepecific potions of the site to hidden 
-function saveSelections(curPart)
-{
- if((curPart!=0)&&(curPart!=5)&&(curPart!=6)&&(curPart!=7)&&(curPart!=8)) //refactor, this shoulkd be the fxn in the else.
- {
-  //alert("p1t4:"+curPart); 
-
-  saveSelResult=setPartSel(curPart);
-  document.getElementById("part"+curPart+"SavedData").value=saveSelResult[0];
- //alert(saveSelResult[0]);
-  document.getElementById("part"+curPart+"StratCodes").value=saveSelResult[1];
-  document.getElementById("pflSurveyLikesDislikesPart"+curPart).value=saveSelResult[2];
-
- }
- else if(curPart==0)
- {
-  //alert("p0:"+curPart); 
-  document.getElementById("part0SavedData").value=saveIntroResults(); 
-   //alert(document.getElementById("part0SavedData").value);
- }
- else if(curPart==5)
- {
-  //alert("p5:"+curPart); 
-  document.getElementById("part5SavedData").value=saveTopicsResults();
-  if(checkPart5())
-  {
-   document.getElementById("surveyAnalysisLink").style.pointerEvents="auto";
-   document.getElementById("surveyAnalysisLink").style.opacity=1;
-
-   document.getElementById("surveySummaryLink").style.pointerEvents="auto";
-   document.getElementById("surveySummaryLink").style.opacity=1;
-
-   document.getElementById("surveyDreamLink").style.pointerEvents="auto";
-   document.getElementById("surveyDreamLink").style.opacity=1;
-   
-   document.getElementById("p5stat").value=1;
-   document.getElementById("p5status").checked=true;
-
-	
-  } 
- }
- else if(curPart==7)
- {
-  //alert("p7:"+curPart); 
-  document.getElementById("summarySavedData").value=saveSummaryInfo(); 
- }
- else if(curPart==8)
- {
-  //alert("p8:"+curPart); 
-  document.getElementById("dreamSavedData").value=saveDreamInfo(); 
- }
- else{}//do nothing
-}
-
-//get summary page results
-function saveSummaryInfo()
-{
- summaryInfo="";
- var topicOps=new Array("whattolearn","waystolearn","showlearn");
- for(tIndex=0;tIndex<topicOps.length;tIndex++)
- {
-  //alert(topicOps[tIndex]);
-  summaryInfo=summaryInfo+";"+topicOps[tIndex]+":";
-  summaryInfo=summaryInfo+document.getElementById(topicOps[tIndex]+"_1").value;
-  summaryInfo=summaryInfo+","+document.getElementById(topicOps[tIndex]+"_2").value;
- }
- //alert(summaryInfo);
- return summaryInfo;
-}
-
-//get dream page results
-function saveDreamInfo()
-{
-//alert('here');
- dreamInfo="";
- 
- dreamInfo=dreamInfo+"::topicWhat>>"+document.getElementById("pflTopicWhatToLearn").value;
- dreamInfo=dreamInfo+"::topicWay>>"+ document.getElementById("pflTopicWayToLearn").value;
- dreamInfo=dreamInfo+"::topicShow>>"+ document.getElementById("pflTopicShowLearn").value;
- dreamInfo=dreamInfo+"::dreamActivity>>"+ document.getElementById("pflDreamActivity").value;
-
- 
- for(dIndex=1;dIndex<=4;dIndex++)
- { 
-   curDivRoot="pflP"+dIndex+"0";
-   if(document.getElementById(curDivRoot+"1").display=="block"){curDiv=curDivRoot+"1";}
-   else{curDiv=curDivRoot+"2";}
-
-    //dreamInfo=dreamInfo+"::"+curDiv+">>"+ document.getElementById(curDiv).innerHTML;
-    dreamInfo=dreamInfo+"::seldiv>>"+ curDiv;
-  }
- //alert(dreamInfo); 
- return dreamInfo;
-}
-
-//get the topics from the checkboxes(part5)
-function saveTopicsResults()
-{
-  topicsString="";
-  debug="";
-  curGroup="";
-
-  //itterate through all checkboxes in each group
-
-  var allCBs = document.getElementsByTagName("input");
-  for(j=0;j<allCBs.length;j++)
-  {
-   //debug=debug+"-here."+j
-   if (allCBs[j].getAttribute("type")=="checkbox")
-   {
-     if(allCBs[j].checked==true)
-     {
-
-      nextGroup=allCBs[j].getAttribute("group");
-
-      if(nextGroup!=curGroup)
-      {
-        if((curGroup!=null)&&(curGroup.length!=0))
-        {
-          var allTAs = document.getElementsByTagName("textarea");         
-          for(i=0;i<allTAs.length;i++)
-          {
-           //alert(allTAs[i].getAttribute("group"));
-           if(allTAs[i].getAttribute("group")==curGroup)
-           {
-            //alert(allTAs[i].id);
-            topicsString=topicsString+","+allTAs[i].id+"#("+allTAs[i].value+")";
-           }
-          }
-          topicsString=topicsString+"[END:"+curGroup+"]";
+.slider.round:before {
+  border-radius: 50%;
+}​	
+	</style>	
+    <style>
+        body {
+            font-size:11px !important;
+            padding: 10px;
+			font-family: "Comic Sans MS", "Comic Sans", cursive;
         }
-        curGroup=nextGroup;
-        topicsString=topicsString+"[START:"+curGroup+"]";
-      }
-      topicsString=topicsString+","+allCBs[j].value;
-     }
-    }
-   }
+    </style>
+
+<!-- BEGINING OF HTML PAGE -->	
+<body ng-cloak ng-controller="pflSurveyController" ng-app='pflSurveyApp' style="margin-top:130px;">
+<?php include 'nav.php';?>
 
 
+<div class="printOnly" style="position:absolute;max-width:700px;" ng-show="printSurvey">
+    <div print-section >
+		<div class="row" style="margin-left:15px;font-size:10px;">
+		<div class="col-sm-12">
+			<div class="row" style="margin-left:10px;">{{surveyTitle}}</div>		
+			<div class='row' style="margin-top:15px;" ng-repeat="sPart in surveyForPrint"   print-avoid-break>
+				<div class='row' style="margin:10px;">
+					<p>{{sPart.partTitle[language]}}</p>
+				</div>
 
-
-
- //redundant code, needs to be cleaned up... used to get last "yourcorner" text box values
-          var allTAs = document.getElementsByTagName("textarea");         
-          for(i=0;i<allTAs.length;i++)
-          {
-           //alert(allTAs[i].getAttribute("group"));
-           if(allTAs[i].getAttribute("group")==curGroup)
-           {
-            //alert(allTAs[i].id);
-            topicsString=topicsString+","+allTAs[i].id+"#("+allTAs[i].value+")";
-           }
-          }
-
-   topicsString=topicsString+"[END:"+curGroup+"]";
-
-  //create a comma separated list of checked values for each group
-  //add the "your corner" info into the lists
-  //alert(topicsString+"__debug:"+debug);
-  //alert(topicsString);
-  return topicsString;
-}
-
-function saveIntroResults()
-{
-  introString="#pflName:"+document.getElementById("pflName").value+"#";
-  introString=introString+"#pflDate:"+document.getElementById("pflDate").value+"#";
-  introString=introString+"#pflAge:"+document.getElementById("pflAge").value+"#";
-  introString=introString+"#pflGrade:"+document.getElementById("pflGrade").value+"#";
-
-//favourite section
- cbpflIntroMath=document.getElementById("cbpflIntroMath").checked;
- cbpflIntroRead=document.getElementById("cbpflIntroRead").checked;
- cbpflIntroWrite=document.getElementById("cbpflIntroWrite").checked;
- cbpflIntroScience=document.getElementById("cbpflIntroScience").checked;
- cbpflIntroSS=document.getElementById("cbpflIntroSS").checked;
- cbpflIntroOth=document.getElementById("cbpflIntroOth").checked;
-
- 
-   introString=introString+"#FavSubj:(cbpflIntroMath-"+cbpflIntroMath+"-Math)(cbpflIntroRead-"+cbpflIntroRead+"-Reading)(cbpflIntroWrite-"+cbpflIntroWrite+"-Writing)(cbpflIntroScience-"+cbpflIntroScience+"-Science)(cbpflIntroSS-"+cbpflIntroSS+"-Social Studies)(cbpflIntroOth-"+cbpflIntroOth+")#";
- 
-  introString=introString+"#inptPFLSubjFavOther:"+document.getElementById("inptPFLSubjFavOther").value+"#";
-
- return introString;
-}
-
-
-//pfl selection counts
-function setPartSel(sectionID)
-{
-  curRBGroup="";
-  qResults="";
-  qStrats="";
-  qLikeDislike="";
-
-
-  var allInputs = document.getElementsByTagName("input");
-  var allRBs = new Array();
-  //build radio buttons only
-  for(r=0;r<allInputs.length;r++)
-  {
-   if (allInputs[r].getAttribute("type")=="radio")
-   {
-    allRBs.push(allInputs[r]);
-   }
-  }
-
-  //get info from group
-  for(j=0;j<allRBs.length;j++)
-  {
-    nextRBGroup=allRBs[j].getAttribute("name");
-    if (curRBGroup!=nextRBGroup){curRBGroup=nextRBGroup;}
-    questResult=checkRBValue(curRBGroup);
-
-    qResults=qResults+","+questResult[0]; //startrs with a ',' so index will start at one when split by a ','
-    qStrats=qStrats+","+questResult[2];
-    j=j+questResult[1]-1;
-  }
-
-
-
-  qLikeDislike=qLikeDislike+",";
-  //get likes and dislikes
-  for(qIndex=1;qIndex<=2;qIndex++)
-  {
-   likeID="pflP0"+sectionID+"LikeBest0"+qIndex;
-   dislikeID="pflP0"+sectionID+"LikeLeast0"+qIndex;
-
-   qLikeDislike=qLikeDislike+","+likeID+":"+document.getElementById(likeID).value;
-   qLikeDislike=qLikeDislike+","+dislikeID+":"+document.getElementById(dislikeID).value;
-  }
-  //alert(qLikeDislike);
- return [qResults,qStrats,qLikeDislike];
-}
-
-function checkRBValue(rbGroup)
-{
-  qVal="";
-  rbObjLen=0;
-  stratids="";
-  
-  curRBGroupObj=document.getElementsByName(rbGroup);
-  rbObjLen=curRBGroupObj.length; 
-  for (i = 0; i < curRBGroupObj.length; i++) 
-  {
-   if(curRBGroupObj[i].checked)
-   {
-    qVal=curRBGroupObj[i].value;
-    if(qVal=="SA"){stratids=curRBGroupObj[i].getAttribute("stratids");}
-    break;
-   }
-  }
-  return  [qVal,rbObjLen,stratids];
-}
-
-
-
-function toogleBetweenDivs(divID1,divID2)
-{
- toogleDiv(divID1);
- toogleDiv(divID2);
-}
-
-</script>
-
-
-
-
-<script >
-	//window.onload=function(){testRef();}
-   
-</script>
-
-<div id="surveyRoot" style="position:relative; left:30px;top:-2px;align:center;">
-
-<style>
-   #surveyNav td{padding:3px;vertical-align:middle;border-width:2px;border-style:outset;width:70px;text-align:center;background-color: #E8E9EA;font-size:10pt;}
-</style>
-
-<?php 
- $curPart=setCurPart();
- if($curPart==6){$curPart='An';}
- if($curPart==7){$curPart='Sum';}
- if($curPart==8){$curPart='DrS';}
- //echo $curPart;
- echo '<style>';
- echo '#surveyNav #navP'.$curPart.' {background-color: rgb(250, 253, 240); border-style: inset;}'; 
- echo '</style>';
-?> 	
-
-<span style="color:red;font-size:14pt;">POSSIBILITIES FOR LEARNING</span><br>
-<table width="700px;">
- <tr>
-  <td>
-   <span style="font-size:10pt;">Lannie Kanevsky, Ph.D.<br>&copy; 2011 - Version 3</span>	
-   <br><br>
-  </td>
-  <td style="text-align:right;">
-   <div style="text-align:right;">
-    <!--button>Print</button-->            
-    <button onclick="savePFLSurveyData();">Save</button>            
-    <button onclick="loadPFLSurveyData();">Load</button>   
-    <button onclick="toogleDiv('printSelBox');">Print</button>
-
+  <div ng-show="sPart.partId==0" style="margin-left:10px;">
+	<div class='row' ng-repeat="info in sPart.infoFields">
+		<div class='col-sm-3'><label>{{info.label[language]}}</label></div>							
+		<div class='col-sm-8' >{{info.data}}</div>		
+	</div> 
+	<div class='row' style="margin-left:5px;">
+		<div class="form-group row"><label>{{sPart.subjectsLabel.label[language]}}</label></div>
+	</div>
+	<div class='row' style="margin-left:5px;" >
+		<div class='col-sm-2'  ng-repeat="opts in sPart.subjects">
+			<input type="radio" name='favSubject' ng-model="sPart.selectedSubjectId" ng-value="opts.id" >
+			<label class="col-form-label">{{opts.label[language]}}</label>
+			<span class="col-sm-2" ng-show="sPart.selectedSubjectId==5 && opts.id==5">
+				{{sPart.otherSubjectText}}
+			</span>									
+		</div>							
+	</div> 	
+  </div>				
+				<div ng-show="sPart.partId!=0 && sPart.partId!=5 && sPart.partId!=6">
+					<div class='row' style="margin-top:15px;border-top:1px solid black;border-bottom:1px solid black;max-width:1200px;" >
+						<div class='col-sm-2' ng-repeat="sr in surveyRatings">
+							<strong>{{sr.abrv[language]}}</strong> = {{sr.label[language]}}
+						</div>							
+					</div>			
+					<div class='row' ng-repeat="quest in sPart.questions"  style="margin-left:-15px;">
+						<div class='row'>
+							<div class="col-sm-10">
+								<span ng-repeat="sr in surveyRatings">
+									<input type="radio" ng-model="quest.selection" ng-value="sr.id">
+									<label>{{sr.abrv[language]}}</label> 
+								</span>																			
+								<span style="width:30px;"><strong>{{sPart.questionIndex.start + $index}})</strong>&nbsp;{{quest.text[language]}}</span>
+							</div>	
+						</div>
+					</div> 
+				</div>
+				<div ng-show="sPart.partId==5">
+					<div class="pageBreak"></div>
+					<div class="row" ng-repeat="section in sPart.listSections" style="margin-top:15px;margin-left:10px;" >
+						<div class="row">
+							<div class="col-sm-10"><h4>{{section.sectionTitle[language]}}</h4><p>{{section.sectionInfo[language]}}</p></div>
+						</div>
+						<div class="row" style="margin-top:15px;">
+							<div width="150px" class="col-sm-4" ng-repeat="item in section.sectionItems">
+								<input type="checkbox" ng-value="item.selected" />  {{item.itemText[language]}}				
+							</div>
+						</div>
+						<div class="row" style="margin-top:15px;">			
+							<strong>{{section.otherItemsText[language]}}</strong><br>
+							<textarea style="box-sizing:border-box;width:80%;" ng-model="section.sectionOtherItems"></textarea>		
+						</div>
+						<div class="row" ng-hide="!section.userQuestionsText" style="margin-top:15px;" >			
+							<strong>{{section.userQuestionsText[language]}}</strong><br>
+							<textarea style="box-sizing:border-box;width:80%;" ng-model="section.sectionUserQuestions"></textarea>		
+						</div>	
+					</div>				
+				</div> 		
+			</div>
+		</div>
    </div>
-  </td>
- </tr>
-</table>
-<div id="printSelBox" style="display:none; position:absolute; z-index:1;top:30px;left:375px;width:300px; border:2px solid black; background-color:white;padding:20px;">
- Please select the part of the survey that you would like to print.<br><br>
-    <select id="surveyPrintSelect">
-      <option>Full Survey</option>
-      <!--option>Analysis by Strategy</option-->
-      <option>Summary Sheet</option>
-      <option>Dream Sheet</option>
-    </select><br><br>         
-    <div style="text-align:right;">
-     <button onclick="printPFLSurvey()">Print</button>
-     <button  onclick="toogleDiv('printSelBox');">Cancel</button>
-    </div>
+   </div>
 </div>
-<form id="surveyNavForm" name="surveyNavForm" method="post" action="">
-<!--form id="surveyNavForm" name="surveyNavForm" method="post" action="./?page_id=421"-->
-<input type="hidden" name="pflSurveyPage" id="pflSurveyPage" value="set">
 
-<?php 
- $curPart=setCurPart();
- //echo $curPart;
- $prevPart=intval($curPart)-1;
- $nextPart=intval($curPart)+1;
- echo '<input type="hidden" name="prevPart" id="prevPart" value="'.$prevPart.'">';
- echo '<input type="hidden" name="nextPart" id="nextPart" value="'.$nextPart.'">';
- echo '<input type="hidden" name="selAct" id="selAct" value="">';
-?>
-
- <div id="pflSurveyAnalysisDiv" style="padding:10px;border-collapse: collapse; border: 0px solid black; position:absolute; top:65px; left: 525px; width:350px">
-<table>
-  <tr><th colspan=2> <u><b>Survey Progress</b></u></th></tr>
-  <tr>
-   <td><table id="survProg">
-<?php
-  $partsAry=array("Introduction","Part 1: Settings for Learning", "Part 2: Ideas to Learn", "Part 3: Ways to Learn","Part 4: Showing Your Learning","Part 5: Lists of Possibilities" );
-  for($pIndex=0;$pIndex<count($partsAry);$pIndex++)
-  {
-   echo '<tr><td>';
-
-   $isChecked="";
-   if(isset($_POST['p'.$pIndex.'stat'])&&($_POST['p'.$pIndex.'stat']=="1")){$isChecked="checked";}
-   echo '<input type="checkbox" id="p'.$pIndex.'status" name="p'.$pIndex.'status" disabled="true" '.$isChecked.'>';
-
-    $setLastViewed="";
-    $lastViewStyle="";
-    if(isset($_POST['lastViewedPart'])&&($_POST['lastViewedPart']==$pIndex)&&($isChecked==""))
-    {
-	$setLastViewed = '<img height="15px" src="/wp.images/page.pflSurvey/last.page.png">';
-	$lastViewStyle = 'style="color:red;"';
-    }
-
-   $curPart=setCurPart();
-   if(($isChecked!="")||($setLastViewed!=""))
-   {
-	echo $setLastViewed.'<a href="javascript:jumpToSurvey('.$pIndex.','.$curPart.');" '.$lastViewStyle.'>'.$partsAry[$pIndex].'</a>';
-   }
-   else{echo $partsAry[$pIndex];}
-   
-
-   echo '</input>';
-   echo '</td></tr>';
-  }
-
-?>
-</table></td>
-<td>
-  <table style="border: 1px solid blue; font-size:10pt;padding:5px;">	
- <?php
- $curPart=setCurPart();
- $linkStyle="";
- if(!surveyComplete()){$linkStyle='style="pointer-events: none;opacity: 0.5;"';}
-
- //echo '<tr><td><a href="javascript:jumpToSurvey(6,'.$curPart.');" id="surveyAnalysisLink" '.$linkStyle.'>Analysis by Strategy</a></td></tr>';	
- echo '<tr><td><a href="javascript:jumpToSurvey(7,'.$curPart.');" id="surveySummaryLink"  '.$linkStyle.'>Summary Page</a></td></tr>';	
- echo '<tr><td><a href="javascript:jumpToSurvey(8,'.$curPart.');" id="surveyDreamLink"  '.$linkStyle.'>Dream Sheet</a></td></tr>';	
-?>
-
-</table></td>
- </tr></table>
-
- </div>
-
-<table>
-<tr><td>
- <table id="surveyNav"><tr>
-  <tr>
-<?php
-   $curPart=setCurPart(); 
-   $navAry=array("My Info","Part #1","Part #2","Part #3","Part #4","Part #5");
-   for($n=0;$n<count($navAry);$n++)
-   {
-     $extraStyle="";
-     if(isset($_POST['lastViewedPart'])&&($_POST['lastViewedPart']==$n)){$extraStyle="color:red;";}
-
-     if(isset($_POST['p'.$n.'stat'])&&($_POST['p'.$n.'stat']=="1"))
-     {
-      echo '<td id="navP'.$n.'" style="font-size:10px;"><a href="javascript:jumpToSurvey('.$n.','.$curPart.');" style="display:block;">'.$navAry[$n].'</a></td>';
-     }
-     else{echo '<td id="navP'.$n.'" style="font-size:10px;'.$extraStyle.'">'.$navAry[$n].'</td>';}
-   }
-?>
-
-   <!--td id="navPAn">Analysis</td>
-   <td id="navPSum">Summary</td>
-   <td id="navPDrS">Dream Sheet</td-->
-  </tr>
- </table>
-</td>
-<!--td width="15px">
-</td-->
-<!--td align="right"-->
-
-<!--/td-->
-</tr>
-</table>
- <div id="mainSurveyInfo">
- <br>
-<?php
-  //buildNavButtons(0,8);
-  //buildNavButtons(0,5);
-  $curPart=setCurPart(); 
-  if(($curPart=='6')||($curPart=='7')||($curPart=='8'))
-  {
-   $prevSurvPart=0; 
-   if(isset($_GET['prevPart'])){$prevSurvPart=$_GET['prevPart'];}
-   //echo '<button onclick="returnToSurvey('.$prevSurvPart.');">Return to Survey</button>';
-  }
-  else{buildNavButtons(0,5);}
-
-  $curPart=setCurPart();
-  //if($curPart){}
-?>
-<br> 
-<div id="surveyPartInstructions" style="width:800px;">
-<?php
-  echo buildSurveyInstructions('./wp.static/pfl.survey.partsInstructions.txt');
-?>
+<div class="printOnly" style="position:absolute;max-width:1000px;top:20px;left:20px" ng-show="printSummary">
+	<div class="row" ng-repeat="sPart in surveyForPrint">
+		<div ng-show="sPart.partId==6">
+			<div class="row">{{sPart.summary.partTitle[language]}}</div>
+			<br><br>
+			<div class="row" ng-repeat="partId in [1,2,3,4]">
+				<br><br>{{sPart.summary.statements.most[language]}} {{partId}}<br><br>
+				<div class="row" ng-repeat="favs in summaryPartFavs['p'+partId].most">
+					>> {{favs.text[language]}}<br>
+				</div>										
+			</div>
+			<br><br>
+			<div class="row" ng-repeat="partId in [1,2,3,4]">
+				<br><br>{{sPart.summary.statements.least[language]}} {{partId}}<br><br>
+				<div class="row" ng-repeat="favs in summaryPartFavs['p'+partId].least">
+					>> {{favs.text[language]}}
+				</div>
+			</div>		
+		</div>	
+	</div>
 </div>
-<br>
-  <div id="surveyPartQuestions">
-    <?php
-     $curPart=setCurPart(); 
-     if($curPart==0){buildoutIntro();}
-     elseif($curPart==5){buildoutTopics('./wp.static/pfl.lists.txt');}
-     elseif($curPart==6){buildoutAnalysis('./wp.static/pfl.survey.codes.txt','./wp.static/pfl.questions.txt');}
-     elseif($curPart==7){buildoutSummary('./wp.static/pfl.questions.txt');}
-     elseif($curPart==8){buildoutDreamSheet('./wp.static/pfl.questions.txt','./wp.images');}
-     else{buildoutQuestions($curPart,'./wp.static/pfl.questions.txt');}
 
-    ?>
+<div class="printOnly" style="position:absolute;max-width:1000px;" ng-show="printDream">		
+			<img src="<?=getThemePath()?>/surveyApp/static.content/dreamSheet.svg" style="height:800px;width:600px"/>		
+
+			<div style="position:absolute;top:80px;left:120px;width:200px; z-index:999;"><b>{{surveyForPrint[6].sections.settingsForLearning.title[language]}}</b></div>
+			<div style="position:absolute;top:105px;left:110px;max-width:190px;z-index:999;">{{surveyForPrint[6].sections.settingsForLearning.textVal}}</div>
+
+			<div style="position:absolute;top:33px;left:400px;z-index:999;"><b>{{surveyForPrint[6].sections.bigIdeas.title[language]}}</b></div>
+			<div style="position:absolute;top:52px;left:400px;width:130px;z-index:999;">{{surveyForPrint[6].sections.bigIdeas.textVal}}</div>
+			
+			<div style="position:absolute;top:585px;left:140px;z-index:999;"><b>{{surveyForPrint[6].sections.wayToLearn.title[language]}}</b></div>
+			<div style="position:absolute;top:610px;left:105px;width:170px;z-index:999;">{{surveyForPrint[6].sections.wayToLearn.textVal}}</div>
+
+			<div style="position:absolute;top:615px;left:390px;z-index:999;"><b>{{surveyForPrint[6].sections.wayToShowLearning.title[language]}}</b></div>
+			<div style="position:absolute;top:635px;left:375px;width:160px;z-index:999;">{{surveyForPrint[6].sections.wayToShowLearning.textVal}}</div>		
+
+			<div style="position:absolute;top:150px;left:425px;z-index:999;"><b>{{surveyForPrint[6].sections.topic.title[language]}}</b></div>
+			<div style="position:absolute;top:175px;left:400px;z-index:999;">{{surveyForPrint[6].sections.topic.textVal}}</div>			
+
+			<div style="position:absolute;top:485px;left:185px;z-index:999;"><b>{{surveyForPrint[6].sections.action.title[language]}}</b></div>
+			<div style="position:absolute;top:505px;left:160px;z-index:999;">{{surveyForPrint[6].sections.action.textVal}}</div>			
+
+			<div style="position:absolute;top:500px;left:380px;z-index:999;"><b>{{surveyForPrint[6].sections.product.title[language]}}</b></div>
+			<div style="position:absolute;top:520px;left:360px;z-index:999;">{{surveyForPrint[6].sections.product.textVal}}</div>
+
+			<div style="position:absolute;top:300px;left:280px;z-index:999;"><b>{{surveyForPrint[6].sections.activity.title[language]}}</b></div>
+			<div style="position:absolute;top:320px;left:260px;z-index:999;">
+					{{surveyForPrint[6].sections.activity.textVal}}				
+			</div>			
+</div>
+
+<!-- div id='navGrowler' print-remove 
+	style="position:absolute;top:50%;left:50%;width:250px;font-size:10pt;font-weight:bold;background-color:#7ade7a;padding:10px;border-radius:7px;z-index:9999;" 
+		ng-show="showNavGrowler&&navProgressChange">
+	<div class="row" style="margin:5px;">{{navMessages.partCompletion[language]}}</div>
+	<div class="row" style="margin:5px;">
+		<button class="btn btn-info btn-xs" style="float:right;" ng-click="showNavGrowler=!showNavGrowler;loadSurveyByPartId(currentSurveyPart.partId + 1)">{{navMessages.partContinue[language]}}</button>
+	</div>
+</div -->
+
+<div id='printSelectorPopUp' print-remove 
+	style="position:absolute;top:37%;left:40%;width:375px;font-size:10pt;font-weight:bold;background-color:#898d9c;padding:10px;border-radius:7px;z-index:9999;" 
+		ng-show="showPrintSelectorPopUp">
+	<div class="row" style="float:right;margin-right:20px;margin-left:20px;">Print Dialog</div>	
+	<div class="row" style="margin:5px;">
+		<button class="btn btn-info btn-sm fa fa-print" print-btn ng-click="printSurvey=true;printSummary=false;printDream=false;">&nbsp;Survey</button>
+	</div>
+	<div class="row" style="margin:5px;">
+		<button class="btn btn-info btn-sm fa fa-print" print-btn ng-click="printSurvey=false;printSummary=true;printDream=false;">&nbsp;Summary</button>
+	</div>	
+	<div class="row" style="margin:5px;">
+		<button class="btn btn-info btn-sm fa fa-print" print-btn ng-click="printSurvey=false;printSummary=false;printDream=true;">&nbsp;Dream Sheet</button>
+	</div>	
+	<div class="row" style="margin:5px;">
+		<button class="btn btn-success btn-sm" style="float:right;" ng-click="showPrintSelectorPopUp=false;">Close</button>
+	</div>	
+</div>
+
+<div id='errorPopUp' print-remove 
+	style="position:absolute;top:50%;left:50%;width:375px;font-size:10pt;font-weight:bold;background-color:#e6c1c1;padding:10px;border-radius:7px;z-index:9999;" 
+		ng-show="showErrorPopUp" >
+	<div class="row" style="margin:5px;">{{navMessages.partIncomplete[language]}}</div>
+	<div class="row" style="margin:5px;">
+		<button class="btn btn-info btn-xs" style="float:right;" ng-click="showErrorPopUp=!showErrorPopUp">{{navMessages.partContinue[language]}}</button>
+	</div>
+</div>
+
+<div class="panel panel-default" print-remove>
+  <div class="panel-heading">
+	<div class="row">
+		<div class="col-sm-2">
+			{{surveyTitle}}
+		</div>
+		<div class="col-sm-1">			
+			<!-- This is the button for the language switch. It can be turned on once the french translations have been approved			-->
+			<!--div >
+				English
+				<label class="switch" style="top:7px;">
+					<input type="checkbox" ng-model="isFrench" ng-click="setLanguage(isFrench);">
+					<div class="slider round"></div>
+				</label>
+				Francais				
+			</div-->
+		</div>		
+		<div class="col-sm-4">
+			<button ng-repeat="part in surveyButtonParts" 
+					ng-click="loadSurveyByPartId(part.partId);" 
+					ng-show="part.partId<6" 
+					ng-disabled="lockedPart(part);"
+					ng-class="{'progressPartBtn' :part.partId==currentSurveyPart.partId, 'completedPartBtn':part.isComplete && part.partId!=currentSurveyPart.partId }"
+					>{{part.partShortTitle[language]}}</button>
+		</div>
+		<div class="col-sm-2">
+			<button class="btn btn-success btn-xs" ng-click="showSummaryOnly=true;loadSurveyByPartId(6)">Summary</button>
+			<button class="btn btn-primary btn-xs" ng-click="showSummaryOnly=false;loadSurveyByPartId(6);">Dream Sheet</button>			
+		</div>
+		<div class="col-sm-3">			
+			<div style="float:right;">
+				<button class="btn btn-info btn-sm fa fa-save" ng-click="savePflSurvey();">&nbsp;Save</button>
+				<label for="file-input" class="btn btn-info btn-sm fa fa-folder-open" >&nbsp;Open</label>				
+				<input type="file" id="file-input" style="display:none;">
+				<button class="btn btn-info btn-sm fa fa-print" ng-click="showPrintSelectorPopUp=true;getSurveyDataForPrinting();getPartFavorites();">&nbsp;Print</button>
+			</div>
+		</div>				
+	</div>
+  </div>  
+</div>
+
+<div class="panel panel-default" print-remove>
+  <div class="panel-heading">
+	<div class="row">
+		<div class="col-sm-12">{{currentSurveyPart.partTitle[language]}}</div>		
+	</div>
   </div>
+  <div class="panel-body" ng-show="currentSurveyPart.partType=='INFO'" style="margin-left:10px;">
+	<div class='row' ng-repeat="info in currentSurveyPart.infoFields">
+		<div class='col-sm-1'  >
+			<div class="form-group row">
+				<label class="col-form-label">{{info.label[language]}}<span ng-show="!info.data" style="color:red;">*</span></label>
+			</div>
+		</div>							
+		<div class='col-sm-2'  >
+			<div class="form-group row">
+				<input ng-show="info.type!='date' && info.type!='text'" class="form-control" type="{{info.type}}" ng-model="info.data" ng-blur="checkNavAction(currentSurveyPart)" min="1">
+				<input ng-show="info.type=='date' || info.type=='text'" class="form-control" type="{{info.type}}" ng-model="info.data" ng-blur="checkNavAction(currentSurveyPart)" >
+			</div>
+		</div>		
+	</div> 
+	<div class='row' style="margin-left:5px;">
+		<div class="form-group row"><label>{{currentSurveyPart.subjectsLabel.label[language]}}<span ng-show="!currentSurveyPart.selectedSubjectId && currentSurveyPart.selectedSubjectId!=0" style="color:red;">*</span></label></div>
+	</div>
+	<div class='row' style="margin-left:5px;" >
+		<div class='col-sm-1'  ng-repeat="opts in currentSurveyPart.subjects">
+			<div class="form-group row">
+				<div class="row">
+					<div class="col-sm-2">
+						<input type="radio" name='favSubject' ng-model="currentSurveyPart.selectedSubjectId" ng-value="opts.id" ng-click="checkNavAction(currentSurveyPart)">
+					</div>				
+					<div class="col-sm-10">
+						<label class="col-form-label">{{opts.label[language]}}</label>
+					</div>	
+					<div class="col-sm-2" ng-show="currentSurveyPart.selectedSubjectId==5 && opts.id==5">
+						<input type="text" ng-model="currentSurveyPart.otherSubjectText">
+					</div>						
+				</div>
+							
+			</div>
+		</div>							
+	</div> 	
+	<div class="row">
+		<div class='col-sm-6' >
+			<button style="float:right;"
+				
+				ng-click="loadSurveyByPartId(currentSurveyPart.partId + 1)"
+				class="btn btn-success fa fa-arrow-circle-right fa-3" aria-hidden="true" >&nbsp;{{navMessages.next[language]}}</button>
+		</div>
+	</div>	
   </div>
-<?php
-  $curPart=setCurPart(); 
-  if(($curPart!='6')&&($curPart!='7')&&($curPart!='8')){ buildNavButtons(0,5);}
-  buildHiddenSaveElements();
-?>
-</form> 
+
+  <div class="panel-body" ng-show="currentSurveyPart.partType=='QUESTION'" style="margin-left:10px;">
+	<div class='row' style="margin-top:15px;">
+		<div class='col-sm-12'	 >
+			<p>{{currentSurveyPart.partInfo[language]}}</p>
+		</div>							
+	</div> 
+	<div class='row' style="margin-top:15px;border:1px solid black;max-width:1200px;" >
+		<div class='col-sm-2' ng-repeat="sr in surveyRatings">
+			<strong>{{sr.abrv[language]}}</strong> = {{sr.label[language]}}
+		</div>							
+	</div> 	
+	<div class="row"  id="questDiv" style="margin-top:15px;max-height:450px;overflow-y:scroll;overflow-x:hidden;">
+		<div class='row' ng-repeat="quest in currentSurveyPart.questions"  >
+			<div class="col-sm-1" style="max-width:30px;">
+				<strong>{{currentSurveyPart.questionIndex.start + $index}}<span ng-show="!quest.selection && quest.selection!=0" style="color:red;">*</span></strong>
+			</div>		
+			<div class="col-sm-4" style="max-width:200px;">
+				<div class='col-sm-1' ng-repeat="sr in surveyRatings">
+					<input type="radio" name='{{quest.id}}_surveyQuestion' ng-model="quest.selection" ng-value="sr.id" ng-click="checkNavAction(currentSurveyPart)">
+					<label>{{sr.abrv[language]}}</label> 
+				</div>									
+			</div>
+			<div class="col-sm-7">
+				<p>{{quest.text[language]}}</p>
+			</div>		
+		</div> 		
+	</div>
+	<div class='row' style="margin-left:15px;margin-top:15px;max-width:1200px;">
+		<div class='col-sm-4'>
+			<div class='row' >
+				<div class='row'><p>{{currentSurveyPart.favorites.title[language]}} {{currentSurveyPart.questionIndex.start}} to {{currentSurveyPart.questionIndex.end}}</p></div>
+				<div class='row'><p>{{currentSurveyPart.favorites.most.label[language]}}</p></div>
+				<div class='row'>
+					<div class='col-sm-5'>
+						<input class="form-control" type="number" ng-model="currentSurveyPart.favorites.most.data.a" 
+							ng-class="{'formError':!validFavNums()&&!favNumValidation[0].isValid}"
+							ng-blur="checkNavAction(currentSurveyPart)"
+							min="{{currentSurveyPart.questionIndex.start}}" max="{{currentSurveyPart.questionIndex.end}}"
+							>			
+					</div>									
+					<div class='col-sm-5'>
+						<input class="form-control" type="number" ng-model="currentSurveyPart.favorites.most.data.b" 
+							ng-class="{'formError':!validFavNums()&&!favNumValidation[1].isValid}"
+							ng-blur="checkNavAction(currentSurveyPart)"
+							min="{{currentSurveyPart.questionIndex.start}}" max="{{currentSurveyPart.questionIndex.end}}"
+							>			
+					</div>												
+				</div>
+				<div class='row'><p>{{currentSurveyPart.favorites.least.label[language]}}</p></div>
+				<div class='row'>
+					<div class='col-sm-5'>
+						<input class="form-control" type="number" ng-model="currentSurveyPart.favorites.least.data.a" 
+							ng-class="{'formError':!validFavNums()&&!favNumValidation[2].isValid}"
+							ng-blur="checkNavAction(currentSurveyPart)"
+							min="{{currentSurveyPart.questionIndex.start}}" max="{{currentSurveyPart.questionIndex.end}}"
+							>			
+					</div>									
+					<div class='col-sm-5'>
+						<input class="form-control" type="number" ng-model="currentSurveyPart.favorites.least.data.b" 
+							ng-class="{'formError':!validFavNums()&&!favNumValidation[3].isValid}"
+							ng-blur="checkNavAction(currentSurveyPart)"
+							min="{{currentSurveyPart.questionIndex.start}}" max="{{currentSurveyPart.questionIndex.end}}"
+							>			
+					</div>												
+				</div>
+			</div>		
+		</div>
+		<div class="col-sm-6" style="padding:20px;color:red;">
+			<ul>
+				<li ng-repeat="err in favNumErrors">{{favNumErrorMessages[err][language]}}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class='col-sm-8' style="float:right;">
+			<button 
+			ng-click="loadSurveyByPartId(currentSurveyPart.partId - 1)"
+			class="btn btn-success fa fa-arrow-circle-left fa-3" aria-hidden="true">&nbsp;{{navMessages.back[language]}}</button>
+			&nbsp;&nbsp;&nbsp;
+			<button 
+
+				ng-click="loadSurveyByPartId(currentSurveyPart.partId + 1)"
+				class="btn btn-success fa fa-arrow-circle-right fa-3" aria-hidden="true" >&nbsp;{{navMessages.next[language]}}</button>
+		</div>
+	</div>
+
+  </div>
+  <div class="panel-body" ng-show="currentSurveyPart.partType=='LIST'" style="margin-left:10px;">
+	<div class="row" ng-repeat="section in currentSurveyPart.listSections" style="margin-top:15px;margin-left:10px;" >
+		<div class="row">
+			<div class="col-sm-10"> 
+						<h4>{{section.sectionTitle[language]}} [
+								<span ng-show="getListSectionSelectedCount(section)==0" style="color:red;">{{getListSectionSelectedCount(section)}}</span> 
+								<span ng-show="getListSectionSelectedCount(section)>0" style="color:#68da68;">{{getListSectionSelectedCount(section)}}</span> 
+							{{navMessages.selected[language]}} ]</h4>
+						<p>{{section.sectionInfo[language]}}</p>			
+			</div>
+			<div class="col-sm-2">
+				<button ng-show="!section.show" ng-click="section.show=!section.show" ng-init="section.show=false;" class="btn btn-xs fa fa-caret-down"></button>
+				<button ng-show="section.show" ng-click="section.show=!section.show" class="btn btn-xs fa fa-caret-up"></button>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px;max-height:500px;overflow-y:scroll;overflow-x:hidden;" ng-show="section.show">
+			<div class="col-sm-2" ng-repeat="item in section.sectionItems">
+				<input type="checkbox" ng-model="item.selected" ng-value="item.selected" />  {{item.itemText[language]}}				
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px;" ng-show="section.show">			
+			<strong>{{section.otherItemsText[language]}}</strong><br>
+			<textarea style="box-sizing:border-box;width:80%;" ng-model="section.sectionOtherItems"></textarea>		
+		</div>
+		<div class="row" ng-hide="!section.userQuestionsText || !section.show" style="margin-top:15px;" >			
+			<strong>{{section.userQuestionsText[language]}}</strong><br>
+			<textarea style="box-sizing:border-box;width:80%;" ng-model="section.sectionUserQuestions"></textarea>		
+		</div>	
+	</div>
+	<div class="row">
+			<div class="col-sm-11">
+				<button style="float:right;" ng-click="checkNavAction(currentSurveyPart)">Done</button>
+			</div>		
+	</div>			
+
+  </div>
+  
+  <div class="panel-body" ng-show="currentSurveyPart.partType=='DREAM'" >
+	<div class="row">
+		<div ng-class="{'col-sm-4':!showSummaryOnly,'col-sm-12':showSummaryOnly }">
+			<div class="panel-default">
+				<div class="panel-heading">{{currentSurveyPart.summary.partTitle[language]}}</div>
+				<div class="panel-body">
+					<div class="row" style="border:1px solid black" ng-repeat="partId in [1,2,3,4]">
+						{{currentSurveyPart.summary.statements.most[language]}} {{partId}}
+						<ul>
+							<li ng-repeat="favs in summaryPartFavs['p'+partId].most">
+								<input ng-show="!showSummaryOnly" type="radio" name="p{{partId}}_selection" ng-click="setDreamSheetText(partId,favs.text[language])"> 
+								{{favs.text[language]}}
+							</li>
+						</ul>										
+					</div>
+					<div class="row" ng-show="!showSummaryOnly"><hr></div>
+					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
+						{{currentSurveyPart.summary.statements.lists.topics[language]}}
+						<ul>
+							<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
+								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])"> 
+								{{topics.itemText[language]}}
+							</li>
+						</ul>
+					</div>						
+					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
+						{{currentSurveyPart.summary.statements.lists.ways[language]}}
+						<ul>
+							<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
+								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])" > 
+								{{ways.itemText[language]}}
+							</li>
+						</ul>
+					</div>											
+					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
+						{{currentSurveyPart.summary.statements.lists.show[language]}}
+						<ul>
+							<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
+								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.3,show.itemText[language])"> 
+								{{show.itemText[language]}}
+							</li>
+						</ul>
+					</div>																
+					<div class="row" ng-show="showSummaryOnly" ><hr></div>
+					<div class="row" ng-show="showSummaryOnly" style="border:1px solid black" ng-repeat="partId in [1,2,3,4]">
+						{{currentSurveyPart.summary.statements.least[language]}} {{partId}}
+						<ul>
+							<li ng-repeat="favs in summaryPartFavs['p'+partId].least">{{favs.text[language]}}</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div ng-show="!showSummaryOnly" class="col-sm-8" style="margin-left:10px;background-image: url(<?=getThemePath()?>/surveyApp/static.content/dreamSheet.svg);height:800px;width:600px;background-repeat:no-repeat;">
+			<div style="position:absolute;top:12%;left:15%;max-width:30%"><b>{{currentSurveyPart.sections.settingsForLearning.title[language]}}</b></div>
+			<div style="position:absolute;top:16%;left:15%;max-width:30%">{{currentSurveyPart.sections.settingsForLearning.textVal}}</div>
+			
+			<div style="position:absolute;top:5%;left:58%;max-width:25%"><b>{{currentSurveyPart.sections.bigIdeas.title[language]}}</b></div>
+			<div style="position:absolute;top:8%;left:56%;max-width:25%">{{currentSurveyPart.sections.bigIdeas.textVal}}</div>
+			
+			<div style="position:absolute;top:74%;left:11%;max-width:30%"><b>{{currentSurveyPart.sections.wayToLearn.title[language]}}</b></div>
+			<div style="position:absolute;top:77%;left:9%;max-width:30%">{{currentSurveyPart.sections.wayToLearn.textVal}}</div>
+			
+			<div style="position:absolute;top:78%;left:57%;max-width:30%"><b>{{currentSurveyPart.sections.wayToShowLearning.title[language]}}</b></div>
+			<div style="position:absolute;top:81%;left:56%;max-width:30%">{{currentSurveyPart.sections.wayToShowLearning.textVal}}</div>		
+
+			<div style="position:absolute;top:22%;left:58%;max-width:25%"><b>{{currentSurveyPart.sections.topic.title[language]}}</b></div>
+			<div style="position:absolute;top:25%;left:58%;max-width:25%">{{currentSurveyPart.sections.topic.textVal}}</div>			
+			
+			<div style="position:absolute;top:61%;left:23%;max-width:30%"><b>{{currentSurveyPart.sections.action.title[language]}}</b></div>
+			<div style="position:absolute;top:64%;left:23%;max-width:30%">{{currentSurveyPart.sections.action.textVal}}</div>			
+			
+			<div style="position:absolute;top:62%;left:55%;max-width:30%"><b>{{currentSurveyPart.sections.product.title[language]}}</b></div>
+			<div style="position:absolute;top:65%;left:55%;max-width:30%">{{currentSurveyPart.sections.product.textVal}}</div>			
+
+			<div style="position:absolute;top:38%;left:40%;max-width:30%"><b>{{currentSurveyPart.sections.activity.title[language]}}</b></div>
+			<div style="position:absolute;top:41%;left:30%;">
+				<textarea style="box-sizing:border-box;width:140%;height:70px" ng-model="dreamSheetActivity" ng-change="setDreamSheetActivity(dreamSheetActivity)"></textarea>
+			</div>			
+			
+		</div>		
+	</div>
+  </div>
+	
+	<div class='row' style='height:10px;'>&nbsp;</div>
+
+	<a ng-show="false" href='https://www.freepik.com/free-vector/speech-bubbles-with-halftone-dots_1111603.htm'>Designed by Freepik</a>
+	
+	<?php get_footer(); ?>
 
 
-</div>
+<script type="text/javascript" src="<?=getThemePath()?>/surveyApp/static.content/survey.data.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/surveyApp/app/pflSurveyApp.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/surveyApp/app/pflSurveyApp.controller.js"></script>
+<script type="text/javascript" src="<?=getThemePath()?>/surveyApp/app/pflSurveyApp.service.js"></script>
+	
+	
+</body>
 
 
-
-
-<!-- END OF HTML PAGE -->
-<?php
-function surveyComplete()
-{
-  $partsComplete=0;
-  for($i=0;$i<6;$i++)
-  {
-   if(isset($_POST['p'.$i.'stat'])&&($_POST['p'.$i.'stat']=="1")){$partsComplete=$partsComplete+1;}
-  }
-  if($partsComplete>=6){return true;}
-  return false;
-}
-
-?>
