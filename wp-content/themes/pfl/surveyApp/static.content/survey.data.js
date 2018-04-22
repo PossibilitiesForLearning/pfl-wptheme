@@ -347,7 +347,7 @@ var pflSurvey=[
 			},			
 			{
 				sectionId:2,
-				sectionTitle:{en:'Section 2 - In what ways would you like to Learn?', fr:'Stuff part 2'},
+				sectionTitle:{en:'Section 2 - In what ways would you like to learn?', fr:'Stuff part 2'},
 				sectionInfo:{en:'In this list you\'ll find words that describe ways to learn fascinating things. Select all the ways you like.', fr:'stuff about part 2 in french'},
 				sectionItems:[
 					{itemId:1, itemText:{en:'adapt', fr:'stuff'},selected:null},
