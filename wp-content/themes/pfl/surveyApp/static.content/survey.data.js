@@ -23,9 +23,9 @@ var navMessages={
 };
 
 var favNumErrorMessages={
-	e0:{en:'Please enter a most and least favourite question', fr:'Veuillez entrer une question plus ou moins préférée'},
-	e1:{en:'Selected questions are not in this section', fr:'Les questions choisies ne sont pas dans cette section'},
-	e2:{en:'The same number cannot be used twice', fr:'Le même numéro ne peut pas être utilisé deux fois'}	
+	e0:{en:'Please enter your selection in the empty box.', fr:'Veuillez entrer une question plus ou moins préférée'},
+	e1:{en:'You\'ve chosen a number that is not in this section.', fr:'Les questions choisies ne sont pas dans cette section'},
+	e2:{en:'The same number cannot be used twice.', fr:'Le même numéro ne peut pas être utilisé deux fois'}	
 };
 
 var pflSurvey=[
