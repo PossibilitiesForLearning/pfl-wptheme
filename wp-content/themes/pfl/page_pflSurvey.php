@@ -441,6 +441,7 @@ input:checked + .slider:before {
 
   </div>
   <div class="panel-body" ng-show="currentSurveyPart.partType=='LIST'" style="margin-left:10px;">
+	<div class="row" style="color:blue;font-size:14px;"><label>Please click on the arrow to see the possibilities for each section or to enter your own.<label></div>
 	<div class="row" ng-repeat="section in currentSurveyPart.listSections" style="margin-top:15px;margin-left:10px;" >
 		<div class="row">
 			<div class="col-sm-10"> 
