@@ -82,7 +82,7 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 	$scope.surveyForPrint={};
 	$scope.getSurveyDataForPrinting=function(){
 		$scope.surveyForPrint=alasql('select * from ? ',[pflSurvey]);
-		
+		$scope.getSelectedListData();		
 	}
 	
 	//dream sheet functions
