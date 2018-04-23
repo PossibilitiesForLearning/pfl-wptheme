@@ -173,20 +173,44 @@ input:checked + .slider:before {
    </div>
 </div>
 
-<div class="printOnly" style="position:absolute;max-width:1000px;top:20px;left:20px" ng-show="printSummary">
+<div class="printOnly" style="position:absolute;max-width:1000px;top:-100px;left:20px" ng-show="printSummary">
 	<div class="row" ng-repeat="sPart in surveyForPrint">
 		<div ng-show="sPart.partId==6">
-			<div class="row">{{sPart.summary.partTitle[language]}}</div>
-			<br><br>
+			<div class="row"><b>{{sPart.summary.partTitle[language]}}</b></div>
 			<div class="row" ng-repeat="partId in [1,2,3,4]">
-				<br><br>{{sPart.summary.statements.most[language]}} {{partId}}<br><br>
+				<u>{{sPart.summary.statements.most[language]}} {{partId}}</u><br>
 				<div class="row" ng-repeat="favs in summaryPartFavs['p'+partId].most">
-					>> {{favs.text[language]}}<br>
+					>> {{favs.text[language]}}
 				</div>										
 			</div>
-			<br><br>
+			<br>
+			<div class="row">
+				<div class="col-sm-6"><u>{{sPart.summary.statements.lists.topics[language]}}</u></div>
+				<div class="col-sm-6">
+					<ul>
+						<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">{{topics.itemText[language]}}</li>
+					</ul>
+				</div>
+			</div>						
+			<div class="row"  >
+				<div class="col-sm-6"><u>{{sPart.summary.statements.lists.ways[language]}}</u></div>
+				<div class="col-sm-6">
+					<ul>
+						<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">{{ways.itemText[language]}}</li>
+					</ul>				
+				</div>
+			</div>											
+			<div class="row">
+				<div class="col-sm-6"><u>{{sPart.summary.statements.lists.show[language]}}</u></div>
+				<div class="col-sm-6">
+					<ul>
+						<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">{{show.itemText[language]}}</li>
+					</ul>
+				</div>	
+			</div>	
+			<br>
 			<div class="row" ng-repeat="partId in [1,2,3,4]">
-				<br><br>{{sPart.summary.statements.least[language]}} {{partId}}<br><br>
+				<u>{{sPart.summary.statements.least[language]}} {{partId}}</u><br>
 				<div class="row" ng-repeat="favs in summaryPartFavs['p'+partId].least">
 					>> {{favs.text[language]}}
 				</div>
@@ -493,8 +517,8 @@ input:checked + .slider:before {
 							</li>
 						</ul>										
 					</div>
-					<div class="row" ng-show="!showSummaryOnly"><hr></div>
-					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
+					<div class="row" ><hr></div>
+					<div class="row" style="border:1px solid black">
 						{{currentSurveyPart.summary.statements.lists.topics[language]}}
 						<ul>
 							<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
@@ -503,7 +527,7 @@ input:checked + .slider:before {
 							</li>
 						</ul>
 					</div>						
-					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
+					<div class="row"  style="border:1px solid black">
 						{{currentSurveyPart.summary.statements.lists.ways[language]}}
 						<ul>
 							<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
@@ -512,7 +536,7 @@ input:checked + .slider:before {
 							</li>
 						</ul>
 					</div>											
-					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
+					<div class="row" style="border:1px solid black">
 						{{currentSurveyPart.summary.statements.lists.show[language]}}
 						<ul>
 							<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
