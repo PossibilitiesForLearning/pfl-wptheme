@@ -134,6 +134,9 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 			$scope.favNumValidation[nullCheckIndex].isValid=false;
 		}
 
+		//if blank or null, no need to go further.
+		if($scope.favNumErrors.indexOf('e0')>=0){return;}
+		
 		//index check
 		for(var i=0;i<selectedNums.length;i++){
 			if(selectedNums[i]<$scope.currentSurveyPart.questionIndex.start || selectedNums[i]>$scope.currentSurveyPart.questionIndex.end){
