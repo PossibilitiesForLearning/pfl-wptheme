@@ -1,4 +1,4 @@
-var surveyVersion=1;
+var surveyVersion=2;
 
 var surveyTitle={
 	en:'Posibilities For Learning - Survey',
@@ -30,7 +30,7 @@ var favNumErrorMessages={
 
 var pflSurvey=[
 	{
-		version:1,
+		version:2,
 		partId:0, 
 		partType:'INFO',
 		partTitle: {en:'My Info', fr:'My Info in fr' },
@@ -57,7 +57,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:1,
+		version:2,
 		partId:1, 
 		partType:'QUESTION',		
 		partTitle: {en:'PART ONE: SETTINGS FOR LEARNING', fr:'SECTION UN : CONDITIONS D\'APPRENTISSAGE' },
@@ -115,7 +115,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:1,
+		version:2,
 		partId:2, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART TWO: IDEAS TO LEARN', fr:'SECTION DU : Stuff et things' },
@@ -148,7 +148,7 @@ var pflSurvey=[
 		isComplete:false
 	},		
 	{
-		version:1,		
+		version:2,		
 		partId:3, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART THREE: WAYS TO LEARN', fr:'SECTION TOIS : Stuff et things part 3!!!!' },
@@ -192,7 +192,7 @@ var pflSurvey=[
 		isComplete:false
 	},	
 	{
-		version:1,		
+		version:2,		
 		partId:4, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART FOUR: SHOWING YOUR LEARNING', fr:'SECTION FOUR: Stuff et things part 4!!!!' },
@@ -208,7 +208,7 @@ var pflSurvey=[
 			{id:3, text:{en:'	I like sharing what I\’m learning with younger students.', fr:'stuff and things'}, selection:null },
 			{id:4, text:{en:'	I like sharing what I\’m learning with older students.', fr:'stuff and things'}, selection:null },
 			{id:5, text:{en:'	I like sharing what I\’m learning with adults outside of school.', fr:'stuff and things'}, selection:null },
-			{id:6, text:{en:'	I like sharing what I\’m learning my family.', fr:'stuff and things'}, selection:null },	
+			{id:6, text:{en:'	I like sharing what I\’m learning with my family.', fr:'stuff and things'}, selection:null },	
 			{id:26, text:{en:'	I like to be able to choose who will hear about or see what I\'ve learned.', fr:'stuff and things'}, selection:null },				
 			{id:7, text:{en:'	I like my teacher to tell me how I\'ll be marked before I begin an assignment.', fr:'stuff and things'}, selection:null },
 			{id:8, text:{en:'	I like tests.', fr:'stuff and things'}, selection:null },
@@ -238,7 +238,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:1,		
+		version:2,		
 		partId:5, 
 		partType:'LIST',				
 		partTitle: {en:'PART FIVE: LISTS OF POSSIBILITIES', fr:'SECTION CINQ: Stuff et things part 5!!!!' },
@@ -296,7 +296,7 @@ var pflSurvey=[
 					{itemId:42, itemText:{en:'government', fr:'stuff'},selected:null},
 					{itemId:43, itemText:{en:'history', fr:'stuff'},selected:null},
 					{itemId:44, itemText:{en:'human body', fr:'stuff'},selected:null},
-					{itemId:45, itemText:{en:'insetcs', fr:'stuff'},selected:null},
+					{itemId:45, itemText:{en:'insects', fr:'stuff'},selected:null},
 					{itemId:46, itemText:{en:'inventions', fr:'stuff'},selected:null},
 					{itemId:47, itemText:{en:'inventors', fr:'stuff'},selected:null},
 					{itemId:48, itemText:{en:'justice', fr:'stuff'},selected:null},
@@ -304,7 +304,7 @@ var pflSurvey=[
 					{itemId:50, itemText:{en:'law', fr:'stuff'},selected:null},
 					{itemId:51, itemText:{en:'literature', fr:'stuff'}, selected:null},
 					{itemId:52, itemText:{en:'love', fr:'stuff'},selected:null},
-					{itemId:53, itemText:{en:'medecine', fr:'stuff'},selected:null},
+					{itemId:53, itemText:{en:'medicine', fr:'stuff'},selected:null},
 					{itemId:54, itemText:{en:'meteorology', fr:'stuff'},selected:null},
 					{itemId:55, itemText:{en:'money', fr:'stuff'},selected:null},
 					{itemId:56, itemText:{en:'music', fr:'stuff'},selected:null},
@@ -659,7 +659,7 @@ var pflSurvey=[
 		isComplete:false				
 	},
 	{
-		version:1,		
+		version:2,		
 		partId:6, 
 		partType:'DREAM',
 		partTitle: {en:'Possibilities For Learning - Dream Sheet', fr:'Feuille de rêve' },
@@ -673,7 +673,12 @@ var pflSurvey=[
 					topics:{en:'Select the two topics you like most:', fr:'Sélectionnez deux sujets favoris, un dans chaque liste déroulante' },
 					ways:{en:'Select the two ways to learn you like most:', fr:'Sélectionnez deux façons d\'apprendre dans la liste déroulante' },
 					show:{en:'Select the two ways to show your learning you like most:', fr:'Sélectionnez deux façons préférées de montrer votre apprentissage dans la liste déroulante' },
-				}
+				},
+				listStatements:{
+					topics:{en:'Two topics you like most:', fr:'Deux sujets favoris, un dans chaque liste déroulante' },
+					ways:{en:'Two ways to learn that you like most:', fr:'Deux façons d\'apprendre dans la liste déroulante' },
+					show:{en:'Two ways to show your learning that you like most:', fr:'Deux façons préférées de montrer votre apprentissage dans la liste déroulante' },
+				}				
 			}
 		},
 		sections:{

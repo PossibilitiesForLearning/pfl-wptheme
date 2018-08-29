@@ -463,7 +463,7 @@ input:checked + .slider:before {
 	</div>
 	<div class="row">
 			<div class="col-sm-11">
-				<button style="float:right;" ng-click="checkNavAction(currentSurveyPart)">Done</button>
+				<button style="float:right; " class="btn btn-sm btn-success" ng-click="completePart5()">Fill in the Summary</button>
 			</div>		
 	</div>			
 
@@ -484,9 +484,10 @@ input:checked + .slider:before {
 							</li>
 						</ul>										
 					</div>
-					<div class="row" ng-show="!showSummaryOnly"><hr></div>
-					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
-						{{currentSurveyPart.summary.statements.lists.topics[language]}}
+					<div class="row" ><hr></div>
+					<div class="row" style="border:1px solid black">
+                        <span ng-show="!showSummaryOnly">{{currentSurveyPart.summary.statements.lists.topics[language]}}</span>
+                        <span ng-show="showSummaryOnly">{{currentSurveyPart.summary.statements.listStatements.topics[language]}}</span>
 						<ul>
 							<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
 								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])"> 
@@ -494,8 +495,9 @@ input:checked + .slider:before {
 							</li>
 						</ul>
 					</div>						
-					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
-						{{currentSurveyPart.summary.statements.lists.ways[language]}}
+					<div class="row" style="border:1px solid black">
+						<span ng-show="!showSummaryOnly">{{currentSurveyPart.summary.statements.lists.ways[language]}}</span>
+                        <span ng-show="showSummaryOnly">{{currentSurveyPart.summary.statements.listStatements.ways[language]}}</span>
 						<ul>
 							<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
 								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])" > 
@@ -503,8 +505,9 @@ input:checked + .slider:before {
 							</li>
 						</ul>
 					</div>											
-					<div class="row" ng-show="!showSummaryOnly" style="border:1px solid black">
-						{{currentSurveyPart.summary.statements.lists.show[language]}}
+					<div class="row" style="border:1px solid black">
+						<span ng-show="!showSummaryOnly">{{currentSurveyPart.summary.statements.lists.show[language]}}</span>
+                        <span ng-show="showSummaryOnly">{{currentSurveyPart.summary.statements.listStatements.show[language]}}</span>
 						<ul>
 							<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
 								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.3,show.itemText[language])"> 
@@ -512,7 +515,7 @@ input:checked + .slider:before {
 							</li>
 						</ul>
 					</div>																
-					<div class="row" ng-show="showSummaryOnly" ><hr></div>
+					<div class="row" ><hr></div>
 					<div class="row" ng-show="showSummaryOnly" style="border:1px solid black" ng-repeat="partId in [1,2,3,4]">
 						{{currentSurveyPart.summary.statements.least[language]}} {{partId}}
 						<ul>

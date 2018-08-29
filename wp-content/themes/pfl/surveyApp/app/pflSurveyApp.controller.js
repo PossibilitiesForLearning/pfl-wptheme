@@ -214,6 +214,17 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 		return alasql('select count(1) as cnt from ? where selected is not null',[section.sectionItems])[0].cnt		
 	}
 	
+	$scope.completePart5=function(){
+		$scope.checkNavAction($scope.currentSurveyPart);
+		if($scope.currentSurveyPart.isComplete){
+			$scope.showSummaryOnly=true;
+			$scope.loadSurveyByPartId(6);
+		}
+		else{
+			alert("Please ensure that at least 1 item from each section has been selected");
+		}
+	}
+	
 	$scope.lockedPart=function(surveyPart){
 		if(surveyPart.partId==0){return false;}
 		var prevPartComplete=alasql('select isComplete from ? where partId='+(surveyPart.partId-1),[pflSurvey])[0].isComplete;
