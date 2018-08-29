@@ -262,6 +262,18 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 		baseObj.textVal=baseObj.list.join(', ');		
 		//console.log('setDreamSheetTextList',baseObj);		
 	}
+    
+    $scope.setSummarySheetTextList=function(partId,textVal){	
+		var baseObj=null;
+		if(partId==5.1){baseObj=$scope.currentSurveyPart.sections.topic;}		
+		if(partId==5.2){baseObj=$scope.currentSurveyPart.sections.action;}		
+		if(partId==5.3){baseObj=$scope.currentSurveyPart.sections.product;}	
+		if(!baseObj){return;}		
+		
+		baseObj.list.push(textVal);
+		baseObj.textSummaryVal=baseObj.list.join(', ');		
+		//console.log('setDreamSheetTextList',baseObj);		
+	}
 	
 	$scope.setDreamSheetActivity=function(dreamSheetActivity){
 		pflSurveyService.getSurveyQuestionsByPart(6).sections.activity.textVal=dreamSheetActivity;

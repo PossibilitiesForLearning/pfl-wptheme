@@ -496,7 +496,7 @@ input:checked + .slider:before {
 	</div>
 	<div class="row">
 			<div class="col-sm-11">
-				<button style="float:right;" ng-click="checkNavAction(currentSurveyPart)">Done</button>
+				<button style="float:right; " class="btn btn-sm btn-success" ng-click="completePart5()">Continue to Summary</button>
 			</div>		
 	</div>			
 
@@ -523,6 +523,7 @@ input:checked + .slider:before {
 						<ul>
 							<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
 								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])"> 
+                <input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.1,topics.itemText[language])"> 
 								{{topics.itemText[language]}}
 							</li>
 						</ul>
@@ -532,6 +533,7 @@ input:checked + .slider:before {
 						<ul>
 							<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
 								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])" > 
+                <input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.2,ways.itemText[language])" > 
 								{{ways.itemText[language]}}
 							</li>
 						</ul>
@@ -541,6 +543,7 @@ input:checked + .slider:before {
 						<ul>
 							<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
 								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.3,show.itemText[language])"> 
+                <input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.3,show.itemText[language])"> 
 								{{show.itemText[language]}}
 							</li>
 						</ul>

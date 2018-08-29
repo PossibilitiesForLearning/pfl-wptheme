@@ -684,10 +684,10 @@ var pflSurvey=[
 		sections:{
 			settingsForLearning:{title:{en:'Selected setting for learning',fr:'Paramètre sélectionné pour l\'apprentissage'}, textVal:null },
 			bigIdeas:{title:{en:'Big ideas to learn',fr:'De grandes idées à apprendre'}, textVal:null },
-			topic:{title:{en:'Topic',fr:'Sujet'},list:[], textVal:null },
+			topic:{title:{en:'Topic',fr:'Sujet'},list:[], textVal:null ,textSummaryVal:null},
 			activity:{title:{en:'Activity',fr:'Activité'}, textVal:null },
-			action:{title:{en:'Action',fr:'Action'}, list:[],textVal:null },
-			product:{title:{en:'Product',fr:'Produit'},list:[], textVal:null },
+			action:{title:{en:'Action',fr:'Action'}, list:[],textVal:null,textSummaryVal:null },
+			product:{title:{en:'Product',fr:'Produit'},list:[], textVal:null,textSummaryVal:null },
 			wayToLearn:{title:{en:'Way to learn',fr:'Façon d\'apprendre'}, textVal:null },
 			wayToShowLearning:{title:{en:'Way to show my learning',fr:'Façon de montrer mon apprentissage'}, textVal:null }			
 		},
