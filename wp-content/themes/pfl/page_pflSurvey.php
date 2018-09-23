@@ -445,35 +445,45 @@ get_header(); ?>
 				<!-- Question Template -->
 				<div class="col-xs-12" ng-show="currentSurveyPart.partType=='QUESTION'">
 					<div class="panel-body">
-						<div class='row' style="margin-top:15px;">
-							<div class='col-sm-12'>
-								<p>{{currentSurveyPart.partInfo[language]}}</p>
+						<div class='row' style="margin:20px 0px;">
+							<div class='col-xs-12 col-sm-8 col-sm-offset-2'>
+								{{currentSurveyPart.partInfo[language]}}
 							</div>
 						</div>
-						<div class='row' style="margin-top:15px;border:1px solid black;max-width:1200px;">
-							<div class='col-sm-2' ng-repeat="sr in surveyRatings">
-								<strong>{{sr.abrv[language]}}</strong> = {{sr.label[language]}}
-							</div>
-						</div>
-						<div class="row" id="questDiv" style="margin-top:15px;max-height:450px;overflow-y:scroll;overflow-x:hidden;">
-							<div class='row' ng-repeat="quest in currentSurveyPart.questions">
-								<div class="col-sm-1" style="max-width:30px;">
-									<strong>{{currentSurveyPart.questionIndex.start + $index}}
-										<span ng-show="!quest.selection && quest.selection!=0" style="color:red;">*</span>
-									</strong>
+						
+						<div class='row'>
+							<div class='col-xs-12 col-sm-10 col-sm-offset-1'>							
+								<div class="col-xs-1"></div>
+								<div class='col-xs-2 rating-legend' ng-repeat="sr in surveyRatings">
+									<div class="term">{{sr.abrv[language]}}</div>
+									<div class="explanation">{{sr.label[language]}}</div>
 								</div>
-								<div class="col-sm-4" style="max-width:200px;">
-									<div class='col-sm-1' ng-repeat="sr in surveyRatings">
-										<input type="radio" name='{{quest.id}}_surveyQuestion' ng-model="quest.selection" ng-value="sr.id" ng-click="checkNavAction(currentSurveyPart)">
-										<label>{{sr.abrv[language]}}</label>
+							</div>
+						</div>
+						<div class="row" id="questDiv">							
+							<div class='col-xs-12 col-sm-8 col-sm-offset-2'>	
+								<div class='row' ng-repeat="quest in currentSurveyPart.questions">
+									<div class="col-sm-1" style="max-width:30px;">
+										<strong>{{currentSurveyPart.questionIndex.start + $index}}
+											<span ng-show="!quest.selection && quest.selection!=0" style="color:red;">*</span>
+										</strong>
+									</div>
+									<div class="col-sm-4" style="max-width:200px;">
+										<div class='col-sm-1' ng-repeat="sr in surveyRatings">
+											<input type="radio" name='{{quest.id}}_surveyQuestion' ng-model="quest.selection" ng-value="sr.id" ng-click="checkNavAction(currentSurveyPart)">
+											<div class="legend-label">{{sr.abrv[language]}}</div>
+										</div>
+									</div>
+									<div class="col-sm-7">
+										<p class="question">{{quest.text[language]}}</p>
 									</div>
 								</div>
-								<div class="col-sm-7">
-									<p>{{quest.text[language]}}</p>
-								</div>
 							</div>
 						</div>
-						<div class='row' style="margin-left:15px;margin-top:15px;max-width:1200px;">
+						<div class='row'>
+							<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+								<div class="row">
+									
 							<div class='col-sm-4'>
 								<div class='row'>
 									<div class='row'>
@@ -512,6 +522,8 @@ get_header(); ?>
 								<ul>
 									<li ng-repeat="err in favNumErrors">{{favNumErrorMessages[err][language]}}</li>
 								</ul>
+							</div>
+								</div>
 							</div>
 						</div>
 						<div class="row">
@@ -692,6 +704,8 @@ get_header(); ?>
 
 					<button class="btn" style="float:right;" ng-click="loadSurveyByPartId(currentSurveyPart.partId + 1)" 
 						 aria-hidden="true">{{navMessages.next[language]}}</button>
+					<button class="btn btn-default" style="float:right;" ng-click="loadSurveyByPartId(currentSurveyPart.partId + 1)" 
+						 aria-hidden="true">{{navMessages.back[language]}}</button>
 				</div>
 			</div>
 
