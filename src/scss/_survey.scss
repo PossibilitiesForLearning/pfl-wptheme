@@ -1,0 +1,87 @@
+.body-survey {
+
+    ul.page-progression {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            text-align: center;
+            width: 60px;
+            position: relative;
+            cursor: pointer;
+
+            .h-line {
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                top: 10px;
+                background-color: $light-2;
+            }
+
+            .indicator {
+                position: relative;
+                height: 20px;
+                width: 20px;
+                background-color: $primary-1;
+                margin: 0 auto 20px;
+                border-radius: 100px;    
+                transition: 0.3s;            
+            }
+
+            &.in-progress {
+                .indicator {
+                    background-color: $secondary-2;
+                }
+            }
+            &.completed {
+                .indicator {
+                    background-color: $secondary-3;
+                }
+            }
+
+            &:hover {
+                .indicator {
+                    background-color: $primary-3;
+                }
+            }
+
+        }
+    }
+
+    .button-row {
+        font-size: 18px;
+        margin-right: 6px;
+        .btn {
+            background-color: $secondary-2;
+            color: white;
+            margin-left:6px;
+            font-size: 18px;
+            transition: 0.4s;
+            &:hover {
+                background-color: $secondary-1;
+            }
+
+            &.btn-default {
+                background-color: $light-2;
+                color: $dark-1;
+                border-color: transparent;
+            }
+
+            &.btn-special {
+                background-color: $primary-2;
+                color: $light-1;
+                border-color: transparent;
+            }
+        }
+    }
+
+    .panel-body {
+        .col-form-label {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .radio-label {
+            font-size: 14px;
+        }
+    }
+}
