@@ -467,8 +467,9 @@ get_header(); ?>
 									</div>
 									<div class="col-sm-4" style="max-width:200px;">
 										<div class='col-sm-1' ng-repeat="sr in surveyRatings">
+											<label>
 											<input type="radio" name='{{quest.id}}_surveyQuestion' ng-model="quest.selection" ng-value="sr.id" ng-click="checkNavAction(currentSurveyPart)">
-											<div class="legend-label">{{sr.abrv[language]}}</div>
+											<div class="legend-label">{{sr.abrv[language]}}</div></label>
 										</div>
 									</div>
 									<div class="col-sm-7">
@@ -540,7 +541,7 @@ get_header(); ?>
 						<div class="row" ng-repeat="section in currentSurveyPart.listSections" style="margin-top:15px;margin-left:10px;">
 							<div class="row">
 								<div class="col-sm-10">
-									<h4>{{section.sectionTitle[language]}} [
+									<h4 class="section-heading">{{section.sectionTitle[language]}} [
 										<span ng-show="getListSectionSelectedCount(section)==0" class="selected-count inactive">{{getListSectionSelectedCount(section)}}</span>
 										<span ng-show="getListSectionSelectedCount(section)>0" class="selected-count active">{{getListSectionSelectedCount(section)}}</span>
 										{{navMessages.selected[language]}} ]</h4>
@@ -552,8 +553,9 @@ get_header(); ?>
 								</div>
 							</div>
 							<div class="row" style="margin-top:15px;max-height:500px;overflow-y:scroll;overflow-x:hidden;" ng-show="section.show">
-								<div class="col-sm-2" ng-repeat="item in section.sectionItems">
-									<input type="checkbox" ng-model="item.selected" ng-value="item.selected" /> {{item.itemText[language]}}
+								<div class="col-sm-2 checkbox-container" ng-repeat="item in section.sectionItems">
+										<label>
+									<input type="checkbox" ng-model="item.selected" ng-value="item.selected" /> {{item.itemText[language]}}</label>
 								</div>
 							</div>
 							<div class="row" style="margin-top:15px;" ng-show="section.show">
@@ -578,13 +580,13 @@ get_header(); ?>
 					<div class="panel-body container">
 						<div class="row">
 								
-							<div ng-class="{'col-sm-4':!showSummaryOnly,'col-sm-12':showSummaryOnly }">
+							<div ng-class="{'col-sm-4':!showSummaryOnly,'col-sm-10 col-sm-offset-1':showSummaryOnly }">
 								<div class="panel-default">
 									<div class="panel-heading">{{currentSurveyPart.summary.partTitle[language]}}</div>
 									<div class="panel-body">
 										<div class="row summary-row" ng-repeat="partId in [1,2,3,4]">
-											{{currentSurveyPart.summary.statements.most[language]}} {{partId}}
-											<ul>
+											<div class="summary-question">{{currentSurveyPart.summary.statements.most[language]}} {{partId}}</div>
+											<ul class="summary-ul">
 												<li ng-repeat="favs in summaryPartFavs['p'+partId].most">
 													<input ng-show="!showSummaryOnly" type="radio" name="p{{partId}}_selection" ng-click="setDreamSheetText(partId,favs.text[language])">
 													{{favs.text[language]}}
@@ -592,8 +594,8 @@ get_header(); ?>
 											</ul>
 										</div>
 										<div class="row summary-row">
-											{{currentSurveyPart.summary.statements.lists.topics[language]}}
-											<ul>
+										<div class="summary-question">{{currentSurveyPart.summary.statements.lists.topics[language]}}</div>
+											<ul class="summary-ul">
 												<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
 													<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])">
 													<input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.1,topics.itemText[language])">
@@ -602,8 +604,8 @@ get_header(); ?>
 											</ul>
 										</div>
 										<div class="row summary-row">
-											{{currentSurveyPart.summary.statements.lists.ways[language]}}
-											<ul>
+											<div class="summary-question">{{currentSurveyPart.summary.statements.lists.ways[language]}}</div>
+											<ul class="summary-ul">
 												<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
 													<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])">
 													<input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.2,ways.itemText[language])">
@@ -612,8 +614,8 @@ get_header(); ?>
 											</ul>
 										</div>
 										<div class="row summary-row">
-											{{currentSurveyPart.summary.statements.lists.show[language]}}
-											<ul>
+											<div class="summary-question">{{currentSurveyPart.summary.statements.lists.show[language]}}</div>
+											<ul class="summary-ul">
 												<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
 													<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.3,show.itemText[language])">
 													<input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.3,show.itemText[language])">
@@ -624,8 +626,8 @@ get_header(); ?>
 										<div class="row" ng-show="showSummaryOnly">
 										</div>
 										<div class="row  summary-row" ng-show="showSummaryOnly" ng-repeat="partId in [1,2,3,4]">
-											{{currentSurveyPart.summary.statements.least[language]}} {{partId}}
-											<ul>
+											<div class="summary-question">{{currentSurveyPart.summary.statements.least[language]}} {{partId}}</div>
+											<ul class="summary-ul">
 												<li ng-repeat="favs in summaryPartFavs['p'+partId].least">{{favs.text[language]}}</li>
 											</ul>
 										</div>
@@ -633,7 +635,7 @@ get_header(); ?>
 								</div>
 							</div>
 
-							<div ng-show="!showSummaryOnly" class="col-sm-8" style="font-size:11px;margin-left:10px;background-image: url(<?=getThemePath()?>/surveyApp/static.content/dreamSheet.svg);height:800px;width:600px;background-repeat:no-repeat;">
+							<div ng-show="!showSummaryOnly" class="col-sm-8" style="font-size:11px;margin-left:10px;background-image: url(<?=getThemePath()?>/surveyApp/static.content/dreamSheet.svg);height:800px;width:600px;background-repeat:no-repeat; background-color: white;">
 								<div style="position:absolute;top:12%;left:15%;max-width:30%">
 									<b>{{currentSurveyPart.sections.settingsForLearning.title[language]}}</b>
 								</div>

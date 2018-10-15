@@ -102,6 +102,12 @@
                 background-color: $primary-2;
             }
         }
+        .checkbox-container {
+            text-transform: capitalize;
+        }
+        .section-heading {
+            font-weight: bold;
+        }
     }
 
     .dream-template {
@@ -120,6 +126,15 @@
             background-color: $light-2;
             margin-bottom: 12px;
             border-radius: 8px;
+        }
+
+        .summary-question {
+            font-weight: bold
+        }
+
+        .summary-ul {
+            margin-bottom: 0px;
+            padding: 10px 0px 10px 20px;
         }
     }
 
