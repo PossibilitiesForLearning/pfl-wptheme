@@ -66,7 +66,10 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 			if(!$scope.checkNavAction($scope.currentSurveyPart) ){
 				$scope.showErrorPopUp=true;
 				return;
-			}		
+			}
+			//scroll to top
+			document.body.scrollTop = document.documentElement.scrollTop = $('.page-progression').position().top+200;
+		
 		
 		}
 		
