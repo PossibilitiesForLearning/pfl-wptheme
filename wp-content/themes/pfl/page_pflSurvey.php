@@ -319,13 +319,6 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div id='errorPopUp' print-remove style="position:absolute;top:50%;left:50%;width:375px;font-size:10pt;font-weight:bold;background-color:#e6c1c1;padding:10px;border-radius:7px;z-index:9999;"
-	 ng-show="showErrorPopUp">
-		<div class="row" style="margin:5px;">{{navMessages.partIncomplete[language]}}</div>
-		<div class="row" style="margin:5px;">
-			<button class="btn btn-info btn-xs" style="float:right;" ng-click="showErrorPopUp=!showErrorPopUp">{{navMessages.partContinue[language]}}</button>
-		</div>
-	</div>
 
 	<!-- KEVIN'S CHANGES AND STUFF STARTS HERE -->
 
@@ -707,6 +700,16 @@ get_header(); ?>
 					<button ng-show="currentSurveyPart.partId>0 && currentSurveyPart.partId<6" class="btn btn-default" style="float:right;" ng-click="loadSurveyByPartId(currentSurveyPart.partId - 1)" 
 						 aria-hidden="true">{{navMessages.back[language]}}</button>
 				</div>
+
+				<div id='errorPopUp' print-remove style="position:relative;top:-200px;margin:0 auto;width:375px;font-size:10pt;font-weight:bold;background-color:#e6c1c1;padding:10px;border-radius:7px;z-index:9999;"
+	 				ng-show="showErrorPopUp">
+					<div class="row" style="margin:5px;">{{navMessages.partIncomplete[language]}}</div>
+					<div class="row" style="margin:5px;">
+						<button class="btn btn-info btn-xs" style="float:right;" ng-click="showErrorPopUp=!showErrorPopUp">{{navMessages.partContinue[language]}}</button>
+					</div>
+				</div>
+
+
 			</div>
 
 
