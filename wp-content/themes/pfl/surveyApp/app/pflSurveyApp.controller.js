@@ -66,11 +66,7 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 			if(!$scope.checkNavAction($scope.currentSurveyPart) ){
 				$scope.showErrorPopUp=true;
 				return;
-			}
-			//scroll to top
-			document.body.scrollTop = document.documentElement.scrollTop = $('.page-progression').position().top+200;
-		
-		
+			}		
 		}
 		
 		$scope.favNumErrors=[]; //do this to make sure it is refreshed on click
@@ -78,6 +74,9 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 		if(partId==6){$scope.buildDreamSheet();}
 		
 		if(partId!=0 && partId!=5 && partId!=6){scrollToTopOfQuestions();}
+
+		//scroll to top on all navigation actions
+		document.body.scrollTop = document.documentElement.scrollTop = $('.page-progression').position().top+200;
 	}
 	
 	
@@ -402,6 +401,7 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
   //helper UI functions
   
 	function scrollToTopOfQuestions(){
+		//this may NOT be working anymore, consider removing
 		console.log('go back to the top');
 		setTimeout( function() {$("#questDiv").scrollTop(0)}, 200 );
 	}

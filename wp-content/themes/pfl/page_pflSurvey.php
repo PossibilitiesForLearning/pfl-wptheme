@@ -23,7 +23,7 @@ get_header(); ?>
 
 <style>
 	.formError {
-			border: 1px solid red;
+			border: 3px solid red;
 		}
 
 		.completedPartBtn {
@@ -320,7 +320,7 @@ get_header(); ?>
 	</div>
 
 
-	<!-- KEVIN'S CHANGES AND STUFF STARTS HERE -->
+	<!-- KEVIN'S CHANGES AND STUFF STARTS HERE this is the start of the visible form -->
 
 	<div id="main">
 		<div id="image-background" style="background-image: url('<?= bgRandom() ?>');" print-remove>
@@ -415,7 +415,9 @@ get_header(); ?>
 									<span ng-show="!currentSurveyPart.selectedSubjectId && currentSurveyPart.selectedSubjectId!=0" style="color:red;">*</span>
 								</label>
 							</div>
-							<div class='col-xs-1' ng-repeat="opts in currentSurveyPart.subjects">
+						</div>
+						<div class='row'>
+							<div class='col-xs-2' ng-repeat="opts in currentSurveyPart.subjects">
 								<div class="row">
 										<div class="col-sm-2">
 											<input type="radio" name='favSubject' ng-model="currentSurveyPart.selectedSubjectId" ng-value="opts.id"
