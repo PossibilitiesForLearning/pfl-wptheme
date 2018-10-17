@@ -455,19 +455,19 @@ get_header(); ?>
 						<div class="row" id="questDiv">							
 							<div class='col-xs-12 col-sm-8 col-sm-offset-2'>	
 								<div class='row' ng-repeat="quest in currentSurveyPart.questions">
-									<div class="col-sm-1" style="max-width:30px;">
+									<div class="col-xs-1" style="max-width:30px;">
 										<strong>{{currentSurveyPart.questionIndex.start + $index}}
 											<span ng-show="!quest.selection && quest.selection!=0" style="color:red;">*</span>
 										</strong>
 									</div>
-									<div class="col-sm-4" style="max-width:200px;">
-										<div class='col-sm-1' ng-repeat="sr in surveyRatings">
+									<div class="col-xs-12" style="max-width:200px;">
+										<div class='col-xs-1' ng-repeat="sr in surveyRatings">
 											<label>
 											<input type="radio" name='{{quest.id}}_surveyQuestion' ng-model="quest.selection" ng-value="sr.id" ng-click="checkNavAction(currentSurveyPart)">
 											<div class="legend-label">{{sr.abrv[language]}}</div></label>
 										</div>
 									</div>
-									<div class="col-sm-7">
+									<div class="col-xs-7">
 										<p class="question">{{quest.text[language]}}</p>
 									</div>
 								</div>
