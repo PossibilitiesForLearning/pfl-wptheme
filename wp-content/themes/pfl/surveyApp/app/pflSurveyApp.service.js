@@ -72,7 +72,26 @@ app.service("pflSurveyService", function ($http, $q) {
 			
 		}
 		
+		function updateV2ToV3(curPflSurvey){
+			console.log("attempt to updateV2ToV3");
+			for(var i=0;i<curPflSurvey.length;i++){
+				if(curPflSurvey[i].version!=2){continue;}
+				curPflSurvey[i].version=3; //incremental version update
+
+				//reorder question IDs in part 4
+				if(curPflSurvey[i].partId==4){					
+					for(var j=0;j<curPflSurvey[i].questions.length;j++){
+						curPflSurvey[i].questions[j].id=(j+1);
+					}
+				}
+			}
+		}
+
 		function isCompatibleVersion(curPflSurvey){	
+
+			//update code:
+			updateV2ToV3(curPflSurvey);
+
 			var versions=alasql('select version from ?' ,[curPflSurvey]);
 			console.log('isCompatibleVersion', surveyVersion, versions);
 			for(var i=0;i<versions.length;i++){

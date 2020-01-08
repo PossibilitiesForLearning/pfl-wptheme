@@ -1,4 +1,4 @@
-var surveyVersion=2;
+var surveyVersion=3;
 
 var surveyTitle={
 	en:'Posibilities For Learning - Survey',
@@ -30,7 +30,7 @@ var favNumErrorMessages={
 
 var pflSurvey=[
 	{
-		version:2,
+		version:3,
 		partId:0, 
 		partType:'INFO',
 		partTitle: {en:'My Info', fr:'My Info in fr' },
@@ -57,7 +57,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:2,
+		version:3,
 		partId:1, 
 		partType:'QUESTION',		
 		partTitle: {en:'PART ONE: SETTINGS FOR LEARNING', fr:'SECTION UN : CONDITIONS D\'APPRENTISSAGE' },
@@ -115,7 +115,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:2,
+		version:3,
 		partId:2, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART TWO: IDEAS TO LEARN', fr:'SECTION DU : Stuff et things' },
@@ -148,7 +148,7 @@ var pflSurvey=[
 		isComplete:false
 	},		
 	{
-		version:2,		
+		version:3,		
 		partId:3, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART THREE: WAYS TO LEARN', fr:'SECTION TOIS : Stuff et things part 3!!!!' },
@@ -192,7 +192,7 @@ var pflSurvey=[
 		isComplete:false
 	},	
 	{
-		version:2,		
+		version:3,		
 		partId:4, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART FOUR: SHOWING YOUR LEARNING', fr:'SECTION FOUR: Stuff et things part 4!!!!' },
@@ -209,26 +209,26 @@ var pflSurvey=[
 			{id:4, text:{en:'	I like sharing what I\’m learning with older students.', fr:'stuff and things'}, selection:null },
 			{id:5, text:{en:'	I like sharing what I\’m learning with adults outside of school.', fr:'stuff and things'}, selection:null },
 			{id:6, text:{en:'	I like sharing what I\’m learning with my family.', fr:'stuff and things'}, selection:null },	
-			{id:26, text:{en:'	I like to be able to choose who will hear about or see what I\'ve learned.', fr:'stuff and things'}, selection:null },				
-			{id:7, text:{en:'	I like my teacher to tell me how I\'ll be marked before I begin an assignment.', fr:'stuff and things'}, selection:null },
-			{id:8, text:{en:'	I like tests.', fr:'stuff and things'}, selection:null },
-			{id:9, text:{en:'	I like to mark my own work.', fr:'stuff and things'}, selection:null },
-			{id:10, text:{en:'	I like to have my teacher mark my work.', fr:'stuff and things'}, selection:null },
-			{id:11, text:{en:'	I like discussing my mark with my teacher.', fr:'stuff and things'}, selection:null },
-			{id:12, text:{en:'	I like to have an expert mark my work.', fr:'stuff and things'}, selection:null },
-			{id:13, text:{en:'	I like to have one or more of my classmates mark my work.', fr:'stuff and things'}, selection:null },
-			{id:14, text:{en:'	I like to have feedback (suggestions) from my teacher that will improve my work before it is ready to be marked.', fr:'stuff and things'}, selection:null },			
-			{id:15, text:{en:'	I like to have feedback (suggestions) from my classmates that will improve my work before it is ready to be marked.', fr:'stuff and things'}, selection:null },			
-			{id:16, text:{en:'	I like to have my work marked in the same way an expert\'s would be judged.', fr:'stuff and things'}, selection:null },						
-			{id:17, text:{en:'	I like to decide how my work will be marked.', fr:'stuff and things'}, selection:null },							
-			{id:18, text:{en:'	Before I start working on a project, I like to talk about who will mark it and how it will be marked with my teacher so we can decide together.', fr:'stuff and things'}, selection:null },
-			{id:19, text:{en:'	Even when I get a good mark I like hearing about ways it could be improved.', fr:'stuff and things'}, selection:null },				
-			{id:20, text:{en:'	I like knowing if my mark is better or worse than my classmates.', fr:'stuff and things'}, selection:null },							
-			{id:21, text:{en:'	I like big projects.', fr:'stuff and things'}, selection:null },				
-			{id:22, text:{en:'	I like to choose the way I\'ll show what I\'ve learned (in a play, a poster, a report, etc.).', fr:'stuff and things'}, selection:null },				
-			{id:23, text:{en:'I like to have my teacher tell me how to show what I have learned (in a play, a poster, a report, etc.).', fr:'stuff and things'}, selection:null },				
-			{id:24, text:{en:'I like to change ideas from one form to another, like changing a story into a play or a math problem into music, or writing a poem about a photo.', fr:'stuff and things'}, selection:null },			
-			{id:25, text:{en:'	I like to be able to show what I\'ve learned in different ways on different assignments.', fr:'stuff and things'}, selection:null },				
+			{id:7, text:{en:'	I like to be able to choose who will hear about or see what I\'ve learned.', fr:'stuff and things'}, selection:null },				
+			{id:8, text:{en:'	I like my teacher to tell me how I\'ll be marked before I begin an assignment.', fr:'stuff and things'}, selection:null },
+			{id:9, text:{en:'	I like tests.', fr:'stuff and things'}, selection:null },
+			{id:10, text:{en:'	I like to mark my own work.', fr:'stuff and things'}, selection:null },
+			{id:11, text:{en:'	I like to have my teacher mark my work.', fr:'stuff and things'}, selection:null },
+			{id:12, text:{en:'	I like discussing my mark with my teacher.', fr:'stuff and things'}, selection:null },
+			{id:13, text:{en:'	I like to have an expert mark my work.', fr:'stuff and things'}, selection:null },
+			{id:14, text:{en:'	I like to have one or more of my classmates mark my work.', fr:'stuff and things'}, selection:null },
+			{id:15, text:{en:'	I like to have feedback (suggestions) from my teacher that will improve my work before it is ready to be marked.', fr:'stuff and things'}, selection:null },			
+			{id:16, text:{en:'	I like to have feedback (suggestions) from my classmates that will improve my work before it is ready to be marked.', fr:'stuff and things'}, selection:null },			
+			{id:17, text:{en:'	I like to have my work marked in the same way an expert\'s would be judged.', fr:'stuff and things'}, selection:null },						
+			{id:18, text:{en:'	I like to decide how my work will be marked.', fr:'stuff and things'}, selection:null },							
+			{id:19, text:{en:'	Before I start working on a project, I like to talk about who will mark it and how it will be marked with my teacher so we can decide together.', fr:'stuff and things'}, selection:null },
+			{id:20, text:{en:'	Even when I get a good mark I like hearing about ways it could be improved.', fr:'stuff and things'}, selection:null },				
+			{id:21, text:{en:'	I like knowing if my mark is better or worse than my classmates.', fr:'stuff and things'}, selection:null },							
+			{id:22, text:{en:'	I like big projects.', fr:'stuff and things'}, selection:null },				
+			{id:23, text:{en:'	I like to choose the way I\'ll show what I\'ve learned (in a play, a poster, a report, etc.).', fr:'stuff and things'}, selection:null },				
+			{id:24, text:{en:'I like to have my teacher tell me how to show what I have learned (in a play, a poster, a report, etc.).', fr:'stuff and things'}, selection:null },				
+			{id:25, text:{en:'I like to change ideas from one form to another, like changing a story into a play or a math problem into music, or writing a poem about a photo.', fr:'stuff and things'}, selection:null },			
+			{id:26, text:{en:'	I like to be able to show what I\'ve learned in different ways on different assignments.', fr:'stuff and things'}, selection:null },				
 		],
 		favorites:{
 			title:{en:'Choose from the sentences numbered from ', fr:'stuff and things'},
@@ -238,7 +238,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:2,		
+		version:3,		
 		partId:5, 
 		partType:'LIST',				
 		partTitle: {en:'PART FIVE: LISTS OF POSSIBILITIES', fr:'SECTION CINQ: Stuff et things part 5!!!!' },
@@ -659,7 +659,7 @@ var pflSurvey=[
 		isComplete:false				
 	},
 	{
-		version:2,		
+		version:3,		
 		partId:6, 
 		partType:'DREAM',
 		partTitle: {en:'Possibilities For Learning - Dream Sheet', fr:'Feuille de rêve' },
