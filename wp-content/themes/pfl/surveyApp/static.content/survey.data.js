@@ -1,4 +1,4 @@
-var surveyVersion=3;
+var surveyVersion=4;
 
 var surveyTitle={
 	en:'Posibilities For Learning - Survey',
@@ -30,7 +30,7 @@ var favNumErrorMessages={
 
 var pflSurvey=[
 	{
-		version:3,
+		version:4,
 		partId:0, 
 		partType:'INFO',
 		partTitle: {en:'My Info', fr:'My Info in fr' },
@@ -57,7 +57,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:3,
+		version:4,
 		partId:1, 
 		partType:'QUESTION',		
 		partTitle: {en:'PART ONE: SETTINGS FOR LEARNING', fr:'SECTION UN : CONDITIONS D\'APPRENTISSAGE' },
@@ -115,7 +115,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:3,
+		version:4,
 		partId:2, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART TWO: IDEAS TO LEARN', fr:'SECTION DU : Stuff et things' },
@@ -148,7 +148,7 @@ var pflSurvey=[
 		isComplete:false
 	},		
 	{
-		version:3,		
+		version:4,		
 		partId:3, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART THREE: WAYS TO LEARN', fr:'SECTION TOIS : Stuff et things part 3!!!!' },
@@ -192,7 +192,7 @@ var pflSurvey=[
 		isComplete:false
 	},	
 	{
-		version:3,		
+		version:4,		
 		partId:4, 
 		partType:'QUESTION',				
 		partTitle: {en:'PART FOUR: SHOWING YOUR LEARNING', fr:'SECTION FOUR: Stuff et things part 4!!!!' },
@@ -238,7 +238,7 @@ var pflSurvey=[
 		isComplete:false
 	},
 	{
-		version:3,		
+		version:4,		
 		partId:5, 
 		partType:'LIST',				
 		partTitle: {en:'PART FIVE: LISTS OF POSSIBILITIES', fr:'SECTION CINQ: Stuff et things part 5!!!!' },
@@ -659,20 +659,21 @@ var pflSurvey=[
 		isComplete:false				
 	},
 	{
-		version:3,		
+		version:4,		
 		partId:6, 
 		partType:'DREAM',
 		partTitle: {en:'Possibilities For Learning - Dream Sheet', fr:'Feuille de rêve' },
 		partShortTitle: {en:'Dream Sheet', fr:'Feuille de rêve' },
 		summary:{
 			partTitle:{en:'Summary Sheet', fr:'Feuille récapitulative' },
+			partTitleDream:{en:'Dream Sheet', fr:'Feuille de rêve' },
 			statements:{
 				most:{en:'Two MOST FAVOURITE statements from the items in Part', fr:'Deux déclarations les plus FAVOURITES des articles en partie' },
 				least:{en:'Two LEAST FAVOURITE statements from the items in Part', fr:'Deux déclarations FAVOURITES MOINS des articles en partie' },
 				lists:{
-					topics:{en:'Select the two topics you like most:', fr:'Sélectionnez deux sujets favoris, un dans chaque liste déroulante' },
-					ways:{en:'Select the two ways to learn you like most:', fr:'Sélectionnez deux façons d\'apprendre dans la liste déroulante' },
-					show:{en:'Select the two ways to show your learning you like most:', fr:'Sélectionnez deux façons préférées de montrer votre apprentissage dans la liste déroulante' },
+					topics:{en:'Select the topic you like most:', fr:'Sélectionnez deux sujets favoris, un dans chaque liste déroulante' },
+					ways:{en:'Select the way to learn you like most:', fr:'Sélectionnez deux façons d\'apprendre dans la liste déroulante' },
+					show:{en:'Select the way to show your learning you like most:', fr:'Sélectionnez deux façons préférées de montrer votre apprentissage dans la liste déroulante' },
 				},
 				listStatements:{
 					topics:{en:'Two topics you like most:', fr:'Deux sujets favoris, un dans chaque liste déroulante' },

@@ -76,6 +76,7 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 		if(partId!=0 && partId!=5 && partId!=6){scrollToTopOfQuestions();}
 
 		//scroll to top on all navigation actions
+		//document this bit out for local dev
 		document.body.scrollTop = document.documentElement.scrollTop = $('.page-progression').position().top+200;
 	}
 	
@@ -253,16 +254,25 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 		if(partId==4){$scope.currentSurveyPart.sections.wayToShowLearning.textVal=textVal;}
 	}
 	
-	$scope.setDreamSheetTextList=function(partId,textVal){	
+	$scope.setDreamSheetTextList=function(partId,textVal,obj){	
+		//console.log(partId,textVal,obj);
 		var baseObj=null;
 		if(partId==5.1){baseObj=$scope.currentSurveyPart.sections.topic;}		
 		if(partId==5.2){baseObj=$scope.currentSurveyPart.sections.action;}		
 		if(partId==5.3){baseObj=$scope.currentSurveyPart.sections.product;}	
 		if(!baseObj){return;}		
 		
-		baseObj.list.push(textVal);
-		baseObj.textVal=baseObj.list.join(', ');		
-		//console.log('setDreamSheetTextList',baseObj);		
+		/*var isExistIndex=baseObj.list.indexOf(textVal);
+		if(isExistIndex>=0){baseObj.list.splice(isExistIndex,1)}
+		else{baseObj.list.push(textVal);}
+
+		var uniqueSet = new Set(baseObj.list);
+		var uniqueArray = Array.from(uniqueSet)
+		baseObj.textVal=uniqueArray.join(', ');*/		
+		console.log('setDreamSheetTextList',baseObj);	
+		
+		baseObj.textVal=textVal;
+		
 	}
     
     $scope.setSummarySheetTextList=function(partId,textVal){	
@@ -351,7 +361,14 @@ app.controller("pflSurveyController", function ($scope, pflSurveyService) {
 	function loadSurveyFromFile(fileStr){
 		var loadedPflSurvey = angular.copy(JSON.parse(fileStr));
 		
-		if(pflSurveyService.isCompatibleVersion(loadedPflSurvey)){pflSurvey=loadedPflSurvey;}
+		if(pflSurveyService.isCompatibleVersion(loadedPflSurvey)){
+			console.log(loadedPflSurvey)
+			pflSurvey=loadedPflSurvey;
+
+			//apply the selected stuff and thing (this is a hack!!)
+			//$("input[name=s53][value='" + "article for magazine" + "']").prop('checked', true);
+
+		}
 		else{
 			
 			alert("The saved survey being loaded is NOT compatible with the current version.");

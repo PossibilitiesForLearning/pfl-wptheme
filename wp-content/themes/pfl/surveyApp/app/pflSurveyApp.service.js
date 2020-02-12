@@ -87,10 +87,30 @@ app.service("pflSurveyService", function ($http, $q) {
 			}
 		}
 
+		function updateV3ToV4(curPflSurvey){
+			console.log("attempt to updateV3ToV4");
+			for(var i=0;i<curPflSurvey.length;i++){
+				if(curPflSurvey[i].version!=3){continue;}
+				curPflSurvey[i].version=4; //incremental version update
+
+				//update title in dream sheet
+				if(curPflSurvey[i].partId==6){					
+					curPflSurvey[i].summary.partTitleDream={en:"Dream Sheet", fr:'Feuille de rêve'};
+
+					curPflSurvey[i].summary.statements.lists={
+						topics:{en:'Select the topic you like most:', fr:'Sélectionnez deux sujets favoris, un dans chaque liste déroulante' },
+						ways:{en:'Select the way to learn you like most:', fr:'Sélectionnez deux façons d\'apprendre dans la liste déroulante' },
+						show:{en:'Select the way to show your learning you like most:', fr:'Sélectionnez deux façons préférées de montrer votre apprentissage dans la liste déroulante' },
+					};
+				}
+			}
+		}
+
 		function isCompatibleVersion(curPflSurvey){	
 
 			//update code:
 			updateV2ToV3(curPflSurvey);
+			updateV3ToV4(curPflSurvey);
 
 			var versions=alasql('select version from ?' ,[curPflSurvey]);
 			console.log('isCompatibleVersion', surveyVersion, versions);

@@ -473,7 +473,8 @@ input:checked + .slider:before {
 	<div class="row">
 		<div ng-class="{'col-sm-4':!showSummaryOnly,'col-sm-12':showSummaryOnly }">
 			<div class="panel-default">
-				<div class="panel-heading">{{currentSurveyPart.summary.partTitle[language]}}</div>
+				<div class="panel-heading" ng-show="showSummaryOnly" >{{currentSurveyPart.summary.partTitle[language]}}</div>
+				<div class="panel-heading" ng-show="!showSummaryOnly" >{{currentSurveyPart.summary.partTitleDream[language]}}</div>
 				<div class="panel-body">
 					<div class="row" style="border:1px solid black" ng-repeat="partId in [1,2,3,4]">
 						{{currentSurveyPart.summary.statements.most[language]}} {{partId}}
@@ -488,9 +489,14 @@ input:checked + .slider:before {
 					<div class="row" style="border:1px solid black">
                         <span ng-show="!showSummaryOnly">{{currentSurveyPart.summary.statements.lists.topics[language]}}</span>
                         <span ng-show="showSummaryOnly">{{currentSurveyPart.summary.statements.listStatements.topics[language]}}</span>
-						<ul>
+						<ul ng-show="showSummaryOnly">
 							<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
-								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])"> 
+								{{topics.itemText[language]}}
+							</li>
+						</ul>
+						<ul ng-show="!showSummaryOnly">
+							<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
+								<input  type="radio" name="5.1" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])"> 
 								{{topics.itemText[language]}}
 							</li>
 						</ul>
@@ -498,9 +504,14 @@ input:checked + .slider:before {
 					<div class="row" style="border:1px solid black">
 						<span ng-show="!showSummaryOnly">{{currentSurveyPart.summary.statements.lists.ways[language]}}</span>
                         <span ng-show="showSummaryOnly">{{currentSurveyPart.summary.statements.listStatements.ways[language]}}</span>
-						<ul>
+						<ul ng-show="showSummaryOnly">
 							<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
-								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])" > 
+								{{ways.itemText[language]}}
+							</li>
+						</ul>
+						<ul ng-show="!showSummaryOnly">
+							<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
+								<input  type="radio" name="5.2" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])" > 
 								{{ways.itemText[language]}}
 							</li>
 						</ul>
@@ -508,9 +519,14 @@ input:checked + .slider:before {
 					<div class="row" style="border:1px solid black">
 						<span ng-show="!showSummaryOnly">{{currentSurveyPart.summary.statements.lists.show[language]}}</span>
                         <span ng-show="showSummaryOnly">{{currentSurveyPart.summary.statements.listStatements.show[language]}}</span>
-						<ul>
+						<ul ng-show="showSummaryOnly">
 							<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
-								<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.3,show.itemText[language])"> 
+								{{show.itemText[language]}}
+							</li>
+						</ul>
+						<ul ng-show="!showSummaryOnly">
+							<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
+								<input type="radio" name="s53" value="{{show.itemText[language]}}" ng-click="setDreamSheetTextList(5.3,show.itemText[language])" > 
 								{{show.itemText[language]}}
 							</li>
 						</ul>

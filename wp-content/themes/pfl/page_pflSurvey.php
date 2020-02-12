@@ -577,7 +577,8 @@ get_header(); ?>
 								
 							<div ng-class="{'col-sm-4':!showSummaryOnly,'col-sm-10 col-sm-offset-1':showSummaryOnly }">
 								<div class="panel-default">
-									<div class="panel-heading">{{currentSurveyPart.summary.partTitle[language]}}</div>
+									<div class="panel-heading" ng-show="showSummaryOnly" >{{currentSurveyPart.summary.partTitle[language]}}</div>
+									<div class="panel-heading" ng-show="!showSummaryOnly" >{{currentSurveyPart.summary.partTitleDream[language]}}</div>
 									<div class="panel-body">
 										<div class="row summary-row" ng-repeat="partId in [1,2,3,4]">
 											<div class="summary-question">{{currentSurveyPart.summary.statements.most[language]}} {{partId}}</div>
@@ -590,33 +591,45 @@ get_header(); ?>
 										</div>
 										<div class="row summary-row">
 										<div class="summary-question">{{currentSurveyPart.summary.statements.lists.topics[language]}}</div>
-											<ul class="summary-ul">
+											<ul ng-show="showSummaryOnly">
 												<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
-													<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])">
-													<input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.1,topics.itemText[language])">
+													{{topics.itemText[language]}}
+												</li>
+											</ul>
+											<ul ng-show="!showSummaryOnly">
+												<li ng-repeat="topics in summaryList.topics" style="display: inline-block;padding-left:10px;">
+													<input  type="radio" name="5.1" ng-click="setDreamSheetTextList(5.1,topics.itemText[language])"> 
 													{{topics.itemText[language]}}
 												</li>
 											</ul>
 										</div>
 										<div class="row summary-row">
-											<div class="summary-question">{{currentSurveyPart.summary.statements.lists.ways[language]}}</div>
-											<ul class="summary-ul">
+											<div class="summary-question">{{currentSurveyPart.summary.statements.lists.ways[language]}}</div>											
+											<ul ng-show="showSummaryOnly">
 												<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
-													<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])">
-													<input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.2,ways.itemText[language])">
 													{{ways.itemText[language]}}
 												</li>
 											</ul>
+											<ul ng-show="!showSummaryOnly">
+												<li ng-repeat="ways in summaryList.ways" style="display: inline-block;padding-left:10px;">
+													<input  type="radio" name="5.2" ng-click="setDreamSheetTextList(5.2,ways.itemText[language])" > 
+													{{ways.itemText[language]}}
+												</li>
+											</ul>											
 										</div>
 										<div class="row summary-row">
-											<div class="summary-question">{{currentSurveyPart.summary.statements.lists.show[language]}}</div>
-											<ul class="summary-ul">
+											<div class="summary-question">{{currentSurveyPart.summary.statements.lists.show[language]}}</div>											
+											<ul ng-show="showSummaryOnly">
 												<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
-													<input ng-show="!showSummaryOnly" type="checkbox" ng-click="setDreamSheetTextList(5.3,show.itemText[language])">
-													<input ng-show="showSummaryOnly" type="checkbox" ng-click="setSummarySheetTextList(5.3,show.itemText[language])">
 													{{show.itemText[language]}}
 												</li>
 											</ul>
+											<ul ng-show="!showSummaryOnly">
+												<li ng-repeat="show in summaryList.show" style="display: inline-block;padding-left:10px;">
+													<input type="radio" name="s53" value="{{show.itemText[language]}}" ng-click="setDreamSheetTextList(5.3,show.itemText[language])" > 
+													{{show.itemText[language]}}
+												</li>
+											</ul>											
 										</div>
 										<div class="row" ng-show="showSummaryOnly">
 										</div>

@@ -65,3 +65,6 @@ ext.print/
 ext.save/
 index.htm.ignore
 testinfo.php
+
+### backup directories
+2020*_bu
