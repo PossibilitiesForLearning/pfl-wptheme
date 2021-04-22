@@ -1,7 +1,7 @@
 var surveyVersion=4;
 
 var surveyTitle={
-	en:'Posibilities For Learning - Survey',
+	en:'Possibilities For Learning - Survey',
 	fr:'something cool in french'
 };
 
